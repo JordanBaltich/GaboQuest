@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float maxSpeed;
+    public float speed;
+    public float acceleration;
+    public float deceleration;
+
+    public float Accelerate()
     {
-        
+        speed += acceleration * Time.deltaTime;
+
+        speed = Mathf.Clamp(speed, 0, maxSpeed);
+
+        return speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    public float Decelerate()
     {
-        
+        speed -= acceleration * Time.deltaTime;
+
+        speed = Mathf.Clamp(speed, 0, maxSpeed);
+
+        return speed;
     }
 }
