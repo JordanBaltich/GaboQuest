@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 
     Vector3 direction;
 
+    public float rotationSpeed;
+
     private void Awake()
     {
         m_Body = GetComponent<Rigidbody>();
@@ -26,28 +28,32 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 moveDirection = new Vector3(Direction().x, 0, Direction().y);
-
-        if (Direction().sqrMagnitude > 0.15f || Direction().sqrMagnitude < - 0.15f)
-        {
-            m_Body.velocity = moveDirection * m_Motor.Accelerate();
-        }
-        else
-        {
-            m_Motor.Decelerate();
-
-            if (m_Body.velocity.sqrMagnitude > 0.15f)
-            {
-                m_Body.velocity = moveDirection * m_Motor.Decelerate();
-            }
-            
-        }
+        
        
     }
 
     private void FixedUpdate()
     {
-        
+        //convert direction from Vector2 to Vector3
+        Vector3 moveDirection = new Vector3(Direction().x, 0, Direction().y);
+
+        //accelerate when input direction is past given threshold, rotate towards input direction
+        if (Direction().sqrMagnitude > 0.15f || Direction().sqrMagnitude < -0.15f)
+        {
+            m_Body.velocity = moveDirection * m_Motor.Accelerate();
+
+            m_Body.rotation = Quaternion.LookRotation((moveDirection * rotationSpeed * Time.deltaTime));
+        }
+        else
+        {
+            // decelerate when no input is given
+            m_Motor.Decelerate();
+            if (m_Body.velocity.sqrMagnitude > 0.15f)
+            {
+                m_Body.velocity = moveDirection * m_Motor.Decelerate();
+            }
+
+        }
     }
 
     Vector2 Direction()
