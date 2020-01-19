@@ -148,7 +148,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -43566
+  m_CachedInstanceID: -19452
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -181,27 +181,7 @@ MonoBehaviour:
   m_ObjectVars: []
   m_DynamicLists: []
   m_FsmEvents: []
-  m_ConcreteFsmEvents:
-  - m_ID: 1214494805
-    m_Name: TimeToPlay
-    m_Blackboard: {fileID: 2363467779709583841}
-    m_IsConstant: 0
-    m_IsSystem: 0
-  - m_ID: 1061935223
-    m_Name: TimeToLeave
-    m_Blackboard: {fileID: 2363467779709583841}
-    m_IsConstant: 0
-    m_IsSystem: 0
-  - m_ID: 1454500857
-    m_Name: TimeToRun
-    m_Blackboard: {fileID: 2363467779709583841}
-    m_IsConstant: 0
-    m_IsSystem: 0
-  - m_ID: 456403323
-    m_Name: TimetoCatch
-    m_Blackboard: {fileID: 2363467779709583841}
-    m_IsConstant: 0
-    m_IsSystem: 0
+  m_ConcreteFsmEvents: []
   m_Namespace: 
 --- !u!54 &837784285075248355
 Rigidbody:
@@ -239,10 +219,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7329060436889987831}
     m_Modifications:
-    - target: {fileID: 195182, guid: 3464ac11686f806428c3048c02d66b5d, type: 3}
-      propertyPath: m_Name
-      value: Vision
-      objectReference: {fileID: 0}
     - target: {fileID: 431866, guid: 3464ac11686f806428c3048c02d66b5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -286,6 +262,10 @@ PrefabInstance:
     - target: {fileID: 431866, guid: 3464ac11686f806428c3048c02d66b5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195182, guid: 3464ac11686f806428c3048c02d66b5d, type: 3}
+      propertyPath: m_Name
+      value: Vision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3464ac11686f806428c3048c02d66b5d, type: 3}
