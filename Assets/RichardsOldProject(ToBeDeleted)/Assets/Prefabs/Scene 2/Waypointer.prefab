@@ -45,4 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Waypoint1: {fileID: 0}
   Waypoint2: {fileID: 0}
+  CameraWaypoint: {fileID: 0}
+  Player: {fileID: 0}
   CurrentWaypoint: {fileID: 0}
+  Artifact: {fileID: 0}
+  Door: {fileID: 0}

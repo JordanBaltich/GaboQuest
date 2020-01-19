@@ -4803,7 +4803,7 @@ MonoBehaviour:
   dir: {x: 0, y: 0, z: 0}
   distanceDir: {x: 0, y: 0, z: 0}
   speed: 8.3
-  cameraChaseSpeed: 13.5
+  chaseSpeed: 0
   positionThreshold: 1.54
   flipLookDir: 0
   moving: 0
