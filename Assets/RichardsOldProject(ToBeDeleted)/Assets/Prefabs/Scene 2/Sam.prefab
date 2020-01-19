@@ -68,7 +68,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -43764
+  m_CachedInstanceID: -19644
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -101,27 +101,7 @@ MonoBehaviour:
   m_ObjectVars: []
   m_DynamicLists: []
   m_FsmEvents: []
-  m_ConcreteFsmEvents:
-  - m_ID: 1214494805
-    m_Name: TimeToPlay
-    m_Blackboard: {fileID: 5644566958365805019}
-    m_IsConstant: 0
-    m_IsSystem: 0
-  - m_ID: 1061935223
-    m_Name: TimeToLeave
-    m_Blackboard: {fileID: 5644566958365805019}
-    m_IsConstant: 0
-    m_IsSystem: 0
-  - m_ID: 1454500857
-    m_Name: TimeToRun
-    m_Blackboard: {fileID: 5644566958365805019}
-    m_IsConstant: 0
-    m_IsSystem: 0
-  - m_ID: 456403323
-    m_Name: TimetoCatch
-    m_Blackboard: {fileID: 5644566958365805019}
-    m_IsConstant: 0
-    m_IsSystem: 0
+  m_ConcreteFsmEvents: []
   m_Namespace: 
 --- !u!54 &7293956231364238553
 Rigidbody:
