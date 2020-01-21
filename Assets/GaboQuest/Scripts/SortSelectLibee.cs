@@ -31,7 +31,7 @@ public class SortSelectLibee : MonoBehaviour
         SelectLibees();
     }
 
-    void SortLibee()
+    public void SortLibee()
     {
         //Reset Libee Count
         for (int i = 0; i < LibeeCount.Length; i++)
@@ -71,73 +71,48 @@ public class SortSelectLibee : MonoBehaviour
 
     void SelectLibees()
     {
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+
             SortLibee();
 
-            if (CurrentLibeeIndex < LibeeCount.Length-1)
+            ////if everything is empty, skip the rest
+            //for (int i = 0; i < LibeeCount.Length; i++)
+            //{
+            //    isEmpty = true;
+
+            //    if (LibeeCount[i] <= 0)
+            //    {
+            //        isEmpty = false;
+            //    }
+
+            //    if (isEmpty)
+            //    {
+            //        break;
+            //    }
+            //}
+
+
+
+            //if i tab, select next libee type
+            if (CurrentLibeeIndex < LibeeCount.Length - 1)
             {
                 CurrentLibeeIndex += 1;
+
+                //if this libee type has none, select next
                 if (LibeeCount[CurrentLibeeIndex] <= 0)
                 {
                     CurrentLibeeIndex += 1;
+
+                    // if the next index is out of range, select the first libee type
                     if (CurrentLibeeIndex > LibeeCount.Length - 1)
                     {
                         CurrentLibeeIndex = 0;
                     }
                 }
             }
-            else CurrentLibeeIndex = 0;
 
         }
     }
-
-
-
-
-    //                if (CapturedLibees.Count > 0)
-    //            {
-
-    //                CurrentWaypoint.transform.position = Waypoints[0].position;
-    //                print(Waypoints[0].name + " Selected");
-    //         else { print("Waypoint not set in Inspector"); }
-    //}
-
-    //            if (Input.GetKeyDown(KeyCode.Alpha2))
-    //            {
-    //                CurrentWaypoint = Waypoint2;
-    //                print(Waypoints[0].name + " Selected");
-    //            }
-    //            if (Input.GetKeyDown(KeyCode.Escape))
-    //            {
-    //                CurrentWaypoint = null;
-    //                print("Cancel Selection");
-
-    //            }
-    //void CycleWaypoint()
-    //{
-
-    //}
-
-    //void PlaceWaypoint()
-    //{
-
-    //    if (Input.GetMouseButtonDown(1))
-    //    {
-    //        if (CurrentWaypoint != null)
-    //        {
-
-    //            RaycastHit hit;
-    //            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //            if (Physics.Raycast(ray, out hit))
-    //            {
-    //                CurrentWaypoint.gameObject.transform.position = hit.point;
-    //                print(CurrentWaypoint.name + " position is now " + CurrentWaypoint.gameObject.transform.position);
-    //            }
-    //        }
-    //        else print("No selected waypoint");
-    //    }
-
-    //}
-
 }
