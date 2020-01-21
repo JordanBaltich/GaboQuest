@@ -22,6 +22,7 @@ public class GrowShrinkMechanic : MonoBehaviour
     public AnimationCurve animationCurveShrink;
     #endregion
 
+    #region Grow Code
     public float growDuration;
 
     public bool isGrowing;
@@ -29,6 +30,7 @@ public class GrowShrinkMechanic : MonoBehaviour
 
 
     public AnimationCurve animationCurveGrow;
+    #endregion
 
     float startTimer;
 
@@ -115,6 +117,7 @@ public class GrowShrinkMechanic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Shrink using left mouse click
         if (Input.GetMouseButtonDown(0))
         {
             isShrinking = true;
@@ -123,6 +126,7 @@ public class GrowShrinkMechanic : MonoBehaviour
             isFullyShrunk = false;
         }
 
+        //Grow using right mouse click
         if (Input.GetMouseButtonDown(1))
         {
             isGrowing = true;
@@ -131,12 +135,14 @@ public class GrowShrinkMechanic : MonoBehaviour
             isFullyGrown = false;
         }
 
+        //Activate Shrink code
         if (isShrinking == true)
         {
             Shrinker();
 
         }
 
+        //Activate Grow code
         if (isGrowing == true)
         {
             Grower();
