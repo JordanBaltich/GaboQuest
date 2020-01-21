@@ -77,38 +77,40 @@ public class SortSelectLibee : MonoBehaviour
 
             SortLibee();
 
-            ////if everything is empty, skip the rest
-            //for (int i = 0; i < LibeeCount.Length; i++)
-            //{
-            //    isEmpty = true;
-
-            //    if (LibeeCount[i] <= 0)
-            //    {
-            //        isEmpty = false;
-            //    }
-
-            //    if (isEmpty)
-            //    {
-            //        break;
-            //    }
-            //}
-
-
-
-            //if i tab, select next libee type
-            if (CurrentLibeeIndex < LibeeCount.Length - 1)
+            //if everything is empty, skip the rest
+            for (int i = 0; i < LibeeCount.Length; i++)
             {
-                CurrentLibeeIndex += 1;
+                isEmpty = true;
 
-                //if this libee type has none, select next
-                if (LibeeCount[CurrentLibeeIndex] <= 0)
+                if (LibeeCount[i] <= 0)
+                {
+                    isEmpty = false;
+                }
+
+                if (isEmpty)
+                {
+                    break;
+                }
+            }
+
+
+            for (int i = 0; i < LibeeCount.Length; i++)
+            {
+                //if i tab, select next libee type
+                if (CurrentLibeeIndex < LibeeCount.Length - 1)
                 {
                     CurrentLibeeIndex += 1;
 
-                    // if the next index is out of range, select the first libee type
-                    if (CurrentLibeeIndex > LibeeCount.Length - 1)
+                    //if this libee type has none, select next
+                    if (LibeeCount[CurrentLibeeIndex] <= 0)
                     {
-                        CurrentLibeeIndex = 0;
+                        CurrentLibeeIndex += 1;
+
+                        // if the next index is out of range, select the first libee type
+                        if (CurrentLibeeIndex > LibeeCount.Length - 1)
+                        {
+                            CurrentLibeeIndex = 0;
+                        }
                     }
                 }
             }
