@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class GrowShrinkMechanic : MonoBehaviour
 {
+    #region Size Variables
     public float maxSize;
     public float minSize;
 
     Vector3 maxScale;
     Vector3 minScale;
+    #endregion
 
+    #region Shrink Code
     public float shrinkDuration;
 
     public bool isShrinking;
@@ -17,6 +20,7 @@ public class GrowShrinkMechanic : MonoBehaviour
 
     float startTimer;
     public AnimationCurve animationCurve;
+    #endregion
 
     // Use this for initialization
     void Start()
