@@ -19,7 +19,7 @@ public class GrowShrinkMechanic : MonoBehaviour
     public bool isFullyShrunk = false;
 
 
-    public AnimationCurve animationCurveShrink;
+
     #endregion
 
     #region Grow Code
@@ -27,24 +27,22 @@ public class GrowShrinkMechanic : MonoBehaviour
 
     public bool isGrowing;
     public bool isFullyGrown = false;
-
-
-    public AnimationCurve animationCurveGrow;
     #endregion
 
     float startTimer;
+    public AnimationCurve animationCurve;
 
     // Use this for initialization
     void Start()
     {
         // Create Vector3s for both the min and max sizes
-        maxScale = new Vector3(maxSize, maxSize, 1);
-        minScale = new Vector3(minSize, minSize, 1);
+        maxScale = new Vector3(maxSize, maxSize, maxSize);
+        minScale = new Vector3(minSize, minSize, minSize);
         // set the scale of the object to the minimum scale
         transform.localScale = maxScale;
         // initially, the object should grow
         isShrinking = false;
-
+        isGrowing = false;
         ResetTimer();
 
     }
@@ -52,6 +50,50 @@ public class GrowShrinkMechanic : MonoBehaviour
     void ResetTimer()
     {
         startTimer = Time.time;
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        //Shrink using left mouse click
+        if (Input.GetMouseButtonDown(0))
+        {
+            isShrinking = true;
+            minSize -= 0.1f;
+            maxSize = minSize + 0.1f;
+            minScale = new Vector3(minSize, minSize, minSize);
+            isFullyShrunk = false;
+            isFullyGrown = false;
+            isGrowing = false;
+        }
+
+        //Grow using right mouse click
+        if (Input.GetMouseButtonDown(1))
+        {
+            isGrowing = true;
+            maxSize += 0.1f;
+            minSize = maxSize - 0.1f;
+            maxScale = new Vector3(maxSize, maxSize, maxSize);
+            isFullyGrown = false;
+            isFullyShrunk = false;
+            isShrinking = false;
+        }
+
+        //Activate Shrink code
+        if (isShrinking == true)
+        {
+            Shrinker();
+
+        }
+
+        //Activate Grow code
+        if (isGrowing == true)
+        {
+            Grower();
+
+        }
+
     }
 
     public void Shrinker()
@@ -79,7 +121,7 @@ public class GrowShrinkMechanic : MonoBehaviour
             isFullyShrunk = false;
         }
         // calculate the current scale of the square using the percent and animation curve
-        Vector3 newScale = Vector3.Lerp(maxScale, minScale, animationCurveShrink.Evaluate(percent));
+        Vector3 newScale = Vector3.Lerp(maxScale, minScale, animationCurve.Evaluate(percent));
         transform.localScale = newScale;
 
     }
@@ -99,55 +141,18 @@ public class GrowShrinkMechanic : MonoBehaviour
             ResetTimer();
             return;
         }
-        if (percent < 0.2)
+        if (percent > 0.2)
         {
             isFullyGrown = true;
         }
 
-        if (percent > 0.2)
+        if (percent < 0.2)
         {
             isFullyGrown = false;
         }
         // calculate the current scale of the square using the percent and animation curve
-        Vector3 newScale = Vector3.Lerp(minScale, maxScale, animationCurveGrow.Evaluate(percent));
+        Vector3 newScale = Vector3.Lerp(minScale, maxScale, animationCurve.Evaluate(percent));
         transform.localScale = newScale;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Shrink using left mouse click
-        if (Input.GetMouseButtonDown(0))
-        {
-            isShrinking = true;
-            minSize -= 0.1f;
-            minScale = new Vector3(minSize, minSize, 1);
-            isFullyShrunk = false;
-        }
-
-        //Grow using right mouse click
-        if (Input.GetMouseButtonDown(1))
-        {
-            isGrowing = true;
-            maxSize += 0.1f;
-            maxScale = new Vector3(maxSize, maxSize, 1);
-            isFullyGrown = false;
-        }
-
-        //Activate Shrink code
-        if (isShrinking == true)
-        {
-            Shrinker();
-
-        }
-
-        //Activate Grow code
-        if (isGrowing == true)
-        {
-            Grower();
-
-        }
 
     }
 }
