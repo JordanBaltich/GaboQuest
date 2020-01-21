@@ -13,17 +13,14 @@ public class GrowShrinkMechanic : MonoBehaviour
     #endregion
 
     #region Shrink Code
-    public float shrinkDuration;
 
     public bool isShrinking;
     public bool isFullyShrunk = false;
 
-
-
     #endregion
 
     #region Grow Code
-    public float growDuration;
+
 
     public bool isGrowing;
     public bool isFullyGrown = false;
@@ -31,6 +28,7 @@ public class GrowShrinkMechanic : MonoBehaviour
 
     float startTimer;
     public AnimationCurve animationCurve;
+    public float sizeDuration;
 
     // Use this for initialization
     void Start()
@@ -39,7 +37,7 @@ public class GrowShrinkMechanic : MonoBehaviour
         maxScale = new Vector3(maxSize, maxSize, maxSize);
         minScale = new Vector3(minSize, minSize, minSize);
         // set the scale of the object to the minimum scale
-        transform.localScale = maxScale;
+        transform.localScale = transform.localScale;
         // initially, the object should grow
         isShrinking = false;
         isGrowing = false;
@@ -101,7 +99,7 @@ public class GrowShrinkMechanic : MonoBehaviour
         // calculate the time elapsed since the timer was started
         float timeElapsed = Time.time - startTimer;
         // get the percent of time elapsed in relation to the grow duration
-        float percent = timeElapsed / shrinkDuration;
+        float percent = timeElapsed / sizeDuration;
 
         // if the timer has elapsed, switch states
         if (percent > 1)
@@ -131,7 +129,7 @@ public class GrowShrinkMechanic : MonoBehaviour
         // calculate the time elapsed since the timer was started
         float timeElapsed = Time.time - startTimer;
         // get the percent of time elapsed in relation to the grow duration
-        float percent = timeElapsed / growDuration;
+        float percent = timeElapsed / sizeDuration;
 
         // if the timer has elapsed, switch states
         if (percent > 1)

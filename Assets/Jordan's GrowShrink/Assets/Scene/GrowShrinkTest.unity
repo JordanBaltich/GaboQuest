@@ -494,10 +494,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSize: 1
   minSize: 0.8
-  shrinkDuration: 1
   isShrinking: 0
   isFullyShrunk: 0
-  growDuration: 1
   isGrowing: 0
   isFullyGrown: 0
   animationCurve:
@@ -524,3 +522,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  sizeDuration: 1
