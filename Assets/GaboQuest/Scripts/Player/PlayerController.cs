@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     Health m_Health;
     Vector3 direction;
 
-    [SerializeField] private int hazardLayerID;
+    [SerializeField] private int hazardLayerID, healthID;
 
     public float rotationSpeed;
 
@@ -61,7 +61,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.layer == healthID)
+        {
+            m_Health.Heal(1);
+            Destroy(other.gameObject);
+        }
     }
 
     private void OnCollisionStay(Collision collision)

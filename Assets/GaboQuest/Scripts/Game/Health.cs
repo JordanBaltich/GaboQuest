@@ -21,7 +21,6 @@ public class Health : MonoBehaviour
     {
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        print(currentHealth);
     }
 
     public void TakeDamage(int amount)
@@ -31,7 +30,6 @@ public class Health : MonoBehaviour
             currentHealth -= amount;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             StartInvulTimer();
-            print(currentHealth);
         }
        
     }
@@ -57,5 +55,6 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(InvulTime);
 
         invulnerable = false;
+        invulRoutine = null;
     }
 }
