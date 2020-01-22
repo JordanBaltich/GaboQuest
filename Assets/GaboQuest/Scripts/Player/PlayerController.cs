@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour
     Rigidbody m_Body;
 
     PlayerMotor m_Motor;
-
+    Health m_Health;
     Vector3 direction;
+
+    [SerializeField] private int hazardLayerID;
 
     public float rotationSpeed;
 
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour
         m_Body = GetComponent<Rigidbody>();
 
         m_Motor = GetComponent<PlayerMotor>();
+        m_Health = GetComponent<Health>();
     }
 
     // Start is called before the first frame update
@@ -53,6 +56,20 @@ public class PlayerController : MonoBehaviour
                 m_Body.velocity = moveDirection * m_Motor.Decelerate();
             }
 
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.layer == hazardLayerID)
+        {
+            m_Health.TakeDamage(1);
+            m_Body.AddForce(Vector3.up * 3, ForceMode.Impulse);
         }
     }
 
