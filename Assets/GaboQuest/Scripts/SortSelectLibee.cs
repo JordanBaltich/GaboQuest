@@ -69,63 +69,44 @@ public class SortSelectLibee : MonoBehaviour
         }
     }
 
+
     void SelectLibees()
     {
-
         if (Input.GetKeyDown(KeyCode.Tab))
         {
 
             SortLibee();
 
-            ////if everything is empty, skip the rest
-            //for (int i = 0; i < LibeeCount.Length; i++)
-            //{
-            //    isEmpty = true;
-
-            //    if (LibeeCount[i] <= 0)
-            //    {
-            //        isEmpty = false;
-            //    }
-
-            //    if (isEmpty)
-            //    {
-            //        break;
-            //    }
-            //}
-
-
-            //foreach (int AmmoCount in LibeeCount)
-            //{
-
-            //    if (AmmoCount >= 0)
-            //    {
-            //        CurrentLibeeIndex = AmmoCount;
-            //        break;
-
-            //    }else
-            //    {
-
-            //    }
-
-            //if i tab, select next libee type
-            if (CurrentLibeeIndex < LibeeCount.Length - 1)
+            //check above current index
+            for (int i = CurrentLibeeIndex; i < LibeeCount.Length - 1; i++)
             {
-                CurrentLibeeIndex += 1;
+                //break out of loop if on last element of array
+                if (i == LibeeCount.Length - 1)
+                    break;
 
-                //if this libee type has none, select next
-                if (LibeeCount[CurrentLibeeIndex] <= 0)
+                //switches to next ammo
+                if (LibeeCount[i + 1] > 0)
                 {
-                    CurrentLibeeIndex += 1;
-
-                    // if the next index is out of range, select the first libee type
-                    if (CurrentLibeeIndex > LibeeCount.Length - 1)
-                    {
-                        CurrentLibeeIndex = 0;
-                    }
+                    CurrentLibeeIndex = i + 1;
+                    return;
                 }
-            } else CurrentLibeeIndex = 0;
-        }
+            }
 
-    
+            //check below current index
+            for (int i = 0; i < LibeeCount.Length - 1; i++)
+            {
+                //keeps current index if player has no other ammo type
+                if (i == CurrentLibeeIndex)
+                {
+                    return;
+                }
+                //switches to next ammo
+                if (LibeeCount[i] > 0)
+                {
+                    CurrentLibeeIndex = i;
+                    return;
+                }
+            }
+        }
     }
 }
