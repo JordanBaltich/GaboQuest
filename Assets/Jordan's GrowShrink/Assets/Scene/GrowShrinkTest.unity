@@ -492,12 +492,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b9148f0aa53a54ca5c830b346a83b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSize: 1
-  minSize: 0.8
-  isShrinking: 0
-  isFullyShrunk: 0
+  maxSize: 5
+  minSize: 1
+  growDuration: 1
+  shrinkDuration: 1
   isGrowing: 0
-  isFullyGrown: 0
   animationCurve:
     serializedVersion: 2
     m_Curve:
@@ -522,4 +521,3 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  sizeDuration: 1
