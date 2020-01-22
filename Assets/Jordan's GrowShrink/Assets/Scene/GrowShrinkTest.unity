@@ -494,8 +494,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSize: 5
   minSize: 1
-  growDuration: 1
-  shrinkDuration: 1
+  growDuration: 5
+  shrinkDuration: 5
   isGrowing: 0
   animationCurve:
     serializedVersion: 2
