@@ -96,6 +96,7 @@ public class BounceArc : MonoBehaviour
     void MoveAlongArc()
     {
         m_Body.position = Vector3.MoveTowards(m_Body.position, positions[currentPosition], travelSpeed * g / m_Body.position.y  * Time.deltaTime);
+        m_Body.rotation = Quaternion.LookRotation(positions[currentPosition] - transform.position, Vector3.up);
 
         if (m_Body.position == positions[currentPosition])
         {

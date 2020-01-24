@@ -148,7 +148,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -10958
+  m_CachedInstanceID: -100844
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -219,10 +219,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7329060436889987831}
     m_Modifications:
-    - target: {fileID: 195182, guid: 3464ac11686f806428c3048c02d66b5d, type: 3}
-      propertyPath: m_Name
-      value: Vision
-      objectReference: {fileID: 0}
     - target: {fileID: 431866, guid: 3464ac11686f806428c3048c02d66b5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -266,6 +262,10 @@ PrefabInstance:
     - target: {fileID: 431866, guid: 3464ac11686f806428c3048c02d66b5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195182, guid: 3464ac11686f806428c3048c02d66b5d, type: 3}
+      propertyPath: m_Name
+      value: Vision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3464ac11686f806428c3048c02d66b5d, type: 3}

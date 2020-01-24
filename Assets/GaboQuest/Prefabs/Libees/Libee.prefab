@@ -441,45 +441,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyLayerID: 30
   travelSpeed: 8
-  height: 12
+  height: 15
   resolution: 60
   minRadius: 3
   maxRadius: 5
   landingRadius: 0
   circlePosition: 3
-  speedCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 3.2452831
-      outSlope: 3.2452831
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.12621568
-    - serializedVersion: 3
-      time: 0.4951841
-      value: 0.50201523
-      inSlope: 0.00876421
-      outSlope: 0.00876421
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 1
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 3.2986336
-      outSlope: 3.2986336
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.23936118
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!120 &652874711
 LineRenderer:
   m_ObjectHideFlags: 0
