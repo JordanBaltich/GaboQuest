@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 267593654}
   - component: {fileID: 267593653}
   - component: {fileID: 267593652}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: TestDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,9 +413,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 3
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!23 &267593653
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -476,6 +476,36 @@ Transform:
   - {fileID: 436979877}
   m_Father: {fileID: 0}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &316899464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 316899465}
+  m_Layer: 0
+  m_Name: LibeeSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &316899465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316899464}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 494661353}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &323575294
 GameObject:
@@ -672,7 +702,6 @@ GameObject:
   - component: {fileID: 436979877}
   - component: {fileID: 436979880}
   - component: {fileID: 436979879}
-  - component: {fileID: 436979878}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -694,19 +723,6 @@ Transform:
   m_Father: {fileID: 267593655}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &436979878
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436979876}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &436979879
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -797,6 +813,7 @@ GameObject:
   - component: {fileID: 494661352}
   - component: {fileID: 494661351}
   - component: {fileID: 494661350}
+  - component: {fileID: 494661354}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -876,9 +893,26 @@ Transform:
   m_LocalScale: {x: 2, y: 1.5, z: 2}
   m_Children:
   - {fileID: 811900150}
+  - {fileID: 316899465}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &494661354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494661349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4456dfc322fcfdf4e87435f8a02bb458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LibeePrefab: {fileID: 7464787531361463914, guid: 37dbf3b6c16bddc46844126608161080,
+    type: 3}
+  shotForce: 35
+  shotOrigin: {fileID: 316899465}
 --- !u!1 &518640385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,7 +1378,7 @@ GameObject:
   - component: {fileID: 811900152}
   - component: {fileID: 811900151}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
