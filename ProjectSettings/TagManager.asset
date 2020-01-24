@@ -35,12 +35,12 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Health
+  - Ground
+  - Hazard
+  - Libee
+  - Enemy
+  - Player
   m_SortingLayers:
   - name: Default
     uniqueID: 0
