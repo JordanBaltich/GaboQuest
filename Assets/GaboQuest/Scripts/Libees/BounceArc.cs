@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BounceArc : MonoBehaviour
 {
-    [SerializeField] int EnemyLayerID;
+    [SerializeField] int EnemyLayerID, GroundLayerID;
 
     LineRenderer lr;
     Rigidbody m_Body;
@@ -51,9 +51,28 @@ public class BounceArc : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.layer == EnemyLayerID)
+    //    {
+    //        m_Body.velocity = Vector3.zero;
+    //        m_Body.isKinematic = true;
+    //        ArcStartPosition = transform.position;
+
+    //        FindArcPoints();
+    //        DrawQuadraticCurve();
+           
+    //    }
+
+    //    if (other.gameObject.layer == GroundLayerID)
+    //    {
+    //        m_Body.isKinematic = false;
+    //    }
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.layer == EnemyLayerID)
+        if (collision.gameObject.layer == EnemyLayerID)
         {
             m_Body.velocity = Vector3.zero;
             m_Body.isKinematic = true;
@@ -61,7 +80,12 @@ public class BounceArc : MonoBehaviour
 
             FindArcPoints();
             DrawQuadraticCurve();
-           
+
+        }
+
+        if (collision.gameObject.layer == GroundLayerID)
+        {
+            m_Body.isKinematic = false;
         }
     }
 
