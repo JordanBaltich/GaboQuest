@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Green
-  - Kid
-  - Car
+  - Normal
+  - Fire
+  - Water
+  - Grass
   layers:
   - Default
   - TransparentFX
