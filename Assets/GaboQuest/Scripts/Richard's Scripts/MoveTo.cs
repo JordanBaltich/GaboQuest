@@ -9,16 +9,20 @@ public class MoveTo : MonoBehaviour
     public Vector3 dir;
     public Vector3 distanceDir;
     [Range(1, 50)]
-    public float speed;
+    public float firstSpeed;
+    [Range(1, 50)]
+    public float secondSpeed;
     [Range (1, 100)]
     public float chaseSpeed;
     [Range(1, 5)]
-    public float positionThreshold;
+    public float firstPositionThreshold;
+    [Range(1, 5)]
+    public float secondPositionThreshold;
 
     public bool flipLookDir;
     public bool moving;
     public bool looking;
-    void Update()
+    void FixedUpdate()
     {
         if (destination != null)
         {
@@ -32,14 +36,19 @@ public class MoveTo : MonoBehaviour
         Vector3 lerpDir = Vector3.Lerp(transform.position, dir, chaseSpeed);
         distanceDir = new Vector3(lerpDir.x, 0f, lerpDir.z);
 
-        if (Vector3.Distance(transform.position, destination.position) >= positionThreshold)
+        if (Vector3.Distance(transform.position, destination.position) >= firstPositionThreshold)
         {
             if (moving)
             {
-                transform.position += distanceDir * Time.deltaTime * speed;
+                transform.position += distanceDir * Time.smoothDeltaTime * firstSpeed;
+                if (Vector3.Distance(transform.position, destination.position) >= firstPositionThreshold)
+                {
+                    transform.position += distanceDir * Time.smoothDeltaTime * secondSpeed;
+
+                }
             }
 
-            if (looking)
+                if (looking)
             {
                 if (flipLookDir)
                 {
