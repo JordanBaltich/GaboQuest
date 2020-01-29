@@ -75,8 +75,10 @@ public class BounceArc : MonoBehaviour
         if (collision.gameObject.layer == EnemyLayerID)
         {
             m_Body.velocity = Vector3.zero;
+            m_Body.rotation = Quaternion.Euler(Vector3.zero);
             m_Body.isKinematic = true;
-            ArcStartPosition = transform.position;
+            ArcStartPosition = new Vector3(collision.gameObject.transform.position.x, 0, collision.gameObject.transform.position.z); 
+           // ArcStartPosition = collision.gameObject.transform.position;
 
             FindArcPoints();
             DrawQuadraticCurve();
@@ -94,6 +96,11 @@ public class BounceArc : MonoBehaviour
         if (m_Body.isKinematic)
         {
             MoveAlongArc();
+        }
+
+        if (currentPosition == positions.Length - 1)
+        {
+            m_Body.isKinematic = false;
         }
     }
 
@@ -148,10 +155,12 @@ public class BounceArc : MonoBehaviour
     {     
         float angle = (float)Random.Range((int)0, (int)12) * Mathf.PI * 2 / 12;
         float radius = Random.Range(minRadius, maxRadius);
-        Vector3 landPos = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * radius;
+        Vector3 circlePos = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * radius;
 
-        print(radius);
-        
+        Vector3 landPos = ArcStartPosition + circlePos;
+        landPos.y = FindGroundLevel(landPos);
+
+        print(landPos.y);
         return landPos;
     }
 
@@ -175,5 +184,25 @@ public class BounceArc : MonoBehaviour
         p += tt * p2;
 
         return p;
+    }
+
+    float FindGroundLevel(Vector3 point)
+    {
+        float currentGroundLevel;
+        RaycastHit hit;
+
+        if ((Physics.Raycast(point + (Vector3.up * g) , Vector3.down, out hit, Mathf.Infinity, GroundLayerID)))
+        {
+            
+            currentGroundLevel = hit.collider.ClosestPoint(point).y;
+            Debug.DrawRay(point, Vector3.down, Color.red, 1f);
+        }
+        else
+        {
+            Debug.DrawRay(point, Vector3.down, Color.red);
+            currentGroundLevel = 0;
+        }
+
+        return currentGroundLevel;
     }
 }

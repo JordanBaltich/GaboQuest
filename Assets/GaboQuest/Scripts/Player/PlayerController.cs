@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -88,5 +88,16 @@ public class PlayerController : MonoBehaviour
         }
 
         return direction;
+    }
+
+    public bool GroundCheck()
+    {
+        RaycastHit hit;
+
+        if ((Physics.Raycast(transform.position, Vector3.down, out hit, GetComponent<CapsuleCollider>().height / 2, LayerMask.GetMask("Ground"))))
+        {
+            return true;
+        }
+        else return false;
     }
 }

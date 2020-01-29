@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 9048703606349471481}
   - component: {fileID: -4640262312582943142}
   - component: {fileID: 652874711}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Libee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyLayerID: 30
-  GroundLayerID: 0
+  GroundLayerID: 27
   travelSpeed: 8
   height: 15
   resolution: 60
