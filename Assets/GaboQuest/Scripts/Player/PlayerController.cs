@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject libee;
+
     Rigidbody m_Body;
+    Animator m_StateMachine;
 
     PlayerMotor m_Motor;
     Health m_Health;
+    Shoot m_Shoot;
+
     Vector3 direction;
+
 
     [SerializeField] private int hazardLayerID, healthID;
 
@@ -17,7 +23,9 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         m_Body = GetComponent<Rigidbody>();
+        m_StateMachine = GetComponent<Animator>();
 
+        m_Shoot = GetComponent<Shoot>();
         m_Motor = GetComponent<PlayerMotor>();
         m_Health = GetComponent<Health>();
     }
@@ -31,32 +39,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-       
+        if (Input.GetButton("Jump"))
+        {
+            m_StateMachine.SetBool("isShooting" ,true);
+
+        }
+        if (Input.GetButtonUp("Jump"))
+        {
+            m_StateMachine.SetBool("isShooting", false);
+
+        }
+
     }
 
     private void FixedUpdate()
     {
-        //convert direction from Vector2 to Vector3
-        Vector3 moveDirection = new Vector3(Direction().x, 0, Direction().y);
-
-        //accelerate when input direction is past given threshold, rotate towards input direction
-        if (Direction().sqrMagnitude > 0.15f || Direction().sqrMagnitude < -0.15f)
-        {
-            m_Body.velocity = moveDirection * m_Motor.Accelerate();
-
-            m_Body.rotation = Quaternion.LookRotation((moveDirection * rotationSpeed * Time.deltaTime));
-        }
-        else
-        {
-            // decelerate when no input is given
-            m_Motor.Decelerate();
-            if (m_Body.velocity.sqrMagnitude > 0.15f)
-            {
-                m_Body.velocity = moveDirection * m_Motor.Decelerate();
-            }
-
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -77,7 +75,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    Vector2 Direction()
+    public Vector2 Direction()
     {
         float hor = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");

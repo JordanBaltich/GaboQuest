@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 8956041398418869255}
   - component: {fileID: 8956041398418869254}
   - component: {fileID: 8956041398418869259}
+  - component: {fileID: 3797857769291508754}
   - component: {fileID: 8956041398418869258}
   - component: {fileID: 8956041398418869253}
   m_Layer: 31
@@ -205,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0407dff6141ea4795ba8960d0bd064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  libee: {fileID: 7464787531361463914, guid: 37dbf3b6c16bddc46844126608161080, type: 3}
   hazardLayerID: 28
   healthID: 26
   rotationSpeed: 0.5
@@ -240,6 +242,21 @@ MonoBehaviour:
   currentHealth: 0
   InvulTime: 1
   invulnerable: 0
+--- !u!114 &3797857769291508754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8956041398418869249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae658c4cb4add54eb68eb2f00f61f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 3
+  shotForce: 20
+  bulletSpawn: {fileID: 8956041398353320097}
 --- !u!54 &8956041398418869258
 Rigidbody:
   m_ObjectHideFlags: 0
