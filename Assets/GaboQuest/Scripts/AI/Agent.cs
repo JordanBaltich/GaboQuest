@@ -10,8 +10,8 @@ public class Agent : MonoBehaviour
     internal Blackboard blackboard;
     internal NavMeshAgent m_navAgent;
 
-    GameObject[] waypointTransform;
-    int currentWaypointIndex = 0;
+    internal GameObject[] waypointTransform;
+    internal int currentWaypointIndex = 0;
     bool incrementingWaypoint; //determines if next waypoint goes up or down the next on the array
 
     public bool cyclicPatrol;
@@ -75,6 +75,10 @@ public class Agent : MonoBehaviour
         m_navAgent.SetDestination(waypointTransform[currentWaypointIndex].transform.position);
     }
 
+    public void GoToWaypoint()
+    {
+        m_navAgent.SetDestination(waypointTransform[currentWaypointIndex].transform.position);
+    }
 
     internal void ResetAgent()
     {
