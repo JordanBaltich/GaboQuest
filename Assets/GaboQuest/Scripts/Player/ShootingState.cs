@@ -23,7 +23,7 @@ public class ShootingState : StateMachineBehaviour
         Vector3 moveDirection = new Vector3(m_Controller.Direction().x, 0, m_Controller.Direction().y);
 
         m_Body.rotation = Quaternion.LookRotation((moveDirection * m_Controller.rotationSpeed * Time.deltaTime));
-        m_Shoot.StartShooting(m_Controller.libee);
+        m_Shoot.StartShooting(m_Controller.m_LibeeSorter.Normal);
       
     }
 

@@ -23,7 +23,8 @@ public class MovingState : StateMachineBehaviour
         //accelerate when input direction is past given threshold, rotate towards input direction
         if (m_Controller.Direction().sqrMagnitude > 0.15f || m_Controller.Direction().sqrMagnitude < -0.15f)
         {
-            m_Body.velocity = moveDirection * m_Motor.Accelerate();
+
+            m_Body.MovePosition(animator.transform.position + moveDirection * m_Motor.Accelerate() * Time.fixedDeltaTime);
 
             m_Body.rotation = Quaternion.LookRotation((moveDirection * m_Controller.rotationSpeed * Time.deltaTime));
         }
@@ -33,7 +34,7 @@ public class MovingState : StateMachineBehaviour
             m_Motor.Decelerate();
             if (m_Body.velocity.sqrMagnitude > 0.15f)
             {
-                m_Body.velocity = moveDirection * m_Motor.Decelerate();
+                m_Body.MovePosition(animator.transform.position + moveDirection * m_Motor.Decelerate() * Time.fixedDeltaTime);
             }
 
         }

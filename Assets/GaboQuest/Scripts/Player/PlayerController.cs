@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject libee;
+    public SortSelectLibee m_LibeeSorter;
 
     Rigidbody m_Body;
     Animator m_StateMachine;
+    
+
 
     PlayerMotor m_Motor;
     Health m_Health;
@@ -16,7 +19,7 @@ public class PlayerController : MonoBehaviour
     Vector3 direction;
 
 
-    [SerializeField] private int hazardLayerID, healthID;
+    [SerializeField] private int hazardLayerID, healthID, libeeLayerID;
 
     public float rotationSpeed;
 
@@ -63,6 +66,23 @@ public class PlayerController : MonoBehaviour
         {
             m_Health.Heal(1);
             Destroy(other.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!m_StateMachine.GetBool("isShooting"))
+        {
+            if (collision.gameObject.layer == libeeLayerID)
+            {
+                Rigidbody libeeBody = collision.gameObject.GetComponent<Rigidbody>();
+                collision.gameObject.transform.position = m_LibeeSorter.CapturedLibees.position;
+                collision.gameObject.transform.parent = m_LibeeSorter.CapturedLibees;
+
+                libeeBody.isKinematic = true;
+                libeeBody.useGravity = false;
+                m_LibeeSorter.SortLibee();
+            }
         }
     }
 
