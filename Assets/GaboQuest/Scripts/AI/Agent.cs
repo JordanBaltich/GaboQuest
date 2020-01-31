@@ -18,7 +18,7 @@ public class Agent : MonoBehaviour
 
     #region Status Variables
 
-    internal IntVar stamina, focus;
+    internal IntVar health, stamina, focus;
     internal BoolVar resting, distracted;
 
     internal float staminaDepletionFrequency, focusDepletionFrequency, staminaRegainFrequency, focusRegainFrequency;

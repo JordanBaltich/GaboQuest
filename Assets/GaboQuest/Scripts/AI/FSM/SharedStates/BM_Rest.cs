@@ -2,49 +2,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using BehaviourMachine;
+using System;
 
 public class BM_Rest : StateBehaviour
 {
     Agent m_agent;
 
-    public float IdleMinTime;
-    public Vector2 IdleTimeAddRange;
-    public float idleTime;
+    IntVar stamina;
 
-    // Called when the state is enabled
-    void OnEnable () {
-		Debug.Log("Started *State*");
+    void OnEnable()
+    {
+        Debug.Log("Started *Rest*");
 
-        m_agent = GetComponent<Agent>();
-
-        StartCoroutine(StartIdling());
-	}
-
+        Setup();
+        m_agent.m_navAgent.isStopped = true;
+        StartCoroutine(RegenerateStamina());
+    }
 
     // Called when the state is disabled
-    void OnDisable () {
-		Debug.Log("Stopped *State*");
-	}
-	
-    void DetermineIdleTime()
+    void OnDisable()
     {
-        if (idleTime == 0)
-            idleTime = IdleMinTime + Random.Range(IdleTimeAddRange.x, IdleTimeAddRange.y);
-        else
-            return;
-    }
+        Debug.Log("Stopped *Rest*");
 
-    private IEnumerator StartIdling()
-    {
-        DetermineIdleTime();
-
-        m_agent.m_navAgent.isStopped = true;
-        yield return new WaitForSeconds(idleTime);
+        StopAllCoroutines();
         m_agent.m_navAgent.isStopped = false;
 
-        SendEvent("ResumePatrol");
-        SendEvent("ResumeWandering");
+        m_agent.resting.Value = false;
     }
+
+    void Setup()
+    {
+        m_agent = GetComponent<Agent>();
+        stamina = blackboard.GetIntVar("Stamina");
+
+        m_agent.resting.Value = true;
+    }
+
+    private IEnumerator RegenerateStamina()
+    {
+        while (enabled)
+        {
+            if (stamina.Value >= 100)
+                break;
+
+            stamina.Value++;
+
+            yield return new WaitForSeconds(m_agent.agentProperties.StaminaRegenerationRate);
+        }
+        SendEvent("RegainedEnergy");
+    }
+
+
 }
 
 

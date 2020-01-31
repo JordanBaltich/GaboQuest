@@ -59,6 +59,8 @@ public class AgentProperties : ScriptableObject
     public int PatrolWait = 2;
     #endregion Behaviour
 
-
-
+    #region RegenerationRate
+    [Range(0.1f, 3)]
+    public float StaminaRegenerationRate;
+    #endregion RegenerationRate
 }

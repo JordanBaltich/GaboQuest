@@ -5,8 +5,11 @@ using BehaviourMachine;
 
 public class BM_Attack : StateBehaviour
 {
-	// Called when the state is enabled
-	void OnEnable () {
+    Agent m_agent;
+    GameObjectVar Target;
+
+    // Called when the state is enabled
+    void OnEnable () {
 		Debug.Log("Started Attack");
 	}
  
@@ -15,10 +18,18 @@ public class BM_Attack : StateBehaviour
 		Debug.Log("Stopped Attack");
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    void Setup()
+    {
+
+    }
+
+    void DamageTarget(GameObject DamageableObject)
+    {
+        ITakeDamage Damageable = DamageableObject.GetComponent<ITakeDamage>();
+        
+        Damageable?.TakeDamage(1);
+    }
 }
 
 
