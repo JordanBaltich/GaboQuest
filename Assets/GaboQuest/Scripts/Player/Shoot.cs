@@ -9,7 +9,9 @@ public class Shoot : MonoBehaviour
     [SerializeField] Transform bulletSpawn;
 
     IEnumerator routine;
-    
+
+    float waitTime = 0;
+
     public void StartShooting(List<Transform> bullets)
     {
         if (routine == null)
@@ -19,12 +21,19 @@ public class Shoot : MonoBehaviour
         }
     }
 
+    public void StopShooting()
+    {
+        if (routine != null)
+        {
+            StopCoroutine(routine);
+            routine = null;
+        }
+    }
 
     IEnumerator FireBullet(List<Transform> bullets)
     {
         float timeBetweenShots = 1f / fireRate;
 
-        //GameObject newBullet = Instantiate(bulletPrefab, bulletSpawn.position + bulletSpawn.forward, bulletSpawn.rotation);
         while (bullets.Count > 0)
         {
             Rigidbody bulletBody = bullets[bullets.Count -1].GetComponent<Rigidbody>();
@@ -32,14 +41,14 @@ public class Shoot : MonoBehaviour
             bullets[bullets.Count - 1].transform.position = bulletSpawn.position;
             bullets[bullets.Count - 1].transform.rotation = bulletSpawn.rotation;
 
-            bulletBody.isKinematic = false;
             bulletBody.useGravity = true;
             bulletBody.AddForce(bulletSpawn.transform.forward * shotForce, ForceMode.Impulse);
             bullets.Remove(bullets[bullets.Count - 1]);
 
             yield return new WaitForSeconds(timeBetweenShots);
+            
         }
 
-        routine = null;
+        //routine = null;
     }
 }

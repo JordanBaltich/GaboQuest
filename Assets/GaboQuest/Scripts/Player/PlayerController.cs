@@ -10,14 +10,12 @@ public class PlayerController : MonoBehaviour
     Rigidbody m_Body;
     Animator m_StateMachine;
     
-
-
     PlayerMotor m_Motor;
     Health m_Health;
     Shoot m_Shoot;
 
     Vector3 direction;
-
+    public Vector3 lastHeldDirection;
 
     [SerializeField] private int hazardLayerID, healthID, libeeLayerID;
 
@@ -79,8 +77,9 @@ public class PlayerController : MonoBehaviour
                 collision.gameObject.transform.position = m_LibeeSorter.CapturedLibees.position;
                 collision.gameObject.transform.parent = m_LibeeSorter.CapturedLibees;
 
-                libeeBody.isKinematic = true;
+                //libeeBody.isKinematic = true;
                 libeeBody.useGravity = false;
+                libeeBody.velocity = Vector3.zero;
                 m_LibeeSorter.SortLibee();
             }
         }
