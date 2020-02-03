@@ -3,40 +3,24 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+
+  tags:
+  - Normal
+  - Fire
+  - Water
+  - Grass
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Health
+  - Ground
+  - Hazard
+  - Libee
+  - Enemy
+  - Player
   m_SortingLayers:
   - name: Default
     uniqueID: 0
