@@ -101,6 +101,7 @@ public class BounceArc : MonoBehaviour
         if (currentPosition == positions.Length - 1)
         {
             m_Body.isKinematic = false;
+            currentPosition = 0;
         }
     }
 

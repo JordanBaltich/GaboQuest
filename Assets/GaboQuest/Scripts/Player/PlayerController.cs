@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody m_Body;
     Animator m_StateMachine;
-    
+    GrowShrinkMechanic m_GrowMechanic;
+
     PlayerMotor m_Motor;
     Health m_Health;
     Shoot m_Shoot;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         m_Shoot = GetComponent<Shoot>();
         m_Motor = GetComponent<PlayerMotor>();
         m_Health = GetComponent<Health>();
+        m_GrowMechanic = GetComponent<GrowShrinkMechanic>();
     }
 
     // Start is called before the first frame update
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             m_StateMachine.SetBool("isShooting" ,true);
 
+            StartCoroutine(m_GrowMechanic.Shrink(m_LibeeSorter.Normal.Count));
         }
         if (Input.GetButtonUp("Jump"))
         {
@@ -55,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -73,6 +76,8 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.gameObject.layer == libeeLayerID)
             {
+                m_GrowMechanic.currentScale = transform.localScale;
+               
                 Rigidbody libeeBody = collision.gameObject.GetComponent<Rigidbody>();
                 collision.gameObject.transform.position = m_LibeeSorter.CapturedLibees.position;
                 collision.gameObject.transform.parent = m_LibeeSorter.CapturedLibees;
@@ -81,6 +86,7 @@ public class PlayerController : MonoBehaviour
                 libeeBody.useGravity = false;
                 libeeBody.velocity = Vector3.zero;
                 m_LibeeSorter.SortLibee();
+                StartCoroutine(m_GrowMechanic.Grow(m_LibeeSorter.Normal.Count));
             }
         }
     }

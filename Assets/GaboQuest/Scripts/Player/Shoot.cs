@@ -44,6 +44,7 @@ public class Shoot : MonoBehaviour
             bulletBody.useGravity = true;
             bulletBody.AddForce(bulletSpawn.transform.forward * shotForce, ForceMode.Impulse);
             bullets.Remove(bullets[bullets.Count - 1]);
+          
 
             yield return new WaitForSeconds(timeBetweenShots);
             
