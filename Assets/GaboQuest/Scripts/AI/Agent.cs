@@ -29,7 +29,7 @@ public class Agent : MonoBehaviour
     private void Awake()
     {
         AgentSetup();
-        StartCoroutine(DepleteEnergy());
+        //StartCoroutine(DepleteEnergy());
     }
 
     void AgentSetup()

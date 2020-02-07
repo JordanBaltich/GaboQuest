@@ -41,7 +41,7 @@ public class BM_Idle : StateBehaviour
         DetermineIdleTime();
 
         m_agent.m_navAgent.isStopped = true;
-        yield return new WaitForSeconds(idleTime);
+        yield return new WaitForSeconds(m_agent.agentProperties.PatrolWait);
         m_agent.m_navAgent.isStopped = false;
 
         SendEvent("ResumePatrol");

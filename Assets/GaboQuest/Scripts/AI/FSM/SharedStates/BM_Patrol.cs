@@ -6,10 +6,10 @@ using System;
 
 public class BM_Patrol : StateBehaviour
 {
-    Agent m_agent;
+    PatrolPoints m_patrolpoints;
 
     float sqrDistanceToDestination;
-    public float distanceToArrive;
+    public float distanceToArrive = 1.3f;
     float sqrDistanceToArrive;
 
     Vector3Var destination;
@@ -23,7 +23,7 @@ public class BM_Patrol : StateBehaviour
 		Debug.Log("Started Patrol");
 
         Setup();
-        m_agent.GoToWaypoint();
+        m_patrolpoints.WalkToWaypoint();
 
         StartCoroutine(CheckForEnemy());
         StartCoroutine(CheckDistanceFromWaypoint());
@@ -41,21 +41,29 @@ public class BM_Patrol : StateBehaviour
 
     private void Setup()
     {
-        m_agent = GetComponent<Agent>();
+        m_patrolpoints = GetComponent<PatrolPoints>();
         target = blackboard.GetGameObjectVar("Threat");
-        targetWaypoint.Value = m_agent.waypointTransform[m_agent.currentWaypointIndex];
+        destination = blackboard.GetVector3Var("Destination");
+
+        targetWaypoint = blackboard.GetGameObjectVar("TargetWaypoint");
+        targetWaypoint.Value = m_patrolpoints.waypoints[m_patrolpoints.waypointIndex];
+        destination.Value = targetDestination();
 
         sqrDistanceToArrive = distanceToArrive * distanceToArrive;
 
-        m_agent.ResetAgent();
+        m_patrolpoints.ResetAgent();
 
         updateDistanceToDestination();
-
     }
 
     private void updateDistanceToDestination()
     {
-        sqrDistanceToDestination = (m_agent.waypointTransform[m_agent.currentWaypointIndex].transform.position - transform.position).sqrMagnitude;
+        sqrDistanceToDestination = (targetDestination() - transform.position).sqrMagnitude;
+    }
+
+    private Vector3 targetDestination()
+    {
+        return targetWaypoint.Value.transform.position;
     }
 
     IEnumerator CheckForEnemy()
@@ -74,12 +82,14 @@ public class BM_Patrol : StateBehaviour
     {
         while (enabled)
         {
+            print(sqrDistanceToDestination);
+
             //increment waypoint if distance is reached
             if (sqrDistanceToDestination < sqrDistanceToArrive)
             {
                 //cyclic patrol
-                m_agent.currentWaypointIndex = (m_agent.currentWaypointIndex + 1) % m_agent.waypointTransform.Length;
-                destination.Value = m_agent.waypointTransform[m_agent.currentWaypointIndex].transform.position;
+                m_patrolpoints.waypointIndex = (m_patrolpoints.waypointIndex + 1) % m_patrolpoints.waypoints.Count;
+                destination.Value = targetDestination();
 
                 SendEvent("Idling");
 
