@@ -3,6 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+
   tags:
   - Normal
   - Fire
@@ -12,29 +13,9 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
   - Water
   - UI
-  - 
-  - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - Health
   - Ground
   - Hazard
