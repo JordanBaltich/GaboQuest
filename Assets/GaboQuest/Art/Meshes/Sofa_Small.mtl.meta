@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/GaboQuest/Prefabs/Enemy/Pfb_Enemy.prefab.meta
-guid: d9d353aaf1ac680439efc60c9bc8973d
-PrefabImporter:
-=======
 guid: fd08e483e6af9fb46aad569aac0aeead
 DefaultImporter:
->>>>>>> master:Assets/GaboQuest/Art/Meshes/Sofa_Small.mtl.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

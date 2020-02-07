@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/GaboQuest/Scripts/AI/AI_Types.meta
-guid: bdcab2ee831f0b34ba2e94cc953c77ee
-=======
 guid: 7a8d149b6f6220348a1592d34ed3e31c
->>>>>>> master:Assets/GaboQuest/Scenes/Tests/Combat.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
