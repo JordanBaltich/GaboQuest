@@ -48,13 +48,13 @@ public class GrowShrinkMechanic : MonoBehaviour
         maxScale = Vector3.one + Vector3.one * (growAmount * currentLibees);
         float time = 0;
 
-        while (time < growDuration)
+        while (time <= growDuration)
         {
             float percent = time / growDuration;
             time += Time.deltaTime;
 
             //// calculate the current scale of the square using the percent and animation curve
-            Vector3 newScale = Vector3.Lerp(currentScale, maxScale, animationCurve.Evaluate(percent));
+            Vector3 newScale = Vector3.LerpUnclamped(currentScale, maxScale, animationCurve.Evaluate(percent));
             transform.localScale = newScale;
 
             yield return null;
@@ -72,13 +72,13 @@ public class GrowShrinkMechanic : MonoBehaviour
 
         float time = 0;
 
-        while (time < shrinkDuration)
+        while (time <= shrinkDuration)
         {
             float percent = time / growDuration;
             time += Time.deltaTime;
 
             //// calculate the current scale of the square using the percent and animation curve
-            Vector3 newScale = Vector3.Lerp(currentScale, minScale, animationCurve.Evaluate(percent));
+            Vector3 newScale = Vector3.LerpUnclamped(currentScale, minScale, animationCurve.Evaluate(percent));
             transform.localScale = newScale;
 
             yield return null;

@@ -344,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7464787531361463914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4720647322975859493}
@@ -441,6 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyLayerID: 30
   GroundLayerID: 27
+  PlayerLayerID: 31
   travelSpeed: 8
   height: 15
   resolution: 60
@@ -448,6 +449,8 @@ MonoBehaviour:
   maxRadius: 5
   landingRadius: 0
   circlePosition: 3
+  LandingTarget: {fileID: 2031320377262353341, guid: c8a75e9b2afed344f9a2b06a7b9565d1,
+    type: 3}
 --- !u!120 &652874711
 LineRenderer:
   m_ObjectHideFlags: 0

@@ -27,9 +27,14 @@ public class ShootingState : StateMachineBehaviour
         //convert direction from Vector2 to Vector3
         moveDirection = new Vector3(m_Controller.Direction().x, 0, m_Controller.Direction().y);
 
-        m_Body.rotation = Quaternion.LookRotation((moveDirection * m_Controller.rotationSpeed * Time.deltaTime));
+        //accelerate when input direction is past given threshold, rotate towards input direction
+        if (m_Controller.Direction().sqrMagnitude > 0.15f || m_Controller.Direction().sqrMagnitude < -0.15f)
+        {
+            m_Body.rotation = Quaternion.LookRotation((moveDirection * m_Controller.rotationSpeed * Time.deltaTime));
 
-        m_Shoot.StartShooting(m_Controller.m_LibeeSorter.Normal);
+        }
+        
+            m_Shoot.StartShooting(m_Controller.m_LibeeSorter.Normal);
       
     }
 

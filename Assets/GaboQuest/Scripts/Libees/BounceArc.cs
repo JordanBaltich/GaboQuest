@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BounceArc : MonoBehaviour
 {
-    [SerializeField] int EnemyLayerID, GroundLayerID;
+    [SerializeField] int EnemyLayerID, GroundLayerID, PlayerLayerID;
 
     LineRenderer lr;
     Rigidbody m_Body;
@@ -20,6 +20,8 @@ public class BounceArc : MonoBehaviour
 
     [Range(0, 12)]
     [SerializeField] private int circlePosition;
+    [SerializeField] GameObject LandingTarget;
+    GameObject currentLandingTarget;
 
     Vector3[] positions;
 
@@ -51,6 +53,10 @@ public class BounceArc : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+    }
+
     //private void OnTriggerEnter(Collider other)
     //{
     //    if (other.gameObject.layer == EnemyLayerID)
@@ -61,7 +67,7 @@ public class BounceArc : MonoBehaviour
 
     //        FindArcPoints();
     //        DrawQuadraticCurve();
-           
+
     //    }
 
     //    if (other.gameObject.layer == GroundLayerID)
@@ -83,11 +89,22 @@ public class BounceArc : MonoBehaviour
             FindArcPoints();
             DrawQuadraticCurve();
 
+           currentLandingTarget = Instantiate(LandingTarget, p2 + (Vector3.up / 2), Quaternion.identity);
+
         }
 
         if (collision.gameObject.layer == GroundLayerID)
         {
             m_Body.isKinematic = false;
+            currentPosition = 0;
+            Destroy(currentLandingTarget);
+        }
+
+        if (collision.gameObject.layer == PlayerLayerID)
+        {
+            m_Body.isKinematic = false;
+            currentPosition = 0;
+            Destroy(currentLandingTarget);
         }
     }
 
@@ -102,6 +119,7 @@ public class BounceArc : MonoBehaviour
         {
             m_Body.isKinematic = false;
             currentPosition = 0;
+            Destroy(currentLandingTarget);
         }
     }
 
@@ -161,7 +179,6 @@ public class BounceArc : MonoBehaviour
         Vector3 landPos = ArcStartPosition + circlePos;
         landPos.y = FindGroundLevel(landPos);
 
-        print(landPos.y);
         return landPos;
     }
 
@@ -190,19 +207,32 @@ public class BounceArc : MonoBehaviour
     float FindGroundLevel(Vector3 point)
     {
         float currentGroundLevel;
+        //RaycastHit[] hits;
+        //hits = Physics.RaycastAll(point + (Vector3.up * g), Vector3.down, 100.0F);
+
+        //for (int i = 0; i < hits.Length; i++)
+        //{
+        //    RaycastHit hit = hits[i];
+
+
+        //}
+
+
         RaycastHit hit;
 
-        if ((Physics.Raycast(point + (Vector3.up * g) , Vector3.down, out hit, Mathf.Infinity, GroundLayerID)))
+        if ((Physics.Raycast(point + (Physics.gravity * -1), Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Ground"))))
         {
-            
-            currentGroundLevel = hit.collider.ClosestPoint(point).y;
+
+            currentGroundLevel = hit.point.y;
             Debug.DrawRay(point, Vector3.down, Color.red, 1f);
+            print(currentGroundLevel + " , " + hit.collider.name);
         }
         else
         {
             Debug.DrawRay(point, Vector3.down, Color.red);
             currentGroundLevel = 0;
         }
+
 
         return currentGroundLevel;
     }

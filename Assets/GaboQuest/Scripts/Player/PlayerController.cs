@@ -82,8 +82,8 @@ public class PlayerController : MonoBehaviour
                 collision.gameObject.transform.position = m_LibeeSorter.CapturedLibees.position;
                 collision.gameObject.transform.parent = m_LibeeSorter.CapturedLibees;
 
-                //libeeBody.isKinematic = true;
-                libeeBody.useGravity = false;
+               //libeeBody.isKinematic = true;
+               libeeBody.useGravity = false;
                 libeeBody.velocity = Vector3.zero;
                 m_LibeeSorter.SortLibee();
                 StartCoroutine(m_GrowMechanic.Grow(m_LibeeSorter.Normal.Count));
