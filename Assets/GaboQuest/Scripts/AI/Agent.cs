@@ -29,7 +29,6 @@ public class Agent : MonoBehaviour
     private void Awake()
     {
         AgentSetup();
-        //StartCoroutine(DepleteEnergy());
     }
 
     void AgentSetup()
@@ -92,23 +91,5 @@ public class Agent : MonoBehaviour
         m_navAgent.speed = agentProperties.RunSpeed;
         m_navAgent.angularSpeed = agentProperties.RunAngularSpeed;
         m_navAgent.acceleration = agentProperties.RunAcceleration;
-    }
-
-
-    IEnumerator DepleteEnergy()
-    {
-        while (true)
-        {
-            if (stamina.Value > 0 && !resting)
-            {
-                stamina.Value--;
-                yield return new WaitForSeconds(staminaDepletionFrequency);
-            }
-            else
-            {
-                blackboard.SendEvent("Tired");
-            }
-            yield return null;
-        }
     }
 }

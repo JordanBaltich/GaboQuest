@@ -33,16 +33,14 @@ public class BM_Patrol : StateBehaviour
 
     // Called when the state is disabled
     void OnDisable () {
-
 		Debug.Log("Stopped Patrol");
-
         StopAllCoroutines();
 	}
 
     private void Setup()
     {
         m_patrolpoints = GetComponent<PatrolPoints>();
-        target = blackboard.GetGameObjectVar("Threat");
+        target = blackboard.GetGameObjectVar("Target");
         destination = blackboard.GetVector3Var("Destination");
 
         targetWaypoint = blackboard.GetGameObjectVar("TargetWaypoint");

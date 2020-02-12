@@ -7,9 +7,6 @@ public class BM_Idle : StateBehaviour
 {
     Agent m_agent;
 
-    public float IdleMinTime;
-    public Vector2 IdleTimeAddRange;
-    public float idleTime;
 
     // Called when the state is enabled
     void OnEnable()
@@ -28,24 +25,14 @@ public class BM_Idle : StateBehaviour
         Debug.Log("Stopped *Idle*");
     }
 
-    void DetermineIdleTime()
-    {
-        if (idleTime == 0)
-            idleTime = IdleMinTime + Random.Range(IdleTimeAddRange.x, IdleTimeAddRange.y);
-        else
-            return;
-    }
-
     private IEnumerator StartIdling()
     {
-        DetermineIdleTime();
 
         m_agent.m_navAgent.isStopped = true;
         yield return new WaitForSeconds(m_agent.agentProperties.PatrolWait);
         m_agent.m_navAgent.isStopped = false;
 
         SendEvent("ResumePatrol");
-        SendEvent("ResumeWandering");
     }
 }
 

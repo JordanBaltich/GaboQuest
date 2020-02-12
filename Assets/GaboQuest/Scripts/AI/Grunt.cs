@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class Grunt : Agent, ITakeDamage
 {
-    
-
-    // Start is called before the first frame update
-    void Start()
+    internal void ChargeToLocation(Vector3 position)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        m_navAgent.angularSpeed = 30f;
+        m_navAgent.speed = 10f;
+        m_navAgent.SetDestination(position);
     }
 
     public void TakeDamage(int damage)

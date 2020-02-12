@@ -21,7 +21,7 @@ public class Vision2 : MonoBehaviour
     private void Awake()
     {
         blackboard = GetComponentInParent<Blackboard>();
-        currentTarget = blackboard.GetGameObjectVar("Threat");
+        currentTarget = blackboard.GetGameObjectVar("Target");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,12 +29,6 @@ public class Vision2 : MonoBehaviour
         if (targetList.Contains(other.tag))
             ObjectsInVolume.Add(other.gameObject);
 
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (ObjectsInVolume.Contains(other.gameObject))
-            ObjectsInVolume.Remove(other.gameObject);
     }
 
     private void Update()

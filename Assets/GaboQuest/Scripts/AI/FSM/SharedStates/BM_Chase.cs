@@ -76,12 +76,6 @@ public class BM_Chase : StateBehaviour
                 yield return null;
             }
 
-            if (target.Value == null)
-            {
-                SendEvent("LostEnemy");
-                yield return null;
-            }
-
             yield return new WaitForSeconds(ticks);
         }
     }
