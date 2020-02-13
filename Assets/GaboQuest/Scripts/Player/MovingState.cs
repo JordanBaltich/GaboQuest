@@ -17,6 +17,8 @@ public class MovingState : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        m_Motor.MaxSpeedValue((float)m_Controller.m_LibeeSorter.Normal.Count);
+
         //convert direction from Vector2 to Vector3
         Vector3 moveDirection = new Vector3(m_Controller.Direction().x, 0, m_Controller.Direction().y);
 

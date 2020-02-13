@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Rewired;
 
 public class PlayerController : MonoBehaviour
 {
+    public Player player;
+
     public GameObject libee;
     public SortSelectLibee m_LibeeSorter;
 
@@ -31,6 +34,8 @@ public class PlayerController : MonoBehaviour
         m_Motor = GetComponent<PlayerMotor>();
         m_Health = GetComponent<Health>();
         m_GrowMechanic = GetComponent<GrowShrinkMechanic>();
+
+        player = ReInput.players.GetPlayer(0);
     }
 
     // Start is called before the first frame update
@@ -42,13 +47,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Jump"))
+        if (player.GetButton("Aim"))
         {
             m_StateMachine.SetBool("isShooting" ,true);
 
             StartCoroutine(m_GrowMechanic.Shrink(m_LibeeSorter.Normal.Count));
         }
-        if (Input.GetButtonUp("Jump"))
+        if (player.GetButtonUp("Aim")) 
         {
             m_StateMachine.SetBool("isShooting", false);
 
@@ -82,8 +87,7 @@ public class PlayerController : MonoBehaviour
                 collision.gameObject.transform.position = m_LibeeSorter.CapturedLibees.position;
                 collision.gameObject.transform.parent = m_LibeeSorter.CapturedLibees;
 
-               //libeeBody.isKinematic = true;
-               libeeBody.useGravity = false;
+                libeeBody.useGravity = false;
                 libeeBody.velocity = Vector3.zero;
                 m_LibeeSorter.SortLibee();
                 StartCoroutine(m_GrowMechanic.Grow(m_LibeeSorter.Normal.Count));
@@ -102,8 +106,8 @@ public class PlayerController : MonoBehaviour
 
     public Vector2 Direction()
     {
-        float hor = Input.GetAxis("Horizontal");
-        float vert = Input.GetAxis("Vertical");
+        float hor = player.GetAxis("L_Horizontal");
+        float vert = player.GetAxis("L_Vertical");
 
         Vector2 direction = new Vector2(hor, vert);
 

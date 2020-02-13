@@ -33,9 +33,13 @@ public class ShootingState : StateMachineBehaviour
             m_Body.rotation = Quaternion.LookRotation((moveDirection * m_Controller.rotationSpeed * Time.deltaTime));
 
         }
-        
+
+        if (m_Controller.player.GetButton("Shoot"))
+        {
             m_Shoot.StartShooting(m_Controller.m_LibeeSorter.Normal);
-      
+
+        }
+
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
