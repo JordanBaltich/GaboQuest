@@ -1,25 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Rewired;
 
 public class PlayerController : MonoBehaviour
 {
+    public Player player;
+
+    public GameObject libee;
+    public SortSelectLibee m_LibeeSorter;
+
     Rigidbody m_Body;
+    Animator m_StateMachine;
+    GrowShrinkMechanic m_GrowMechanic;
 
     PlayerMotor m_Motor;
     Health m_Health;
-    Vector3 direction;
+    Shoot m_Shoot;
 
-    [SerializeField] private int hazardLayerID, healthID;
+    Vector3 direction;
+    public Vector3 lastHeldDirection;
+
+    [SerializeField] private int hazardLayerID, healthID, libeeLayerID;
 
     public float rotationSpeed;
 
     private void Awake()
     {
         m_Body = GetComponent<Rigidbody>();
+        m_StateMachine = GetComponent<Animator>();
 
+        m_Shoot = GetComponent<Shoot>();
         m_Motor = GetComponent<PlayerMotor>();
         m_Health = GetComponent<Health>();
+        m_GrowMechanic = GetComponent<GrowShrinkMechanic>();
+
+        player = ReInput.players.GetPlayer(0);
     }
 
     // Start is called before the first frame update
@@ -31,32 +47,23 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-       
+        if (player.GetButton("Aim"))
+        {
+            m_StateMachine.SetBool("isShooting" ,true);
+
+            StartCoroutine(m_GrowMechanic.Shrink(m_LibeeSorter.Normal.Count));
+        }
+        if (player.GetButtonUp("Aim")) 
+        {
+            m_StateMachine.SetBool("isShooting", false);
+
+        }
+
     }
 
     private void FixedUpdate()
     {
-        //convert direction from Vector2 to Vector3
-        Vector3 moveDirection = new Vector3(Direction().x, 0, Direction().y);
-
-        //accelerate when input direction is past given threshold, rotate towards input direction
-        if (Direction().sqrMagnitude > 0.15f || Direction().sqrMagnitude < -0.15f)
-        {
-            m_Body.velocity = moveDirection * m_Motor.Accelerate();
-
-            m_Body.rotation = Quaternion.LookRotation((moveDirection * rotationSpeed * Time.deltaTime));
-        }
-        else
-        {
-            // decelerate when no input is given
-            m_Motor.Decelerate();
-            if (m_Body.velocity.sqrMagnitude > 0.15f)
-            {
-                m_Body.velocity = moveDirection * m_Motor.Decelerate();
-            }
-
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -65,6 +72,26 @@ public class PlayerController : MonoBehaviour
         {
             m_Health.Heal(1);
             Destroy(other.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!m_StateMachine.GetBool("isShooting"))
+        {
+            if (collision.gameObject.layer == libeeLayerID)
+            {
+                m_GrowMechanic.currentScale = transform.localScale;
+               
+                Rigidbody libeeBody = collision.gameObject.GetComponent<Rigidbody>();
+                collision.gameObject.transform.position = m_LibeeSorter.CapturedLibees.position;
+                collision.gameObject.transform.parent = m_LibeeSorter.CapturedLibees;
+
+                libeeBody.useGravity = false;
+                libeeBody.velocity = Vector3.zero;
+                m_LibeeSorter.SortLibee();
+                StartCoroutine(m_GrowMechanic.Grow(m_LibeeSorter.Normal.Count));
+            }
         }
     }
 
@@ -77,10 +104,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    Vector2 Direction()
+    public Vector2 Direction()
     {
-        float hor = Input.GetAxis("Horizontal");
-        float vert = Input.GetAxis("Vertical");
+        float hor = player.GetAxis("L_Horizontal");
+        float vert = player.GetAxis("L_Vertical");
 
         Vector2 direction = new Vector2(hor, vert);
 
@@ -90,5 +117,16 @@ public class PlayerController : MonoBehaviour
         }
 
         return direction;
+    }
+
+    public bool GroundCheck()
+    {
+        RaycastHit hit;
+
+        if ((Physics.Raycast(transform.position, Vector3.down, out hit, GetComponent<CapsuleCollider>().height / 2, LayerMask.GetMask("Ground"))))
+        {
+            return true;
+        }
+        else return false;
     }
 }

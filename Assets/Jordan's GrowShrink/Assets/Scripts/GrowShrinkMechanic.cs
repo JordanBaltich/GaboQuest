@@ -10,6 +10,9 @@ public class GrowShrinkMechanic : MonoBehaviour
 
     Vector3 maxScale;
     Vector3 minScale;
+    public Vector3 currentScale;
+
+    [SerializeField] float growAmount;
 
     public float growDuration;
     public float shrinkDuration;
@@ -22,15 +25,17 @@ public class GrowShrinkMechanic : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // Create Vector3s for both the min and max sizes
-        maxScale = new Vector3(maxSize, maxSize, maxSize);
-        minScale = new Vector3(minSize, minSize, minSize);
-        // set the scale of the object to the minimum scale
-        transform.localScale = minScale;
-        // initially, the object should grow
-        isGrowing = true;
+        //// Create Vector3s for both the min and max sizes
+        //maxScale = new Vector3(maxSize, maxSize, maxSize);
+        //minScale = new Vector3(minSize, minSize, minSize);
+        //// set the scale of the object to the minimum scale
+        //transform.localScale = minScale;
+        //// initially, the object should grow
+        //isGrowing = true;
 
         ResetTimer();
+
+        currentScale = transform.localScale;
     }
 
     void ResetTimer()
@@ -38,58 +43,48 @@ public class GrowShrinkMechanic : MonoBehaviour
         startTimer = Time.time;
     }
 
-    void Grow()
+    public IEnumerator Grow(float currentLibees)
     {
-        // calculate the time elapsed since the timer was started
-        float timeElapsed = Time.time - startTimer;
-        // get the percent of time elapsed in relation to the grow duration
-        float percent = timeElapsed / growDuration;
+        maxScale = Vector3.one + Vector3.one * (growAmount * currentLibees);
+        float time = 0;
 
-        // if the timer has elapsed, switch states
-        if (percent > 1)
+        while (time <= growDuration)
         {
-            transform.localScale = maxScale;
-            isGrowing = false;
-            ResetTimer();
-            return;
+            float percent = time / growDuration;
+            time += Time.deltaTime;
+
+            //// calculate the current scale of the square using the percent and animation curve
+            Vector3 newScale = Vector3.LerpUnclamped(currentScale, maxScale, animationCurve.Evaluate(percent));
+            transform.localScale = newScale;
+
+            yield return null;
         }
 
-        // calculate the current scale of the square using the percent and animation curve
-        Vector3 newScale = Vector3.Lerp(minScale, maxScale, animationCurve.Evaluate(percent));
-        transform.localScale = newScale;
+        currentScale = transform.localScale;
+        ResetTimer();
+       
     }
 
 
-    void Shrink()
+    public IEnumerator Shrink(float currentLibees)
     {
-        // get the percent of time elapsed in relation to the shrink duration
-        float percent = (Time.time - startTimer) / shrinkDuration;
+        minScale = Vector3.one + Vector3.one * (growAmount * currentLibees);
 
-        // if the timer has elapsed, switch states
-        if (percent > 1)
+        float time = 0;
+
+        while (time <= shrinkDuration)
         {
-            transform.localScale = minScale;
-            isGrowing = true;
-            ResetTimer();
-            return;
+            float percent = time / growDuration;
+            time += Time.deltaTime;
+
+            //// calculate the current scale of the square using the percent and animation curve
+            Vector3 newScale = Vector3.LerpUnclamped(currentScale, minScale, animationCurve.Evaluate(percent));
+            transform.localScale = newScale;
+
+            yield return null;
         }
 
-        // calculate the current scale of the square using the percent and animation curve
-        Vector3 newScale = Vector3.Lerp(maxScale, minScale, animationCurve.Evaluate(percent));
-        transform.localScale = newScale;
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (isGrowing)
-        {
-            Grow();
-        }
-        else if (!isGrowing)
-        {
-            Shrink();
-        }
+        currentScale = transform.localScale;
+        ResetTimer();
     }
 }

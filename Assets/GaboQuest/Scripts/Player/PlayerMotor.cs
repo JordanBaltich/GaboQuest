@@ -8,12 +8,14 @@ public class PlayerMotor : MonoBehaviour
     public float speed;
     public float acceleration;
     public float deceleration;
+    public float maxWithWeight;
+    public float currentSpeed;
 
     public float Accelerate()
     {
         speed += acceleration * Time.deltaTime;
 
-        speed = Mathf.Clamp(speed, 0, maxSpeed);
+        speed = Mathf.Clamp(speed, 0, maxWithWeight);
 
         return speed;
     }
@@ -22,8 +24,24 @@ public class PlayerMotor : MonoBehaviour
     {
         speed -= acceleration * Time.deltaTime;
 
-        speed = Mathf.Clamp(speed, 0, maxSpeed);
+        speed = Mathf.Clamp(speed, 0, maxWithWeight);
 
         return speed;
+    }
+
+    public float MaxSpeedValue(float LibeeCount)
+    {
+        if (LibeeCount > 0)
+        {
+            maxWithWeight = maxSpeed - Mathf.Pow(LibeeCount, 0.5f);
+            print(maxWithWeight);
+            return maxWithWeight;
+        }
+        else
+        {
+            maxWithWeight = maxSpeed;
+            return maxWithWeight;
+        }
+      
     }
 }
