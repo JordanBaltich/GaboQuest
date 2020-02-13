@@ -15,6 +15,7 @@ TagManager:
   - Ignore Raycast
   - Water
   - UI
+  - PostProcessing
   - Health
   - Ground
   - Hazard
