@@ -14,7 +14,7 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] Transform bulletSpawn;
 
-    bool canFire;
+    bool canFire = true;
 
     IEnumerator routine;
     IEnumerator chargeRoutine;
@@ -69,14 +69,15 @@ public class Shoot : MonoBehaviour
             Debug.Log(shotForce);
             yield return null;
         }
-
-        canFire = true;
+     
     }
 
     IEnumerator FireRate()
     {
+        canFire = false;
         float timeBetweenShots = 1f / fireRate;
         yield return new WaitForSeconds(timeBetweenShots);
+        canFire = true;
     }
 
     public void FireBullet(List<Transform> bullets)
