@@ -11,6 +11,8 @@ public class BM_Charge : StateBehaviour
     Grunt m_Grunt;
     GameObjectVar m_Target;
 
+    Vector3 targetDestination;
+
     public float distanceToArrive;
     private float sqrDistanceToArrive;
     public float chargeDistance;
@@ -18,8 +20,7 @@ public class BM_Charge : StateBehaviour
 	// Called when the state is enabled
 	void OnEnable () {
 		Debug.Log("Started *Charge*");
-        m_Grunt = GetComponent<Grunt>();
-        m_Target = blackboard.GetGameObjectVar("Target");
+        
         StartCoroutine(Charge());
 	}
  
@@ -31,6 +32,9 @@ public class BM_Charge : StateBehaviour
 
     void Setup()
     {
+        m_Grunt = GetComponent<Grunt>();
+        m_Target = blackboard.GetGameObjectVar("Target");
+
         sqrDistanceToArrive = distanceToArrive* distanceToArrive;
     }
 
@@ -41,14 +45,16 @@ public class BM_Charge : StateBehaviour
 
     IEnumerator Charge()
     {
-        Vector3 targetDestination = (m_Target.Value.transform.position - transform.position).normalized * chargeDistance;
-
-        print("Charging");
-
         hitbox.SetActive(true);
+
+        targetDestination = (m_Target.Value.transform.position - transform.position).normalized * chargeDistance;
+        print("target transform: " + m_Target.Value.transform.position);
+
+        print("my transform: "+ transform.position);
+
         m_Grunt.ChargeToLocation(targetDestination);
 
-        if(sqrDistanceFromTarget() < sqrDistanceToArrive)
+        if (sqrDistanceFromTarget() < sqrDistanceToArrive)
         {
             hitbox.SetActive(false);
             SendEvent("ResumeChase");
@@ -57,8 +63,8 @@ public class BM_Charge : StateBehaviour
         yield return new WaitForSeconds(maxChargeTime);
         hitbox.SetActive(false);
         SendEvent("Idling");
+        
     }
-
 }
 
 

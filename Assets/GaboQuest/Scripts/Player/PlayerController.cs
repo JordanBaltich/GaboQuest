@@ -51,11 +51,8 @@ public class PlayerController : MonoBehaviour
         }
         if (player.GetButtonUp("Aim")) 
         {
-
             m_StateMachine.SetBool("isShooting", false);
-
         }
-
     }
 
     private void OnTriggerEnter(Collider other)

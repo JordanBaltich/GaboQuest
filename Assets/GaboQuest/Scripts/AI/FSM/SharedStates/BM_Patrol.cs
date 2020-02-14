@@ -83,8 +83,6 @@ public class BM_Patrol : StateBehaviour
         {
             m_agent.m_navAgent.SetDestination(destination);
 
-            print(sqrDistanceToDestination);
-
             //increment waypoint if distance is reached
             if (sqrDistanceToDestination < sqrDistanceToArrive)
             {
