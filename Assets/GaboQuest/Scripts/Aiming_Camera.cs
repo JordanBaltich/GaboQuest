@@ -5,6 +5,7 @@ using UnityEngine;
 public class Aiming_Camera : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject PlayerFront;
     public float aimSensitivity;
 
     public float aimRadius;
@@ -33,6 +34,7 @@ public class Aiming_Camera : MonoBehaviour
 
             if (aimMode == 1)
             {
+
                 gameObject.transform.position = new Vector3(Player.transform.position.x + DragPoint().x, 0f, Player.transform.position.z + DragPoint().z);
             }
             if (aimMode == 2)
@@ -47,7 +49,9 @@ public class Aiming_Camera : MonoBehaviour
         }
         else
         {
-            gameObject.transform.position = new Vector3(Player.transform.position.x, 0f, Player.transform.position.z);
+            //gameObject.transform.position = new Vector3(Player.transform.position.x, 0f, Player.transform.position.z);
+            gameObject.transform.position = new Vector3(PlayerFront.transform.position.x, 0f,  PlayerFront.transform.position.z);
+
             Cursor.lockState = CursorLockMode.Locked;
         }
             
@@ -69,18 +73,3 @@ public class Aiming_Camera : MonoBehaviour
     }
 }
 
-//mouseDir = new Vector3(CursorPos.x, 0f, CursorPos.z);
-//CursorPos = new Vector3((mouseDir.x), 0f, (mouseDir.z - Screen.height / 2));
-
-//mouseDir = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0f, Input.mousePosition.y));
-//new Vector3 (Screen.width / 2, 0f , Screen.height / 2);
-//Player.transform.position
-
-//aimDir = new Vector3(Mathf.Clamp(aimDir.x,-1f,1f), 0f, Mathf.Clamp(aimDir.z, -1f, 1f));
-
-//mouseDir = Vector3.Magnitude(mouseDir);
-//Camera.main.ViewportToWorldPoint(mouseDir);    
-//Vector3.Magnitude
-
-//Screen.width/2,Screen.height / 2;
-//Camera.main.ScreenToWorldPoint()
