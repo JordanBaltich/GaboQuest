@@ -36,15 +36,22 @@ public class ShootingState : StateMachineBehaviour
 
         if (m_Controller.player.GetButton("Shoot"))
         {
-            m_Shoot.StartShooting(m_Controller.m_LibeeSorter.Normal);
+            m_Shoot.StartCharge(m_Controller.player);
 
         }
 
+        if (m_Controller.player.GetButtonUp("Shoot"))
+        {
+            m_Shoot.FireBullet(m_Controller.m_LibeeSorter.Normal);
+            m_Shoot.StopCharge();
+
+        }
     }
+
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        m_Shoot.StopShooting();
+        
     }
 
 
