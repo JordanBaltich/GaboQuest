@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
         {
             // decelerate when no input is given
             m_Motor.Decelerate();
-            if (m_Body.velocity.sqrMagnitude > 0.15f)
+            if (m_Body.velocity.sqrMagnitude > 0.15f || m_Body.velocity.sqrMagnitude < -0.15f)
             {
                 m_Body.velocity = new Vector3(moveDirection.x * m_Motor.Decelerate(), m_Body.velocity.y, moveDirection.z * m_Motor.Decelerate());
 
