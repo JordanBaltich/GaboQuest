@@ -7,6 +7,7 @@ using System;
 public class BM_Patrol : StateBehaviour
 {
     PatrolPoints m_patrolpoints;
+    Agent m_agent;
 
     float sqrDistanceToDestination;
     public float distanceToArrive = 1.3f;
@@ -23,10 +24,9 @@ public class BM_Patrol : StateBehaviour
 		Debug.Log("Started Patrol");
 
         Setup();
-        m_patrolpoints.WalkToWaypoint();
-
         StartCoroutine(CheckForEnemy());
         StartCoroutine(CheckDistanceFromWaypoint());
+        
     }
 
     
@@ -40,6 +40,7 @@ public class BM_Patrol : StateBehaviour
     private void Setup()
     {
         m_patrolpoints = GetComponent<PatrolPoints>();
+        m_agent = GetComponent<Agent>();
         target = blackboard.GetGameObjectVar("Target");
         destination = blackboard.GetVector3Var("Destination");
 
@@ -80,6 +81,8 @@ public class BM_Patrol : StateBehaviour
     {
         while (enabled)
         {
+            m_agent.m_navAgent.SetDestination(destination);
+
             print(sqrDistanceToDestination);
 
             //increment waypoint if distance is reached
@@ -98,7 +101,4 @@ public class BM_Patrol : StateBehaviour
             yield return new WaitForSeconds(.2f);
         }
     }
-
 }
-
-

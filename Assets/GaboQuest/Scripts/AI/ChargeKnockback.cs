@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChargeKnockback : MonoBehaviour
 {
     Transform parentObjectTransform;
+    InvulnerabilityTimer targetInvulnerability;
 
     public float pushbackForce;
 
@@ -20,12 +21,17 @@ public class ChargeKnockback : MonoBehaviour
     {
         if (other.tag == "Player" || other.tag == "Libee")
         {
+            targetInvulnerability = other.gameObject.GetComponent<InvulnerabilityTimer>();
+            if (targetInvulnerability.isVulnerable)
+            {
+                Rigidbody targetRigidbody = other.gameObject.GetComponent<Rigidbody>();
 
-            Rigidbody targetRigidbody = other.gameObject.GetComponent<Rigidbody>();
+                Vector3 KnockbackDirection = (other.gameObject.transform.position - parentObjectTransform.position).normalized;
 
-            Vector3 KnockbackDirection = (other.gameObject.transform.position - parentObjectTransform.position).normalized;
+                targetRigidbody.AddForce(KnockbackDirection * pushbackForce, ForceMode.Impulse);
 
-            targetRigidbody.AddForce(KnockbackDirection * pushbackForce, ForceMode.Impulse);
+                targetInvulnerability.StartInvulnerabilityTimer();
+            }
         }
     }
 

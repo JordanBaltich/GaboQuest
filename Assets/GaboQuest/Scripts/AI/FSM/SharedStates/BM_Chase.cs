@@ -41,7 +41,7 @@ public class BM_Chase : StateBehaviour
     void Setup()
     {
         m_agent = GetComponent<Agent>();
-        target = blackboard.GetGameObjectVar("Threat");
+        target = blackboard.GetGameObjectVar("Target");
         destination = blackboard.GetVector3Var("Destination");
         sqrDistanceToReachTarget = distanceToReachTarget * distanceToReachTarget;
 

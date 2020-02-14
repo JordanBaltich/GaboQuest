@@ -5,11 +5,14 @@ using BehaviourMachine;
 
 public class BM_Charge : StateBehaviour
 {
-    public float chargeTime;
-    public GameObject hitbox;
+    public float maxChargeTime;
+    [SerializeField]
+    private GameObject hitbox;
     Grunt m_Grunt;
     GameObjectVar m_Target;
 
+    public float distanceToArrive;
+    private float sqrDistanceToArrive;
     public float chargeDistance;
 
 	// Called when the state is enabled
@@ -26,15 +29,34 @@ public class BM_Charge : StateBehaviour
         StopAllCoroutines();
 	}
 
+    void Setup()
+    {
+        sqrDistanceToArrive = distanceToArrive* distanceToArrive;
+    }
+
+    float sqrDistanceFromTarget()
+    {
+        return (m_Target.transform.position - transform.position).sqrMagnitude;
+    }
 
     IEnumerator Charge()
     {
         Vector3 targetDestination = (m_Target.Value.transform.position - transform.position).normalized * chargeDistance;
 
+        print("Charging");
+
         hitbox.SetActive(true);
         m_Grunt.ChargeToLocation(targetDestination);
-        yield return new WaitForSeconds(chargeTime);
+
+        if(sqrDistanceFromTarget() < sqrDistanceToArrive)
+        {
+            hitbox.SetActive(false);
+            SendEvent("ResumeChase");
+        }
+
+        yield return new WaitForSeconds(maxChargeTime);
         hitbox.SetActive(false);
+        SendEvent("ResumeChase");
     }
 
 }
