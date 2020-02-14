@@ -63,7 +63,33 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        m_Motor.MaxSpeedValue((float)m_LibeeSorter.Normal.Count);
+
+        //convert direction from Vector2 to Vector3
+        Vector3 moveDirection = new Vector3(Direction().x, 0, Direction().y);
+
+        //accelerate when input direction is past given threshold, rotate towards input direction
+        if (Direction().sqrMagnitude > 0.15f || Direction().sqrMagnitude < -0.15f)
+        {
+            if (!m_StateMachine.GetBool("isShooting"))
+            {
+                m_Body.velocity = new Vector3(moveDirection.x * m_Motor.Accelerate(), m_Body.velocity.y, moveDirection.z * m_Motor.Accelerate());
+
+                m_Body.rotation = Quaternion.LookRotation((moveDirection * rotationSpeed * Time.deltaTime));
+            }
+
+        }
+        else
+        {
+            // decelerate when no input is given
+            m_Motor.Decelerate();
+            if (m_Body.velocity.sqrMagnitude > 0.15f)
+            {
+                m_Body.velocity = new Vector3(moveDirection.x * m_Motor.Decelerate(), m_Body.velocity.y, moveDirection.z * m_Motor.Decelerate());
+
+
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
