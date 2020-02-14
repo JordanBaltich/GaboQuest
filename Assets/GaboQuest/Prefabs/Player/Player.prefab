@@ -230,6 +230,8 @@ MonoBehaviour:
   speed: 0
   acceleration: 10
   deceleration: 6
+  maxWithWeight: 0
+  currentSpeed: 0
 --- !u!114 &8956041398418869259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,8 +260,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae658c4cb4add54eb68eb2f00f61f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chargeCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   fireRate: 3
   shotForce: 20
+  maxForce: 20
+  minForce: 40
+  chargeTime: 1
   bulletSpawn: {fileID: 8956041398353320097}
 --- !u!114 &6889844620024946207
 MonoBehaviour:
@@ -275,6 +286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSize: 0
   minSize: 0
+  currentScale: {x: 0, y: 0, z: 0}
+  growAmount: 0
   growDuration: 0
   shrinkDuration: 0
   isGrowing: 0

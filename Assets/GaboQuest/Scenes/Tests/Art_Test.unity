@@ -1723,7 +1723,7 @@ PrefabInstance:
     - target: {fileID: 8956041398418869252, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8956041398418869252, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
@@ -1767,8 +1767,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
       propertyPath: fireRate
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: chargeCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: minForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: maxForce
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797857769291508754, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: chargeTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6889844620024946207, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
@@ -2296,6 +2356,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095346120276760183, guid: a3788b1f361646b41967da2c8d45e436,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095346120276760183, guid: a3788b1f361646b41967da2c8d45e436,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095346120276760183, guid: a3788b1f361646b41967da2c8d45e436,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3212952854577739192, guid: a3788b1f361646b41967da2c8d45e436,
         type: 3}
@@ -2923,7 +2998,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1479343085 stripped
 Transform:
@@ -3680,7 +3755,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 135.12, y: 89.99999, z: 0}
 --- !u!1001 &1743488330
 PrefabInstance:

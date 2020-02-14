@@ -34,7 +34,7 @@ public class PlayerMotor : MonoBehaviour
         if (LibeeCount > 0)
         {
             maxWithWeight = maxSpeed - Mathf.Pow(LibeeCount, 0.5f);
-            print(maxWithWeight);
+
             return maxWithWeight;
         }
         else
