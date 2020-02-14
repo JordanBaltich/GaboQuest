@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/GaboQuest/Prefabs/Enemy.meta
+HEAD:Assets/GaboQuest/Prefabs/Enemy.meta
 guid: dfce190a787ba504f98b6f5e70a9e45c
-=======
 guid: 46ce8c546ab9c474492f2253de5c2e9a
->>>>>>> master:Assets/GaboQuest/Prefabs/Lighting.meta
+master:Assets/GaboQuest/Prefabs/Lighting.meta
+guid: 3ab73158a1a5e4d4494661725aadd815
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
