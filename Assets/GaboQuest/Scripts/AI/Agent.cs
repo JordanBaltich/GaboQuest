@@ -10,6 +10,10 @@ public class Agent : MonoBehaviour
     internal Blackboard blackboard;
     internal NavMeshAgent m_navAgent;
 
+    GameObjectVar m_target;
+    [SerializeField]
+    GameObject Player;
+
     internal GameObject[] waypointTransform;
     internal int currentWaypointIndex = 0;
     bool incrementingWaypoint; //determines if next waypoint goes up or down the next on the array
@@ -18,10 +22,8 @@ public class Agent : MonoBehaviour
 
     #region Status Variables
 
-    internal IntVar health, stamina, focus;
-    internal BoolVar resting, distracted;
-
-    internal float staminaDepletionFrequency, focusDepletionFrequency, staminaRegainFrequency, focusRegainFrequency;
+    internal IntVar health, stamina;
+    internal BoolVar resting;
 
     #endregion Status Variables
 
@@ -36,12 +38,13 @@ public class Agent : MonoBehaviour
         m_navAgent = GetComponent<NavMeshAgent>();
         blackboard = GetComponent<Blackboard>();
         stamina = blackboard.GetIntVar("Stamina");
-        distracted = blackboard.GetBoolVar("Distracted");
 
         m_navAgent.speed = agentProperties.Speed;
         m_navAgent.angularSpeed = agentProperties.AngularSpeed;
         m_navAgent.acceleration = agentProperties.Acceleration;
 
+        m_target = blackboard.GetGameObjectVar("Target");
+        
     }
 
     void setNextTargetDestination()
@@ -91,5 +94,10 @@ public class Agent : MonoBehaviour
         m_navAgent.speed = agentProperties.RunSpeed;
         m_navAgent.angularSpeed = agentProperties.RunAngularSpeed;
         m_navAgent.acceleration = agentProperties.RunAcceleration;
+    }
+
+    internal void setPlayerAsTarget()
+    {
+        m_target = Player;
     }
 }

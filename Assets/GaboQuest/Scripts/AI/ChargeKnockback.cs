@@ -25,10 +25,12 @@ public class ChargeKnockback : MonoBehaviour
             if (targetInvulnerability.isVulnerable)
             {
                 Rigidbody targetRigidbody = other.gameObject.GetComponent<Rigidbody>();
-
+                
                 Vector3 KnockbackDirection = (other.gameObject.transform.position - parentObjectTransform.position).normalized;
+                //KnockbackDirection = new Vector3(KnockbackDirection.x, other.gameObject.transform.position.y, KnockbackDirection.z);
 
-                targetRigidbody.AddForce(KnockbackDirection * pushbackForce, ForceMode.Impulse);
+                targetRigidbody.AddForce(new Vector3(KnockbackDirection.x * pushbackForce, 0, KnockbackDirection.z * pushbackForce), ForceMode.Impulse);
+
 
                 targetInvulnerability.StartInvulnerabilityTimer();
             }

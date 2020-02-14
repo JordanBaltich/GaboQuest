@@ -56,7 +56,7 @@ public class BM_Charge : StateBehaviour
 
         yield return new WaitForSeconds(maxChargeTime);
         hitbox.SetActive(false);
-        SendEvent("ResumeChase");
+        SendEvent("Idling");
     }
 
 }

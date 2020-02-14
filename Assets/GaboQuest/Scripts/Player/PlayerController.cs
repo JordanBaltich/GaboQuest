@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     Health m_Health;
     Vector3 direction;
 
+    internal bool CanMove = true;
+
     [SerializeField] private int hazardLayerID, healthID;
 
     public float rotationSpeed;
@@ -27,7 +29,8 @@ public class PlayerController : MonoBehaviour
         //convert direction from Vector2 to Vector3
         Vector3 moveDirection = new Vector3(Direction().x, 0, Direction().y);
 
-        //accelerate when input direction is past given threshold, rotate towards input direction
+        
+            //accelerate when input direction is past given threshold, rotate towards input direction
         if (Direction().sqrMagnitude > 0.15f || Direction().sqrMagnitude < -0.15f)
         {
             m_Body.velocity = moveDirection * m_Motor.Accelerate();
@@ -42,16 +45,16 @@ public class PlayerController : MonoBehaviour
             {
                 m_Body.velocity = moveDirection * m_Motor.Decelerate();
             }
-
         }
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == healthID)
         {
-            m_Health.Heal(1);
-            Destroy(other.gameObject);
+            //m_Health.Heal(1);
+            //Destroy(other.gameObject);
         }
     }
 

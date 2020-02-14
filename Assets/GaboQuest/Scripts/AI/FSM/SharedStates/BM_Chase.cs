@@ -79,8 +79,6 @@ public class BM_Chase : StateBehaviour
             yield return new WaitForSeconds(ticks);
         }
     }
-
-
 }
 
 
