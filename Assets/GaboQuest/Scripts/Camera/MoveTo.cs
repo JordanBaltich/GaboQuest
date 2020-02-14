@@ -65,10 +65,10 @@ public class MoveTo : MonoBehaviour
             if (moving)
             {
                 transform.position += distanceDir * Time.smoothDeltaTime * firstSpeed;
-                if (Vector3.Distance(transform.position, destination.position) >= firstPositionThreshold)
-                {
-                    transform.position += distanceDir * Time.smoothDeltaTime * secondSpeed;
-                }
+                //if (Vector3.Distance(transform.position, destination.position) >= secondPositionThreshold)
+                //{
+                //    transform.position += distanceDir * Time.smoothDeltaTime * secondSpeed;
+                //}
             }
 
                 if (looking)
