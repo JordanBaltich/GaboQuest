@@ -22,10 +22,9 @@ public class ChargeKnockback : MonoBehaviour
         if (other.tag == "Player" || other.tag == "Libee")
         {
             targetInvulnerability = other.gameObject.GetComponent<InvulnerabilityTimer>();
+
             if (targetInvulnerability.isVulnerable)
             {
-                print("pushing back");
-
                 Rigidbody targetRigidbody = other.gameObject.GetComponent<Rigidbody>();
                 
                 Vector3 KnockbackDirection = (other.gameObject.transform.position - parentObjectTransform.position).normalized;

@@ -20,7 +20,8 @@ public class BM_Charge : StateBehaviour
 	// Called when the state is enabled
 	void OnEnable () {
 		Debug.Log("Started *Charge*");
-        
+        Setup();
+
         StartCoroutine(Charge());
 	}
  
@@ -47,12 +48,12 @@ public class BM_Charge : StateBehaviour
     {
         hitbox.SetActive(true);
 
-        targetDestination = (m_Target.Value.transform.position - transform.position).normalized * chargeDistance;
-        print("target transform: " + m_Target.Value.transform.position);
-
-        print("my transform: "+ transform.position);
+        targetDestination = (m_Target.transform.position - transform.position).normalized * chargeDistance;
 
         m_Grunt.ChargeToLocation(targetDestination);
+
+
+        print(sqrDistanceFromTarget());
 
         if (sqrDistanceFromTarget() < sqrDistanceToArrive)
         {
@@ -63,7 +64,6 @@ public class BM_Charge : StateBehaviour
         yield return new WaitForSeconds(maxChargeTime);
         hitbox.SetActive(false);
         SendEvent("Idling");
-        
     }
 }
 
