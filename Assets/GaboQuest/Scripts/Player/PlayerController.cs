@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody m_Body;
     Animator m_StateMachine;
     GrowShrinkMechanic m_GrowMechanic;
-
+    PlayerTongue m_Tongue;
     PlayerMotor m_Motor;
     Health m_Health;
     Shoot m_Shoot;
@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         m_Motor = GetComponent<PlayerMotor>();
         m_Health = GetComponent<Health>();
         m_GrowMechanic = GetComponent<GrowShrinkMechanic>();
+        m_Tongue = GetComponentInChildren<PlayerTongue>();
 
         player = ReInput.players.GetPlayer(0);
     }
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_Tongue.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,6 +60,15 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        if (!m_StateMachine.GetBool("isShooting"))
+        {
+            if (player.GetButtonDown("Tongue"))
+            {
+                m_Tongue.gameObject.SetActive(true);
+                m_StateMachine.SetBool("isTongueOut", true);
+            }
+        }
+        
     }
 
     private void FixedUpdate()
@@ -81,6 +91,7 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.gameObject.layer == libeeLayerID)
             {
+                collision.gameObject.transform.parent = null;
                 m_GrowMechanic.currentScale = transform.localScale;
                
                 Rigidbody libeeBody = collision.gameObject.GetComponent<Rigidbody>();

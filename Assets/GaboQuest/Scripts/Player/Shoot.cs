@@ -85,12 +85,13 @@ public class Shoot : MonoBehaviour
         if (canFire && bullets.Count > 0)
         {
             Rigidbody bulletBody = bullets[bullets.Count - 1].GetComponent<Rigidbody>();
-            bullets[bullets.Count - 1].transform.parent = null;
+           
             bullets[bullets.Count - 1].transform.position = bulletSpawn.position;
             bullets[bullets.Count - 1].transform.rotation = bulletSpawn.rotation;
-
+            bullets[bullets.Count - 1].transform.parent = null;
             bulletBody.useGravity = true;
             bulletBody.AddForce(bulletSpawn.transform.forward * shotForce, ForceMode.Impulse);
+            bulletBody.transform.parent = null;
             bullets.Remove(bullets[bullets.Count - 1]);
  
             StartShotCooldown();

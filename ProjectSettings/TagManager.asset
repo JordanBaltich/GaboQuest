@@ -3,7 +3,6 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-
   tags:
   - Normal
   - Fire
@@ -13,15 +12,35 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
+  - 
   - Water
   - UI
-  - PostProcessing
-  - Health
-  - Ground
+  - 
+  - 
   - Hazard
   - Libee
   - Enemy
   - Player
+  - Tongue
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
