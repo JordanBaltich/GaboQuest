@@ -13,6 +13,9 @@ public class SortSelectLibee : MonoBehaviour
     public List<Transform> Water;
     public List<Transform> Grass;
 
+    public Transform DeadLibeeStorage;
+    public List<Transform> Dead;
+
     [SerializeField]
     public int[] LibeeCount;
 
@@ -20,6 +23,9 @@ public class SortSelectLibee : MonoBehaviour
     public GameObject UI_Fire;
     public GameObject UI_Water;
     public GameObject UI_Grass;
+
+  
+
     private void Awake()
     {
         LibeeCount = new int[4];
@@ -29,6 +35,15 @@ public class SortSelectLibee : MonoBehaviour
     void Update()
     {
         SelectLibees();
+    }
+
+    public void GatherDeadLibees(Transform DeadLibee)
+    {
+        DeadLibee.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        DeadLibee.GetComponent<Rigidbody>().useGravity = false;
+        DeadLibee.transform.position = DeadLibeeStorage.position;
+        DeadLibee.transform.parent = DeadLibeeStorage;
+        Dead.Add(DeadLibee);
     }
 
     public void SortLibee()

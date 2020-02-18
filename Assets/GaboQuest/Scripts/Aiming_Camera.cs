@@ -35,7 +35,7 @@ public class Aiming_Camera : MonoBehaviour
             if (aimMode == 1)
             {
 
-                gameObject.transform.position = new Vector3(Player.transform.position.x + DragPoint().x, 0f, Player.transform.position.z + DragPoint().z);
+                gameObject.transform.position = new Vector3(Player.transform.position.x + DragPoint().x, 0, Player.transform.position.z + DragPoint().z);
             }
             if (aimMode == 2)
             {

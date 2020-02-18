@@ -13,6 +13,8 @@ public class TongueState : StateMachineBehaviour
         m_Tongue = animator.GetComponentInChildren<PlayerTongue>();
 
         m_Tongue.StartCoroutine(m_Tongue.ShootTongue());
+
+        animator.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

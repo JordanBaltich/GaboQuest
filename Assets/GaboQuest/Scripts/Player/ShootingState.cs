@@ -24,15 +24,11 @@ public class ShootingState : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //convert direction from Vector2 to Vector3
-        moveDirection = new Vector3(m_Controller.Direction().x, 0, m_Controller.Direction().y);
 
-        //accelerate when input direction is past given threshold, rotate towards input direction
-        if (m_Controller.Direction().sqrMagnitude > 0.15f || m_Controller.Direction().sqrMagnitude < -0.15f)
-        {
-            m_Body.rotation = Quaternion.LookRotation((moveDirection * m_Controller.rotationSpeed * Time.deltaTime));
+        Vector3 Direction = m_Controller.AimPoint.position - animator.transform.position;
+        Vector3 LookPoint = new Vector3(Direction.x, 0, Direction.z);
 
-        }
+        m_Body.rotation = Quaternion.LookRotation(LookPoint.normalized, Vector3.up);
 
         if (m_Controller.player.GetButton("Shoot"))
         {
@@ -51,7 +47,7 @@ public class ShootingState : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+
     }
 
 

@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public GameObject libee;
     public SortSelectLibee m_LibeeSorter;
 
+    public Transform AimPoint;
+
     Rigidbody m_Body;
     Animator m_StateMachine;
     GrowShrinkMechanic m_GrowMechanic;
@@ -76,18 +78,22 @@ public class PlayerController : MonoBehaviour
     {
         m_Motor.MaxSpeedValue((float)m_LibeeSorter.Normal.Count);
 
+       
+    }
+
+    public void MovePlayer()
+    {
         //convert direction from Vector2 to Vector3
         Vector3 moveDirection = new Vector3(Direction().x, 0, Direction().y);
 
         //accelerate when input direction is past given threshold, rotate towards input direction
         if (Direction().sqrMagnitude > 0.15f || Direction().sqrMagnitude < -0.15f)
         {
-            if (!m_StateMachine.GetBool("isShooting"))
-            {
-                m_Body.velocity = new Vector3(moveDirection.x * m_Motor.Accelerate(), m_Body.velocity.y, moveDirection.z * m_Motor.Accelerate());
 
-                m_Body.rotation = Quaternion.LookRotation((moveDirection * rotationSpeed * Time.deltaTime));
-            }
+            m_Body.velocity = new Vector3(moveDirection.x * m_Motor.Accelerate(), m_Body.velocity.y, moveDirection.z * m_Motor.Accelerate());
+
+            m_Body.rotation = Quaternion.LookRotation((moveDirection * rotationSpeed * Time.deltaTime));
+
 
         }
         else
@@ -101,7 +107,6 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-
     }
 
     private void OnTriggerEnter(Collider other)
