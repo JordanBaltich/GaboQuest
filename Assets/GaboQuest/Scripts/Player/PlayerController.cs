@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     Vector3 direction;
     public Vector3 lastHeldDirection;
 
+    internal bool CanMove = true;
+
     [SerializeField] private int hazardLayerID, healthID, libeeLayerID;
 
     public float rotationSpeed;
@@ -57,7 +59,6 @@ public class PlayerController : MonoBehaviour
         if (player.GetButtonUp("Aim")) 
         {
             m_StateMachine.SetBool("isShooting", false);
-
         }
 
         if (!m_StateMachine.GetBool("isShooting"))
@@ -100,14 +101,15 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == healthID)
         {
-            m_Health.Heal(1);
-            Destroy(other.gameObject);
+            //m_Health.Heal(1);
+            //Destroy(other.gameObject);
         }
     }
 
