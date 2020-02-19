@@ -55,10 +55,6 @@ public class BM_Charge : StateBehaviour
 
         m_Grunt.ChargeToLocation(targetDestination);
 
-        Debug.DrawLine(transform.position, targetDestination, Color.red);
-
-        print(sqrDistanceFromTarget());
-
         yield return new WaitForSeconds(maxChargeTime);
         SendEvent("Idling");
     }
