@@ -69,6 +69,8 @@ public class BM_Chase : StateBehaviour
                 m_agent.m_navAgent.SetDestination(destination.Value);
             }
 
+            print("Square Distance To Target: " + sqrDistanceToTarget + ", Square distance To Reach Target: " + sqrDistanceToReachTarget);
+
 
             if (sqrDistanceToTarget < sqrDistanceToReachTarget)
             {
