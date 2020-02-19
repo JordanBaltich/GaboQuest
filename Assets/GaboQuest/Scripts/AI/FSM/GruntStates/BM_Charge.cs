@@ -20,8 +20,9 @@ public class BM_Charge : StateBehaviour
 	// Called when the state is enabled
 	void OnEnable () {
 		Debug.Log("Started *Charge*");
-        Setup();
+        hitbox.SetActive(true);
 
+        Setup();
         StartCoroutine(Charge());
 	}
  
@@ -29,14 +30,16 @@ public class BM_Charge : StateBehaviour
 	void OnDisable () {
 		Debug.Log("Stopped *Charge*");
         StopAllCoroutines();
-	}
+
+        hitbox.SetActive(false);
+    }
 
     void Setup()
     {
         m_Grunt = GetComponent<Grunt>();
         m_Target = blackboard.GetGameObjectVar("Target");
 
-        sqrDistanceToArrive = distanceToArrive* distanceToArrive;
+        sqrDistanceToArrive = distanceToArrive * distanceToArrive;
     }
 
     float sqrDistanceFromTarget()
@@ -46,23 +49,13 @@ public class BM_Charge : StateBehaviour
 
     IEnumerator Charge()
     {
-        hitbox.SetActive(true);
-
-        targetDestination = (m_Target.transform.position - transform.position).normalized * chargeDistance;
+        targetDestination = (m_Target.transform.position - transform.position).normalized;
+        targetDestination = new Vector3(targetDestination.x * chargeDistance, 0, targetDestination.z * chargeDistance);
+        targetDestination += transform.position;
 
         m_Grunt.ChargeToLocation(targetDestination);
 
-
-        print(sqrDistanceFromTarget());
-
-        if (sqrDistanceFromTarget() < sqrDistanceToArrive)
-        {
-            hitbox.SetActive(false);
-            SendEvent("ResumeChase");
-        }
-
         yield return new WaitForSeconds(maxChargeTime);
-        hitbox.SetActive(false);
         SendEvent("Idling");
     }
 }

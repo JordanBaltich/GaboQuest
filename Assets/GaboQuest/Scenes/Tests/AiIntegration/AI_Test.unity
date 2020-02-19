@@ -173,26 +173,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &71431439
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 71431437}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0676b7d61ca55de4f9c4ab7ea2c653c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 71431448}
-  m_Parent: {fileID: 71431449}
+  m_Parent: {fileID: 0}
   m_StateName: BM_Stunned
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: -60, y: 250}
   m_Transitions:
-  - m_Destination: {fileID: 71431442}
+  - m_Destination: {fileID: 0}
     m_EventID: 42786443
-  m_CachedInstanceID: 19560
+  m_CachedInstanceID: 22862
   StunTime: 0.5
 --- !u!114 &71431440
 MonoBehaviour:
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 634db10235c0241d6ad43433a106016d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
 --- !u!114 &71431449 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8395883984839685011, guid: d9d353aaf1ac680439efc60c9bc8973d,
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a27b962ddfa21461eb78fac1cb2f955f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
 --- !u!1 &218157323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,7 +1351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1623575483}
   CurrentLibeeIndex: 0
-  CapturedLibees: {fileID: 0}
+  CapturedLibees: {fileID: 677277055}
   Normal: []
   Fire: []
   Water: []
@@ -1371,7 +1371,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.7191095, y: 3.2199209, z: -11.948506}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 677277055}
   m_Father: {fileID: 1619577072}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1468,7 +1469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1349252442, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: m_CachedInstanceID
-      value: -27676
+      value: -19022
       objectReference: {fileID: 0}
     - target: {fileID: 1349252442, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: hitbox
@@ -1480,7 +1481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1349252442, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: chargeDistance
-      value: 4
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1349252442, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: distanceToArrive
@@ -1708,7 +1709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1940126739}
   m_Layer: 0
-  m_Name: Enemy1 (1)
+  m_Name: ChargeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

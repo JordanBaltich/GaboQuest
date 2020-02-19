@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/GaboQuest/Prefabs/Enemy/MeleeEnemy.prefab.meta
 guid: 2888aec53240e064380eb5659e8173c2
 PrefabImporter:
+=======
+guid: 5a8a0a204e719ab41afa92fe0df51fed
+NativeFormatImporter:
+>>>>>>> master:Assets/GaboQuest/Shaders/Outliner/OutlinePostProfile.asset.meta
   externalObjects: {}
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
