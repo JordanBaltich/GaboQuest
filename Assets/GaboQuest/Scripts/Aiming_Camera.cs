@@ -5,6 +5,7 @@ using UnityEngine;
 public class Aiming_Camera : MonoBehaviour
 {
     public GameObject Player;
+    PlayerController playerController;
     public GameObject PlayerFront;
     public float aimSensitivity;
 
@@ -18,6 +19,11 @@ public class Aiming_Camera : MonoBehaviour
     [Range (1,15)]
     public float aimMode2Speed;
 
+    private void Awake()
+    {
+        playerController = Player.GetComponent<PlayerController>();
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -28,7 +34,7 @@ public class Aiming_Camera : MonoBehaviour
     {
         Cursor.visible = false;
 
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (playerController.player.GetButton("Aim"))
         {
             Cursor.lockState = CursorLockMode.None;
 
@@ -39,10 +45,28 @@ public class Aiming_Camera : MonoBehaviour
             }
             if (aimMode == 2)
             {
-                if (Vector3.Distance(gameObject.transform.position, Player.transform.position) <= aimRadius)
-                    gameObject.transform.position += new Vector3(DragPoint().x, 0f, DragPoint().z) * Time.deltaTime * aimMode2Speed;
+                //if (Vector3.Distance(gameObject.transform.position, Player.transform.position) <= aimRadius)
+                //    gameObject.transform.position += new Vector3(Player.transform.position.x + DragPoint().x, 0f, Player.transform.position.z + DragPoint().z) * Time.deltaTime * aimMode2Speed;
+
+                Vector3 directon = transform.position - Player.transform.position;
+                float distance = directon.magnitude;
+
+                if (Mathf.Abs(distance) <= aimRadius)
+                {
+                    gameObject.transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(DragPoint().x, 0, DragPoint().z), aimMode2Speed * Time.deltaTime);
+                }
+                else if (Mathf.Abs(distance) > aimRadius)
+                {
+                    Vector3 fromPlayer = transform.position - Player.transform.position;
+                    fromPlayer *= aimRadius / Vector3.Distance(transform.position, Player.transform.position);
+                    transform.position = Player.transform.position + fromPlayer;
+                }
+                
+
+
+
             }
-            if(aimMode == 3)
+            if (aimMode == 3)
             {
                 gameObject.transform.position = new Vector3(Player.transform.position.x + DragPoint().x + DragPoint().x * Time.deltaTime * aimMode2Speed, 0f, Player.transform.position.z + DragPoint().z + DragPoint().z * Time.deltaTime * aimMode2Speed);
             }
@@ -59,13 +83,22 @@ public class Aiming_Camera : MonoBehaviour
     public Vector3 DragPoint()
     {
         // Adjusting mouse position to screen center
-        CursorPos = new Vector3((Input.mousePosition.x - Screen.width / 2), 0f, (Input.mousePosition.y - Screen.height/2));
-        
+        //CursorPos = new Vector3((Input.mousePosition.x - Screen.width / 2), 0f, (Input.mousePosition.y - Screen.height/2));
+
+        CursorPos = new Vector3((playerController.player.GetAxis("L_Horizontal")), 0f, (playerController.player.GetAxis("L_Vertical")));
+
+
+
         // Get percentage to screen
-        aimDir = new Vector3 (CursorPos.x / Screen.width, 0f, CursorPos.z / Screen.height);
+        //aimDir = new Vector3 (CursorPos.x / Screen.width, 0f, CursorPos.z / Screen.height);
+
+        aimDir = new Vector3(CursorPos.x , 0f, CursorPos.z);
+
         aimDir *= aimSensitivity;
-        clampedDir = new Vector3(Mathf.Clamp(aimDir.x, -aimRadius, aimRadius), 0f, Mathf.Clamp(aimDir.z, -aimRadius, aimRadius));
-        return Vector3.ClampMagnitude(clampedDir, aimRadius);
+
+        //clampedDir = new Vector3(Mathf.Clamp(aimDir.x, -aimRadius, aimRadius), 0f, Mathf.Clamp(aimDir.z, -aimRadius, aimRadius));
+        //return Vector3.ClampMagnitude(clampedDir, aimRadius);
+        return aimDir;
     }
     public void LookRotate()
     {

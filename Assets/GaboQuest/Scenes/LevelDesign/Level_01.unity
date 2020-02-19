@@ -377,6 +377,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rewired Input Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4959996329492130985, guid: dbfdb5eb0cb95804383f70c9c1041d29,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[2]._actionId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959996329492130985, guid: dbfdb5eb0cb95804383f70c9c1041d29,
+        type: 3}
+      propertyPath: _userData.mouseMaps.Array.data[0].actionElementMaps.Array.data[3]._actionId
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4959996329492130986, guid: dbfdb5eb0cb95804383f70c9c1041d29,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5856,6 +5866,21 @@ PrefabInstance:
         type: 3}
       propertyPath: aimRadius
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 811921299508171495, guid: 22279659c0fd09c4892342415f8d2fde,
+        type: 3}
+      propertyPath: aimMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 811921299508171495, guid: 22279659c0fd09c4892342415f8d2fde,
+        type: 3}
+      propertyPath: aimMode2Speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 811921299508171495, guid: 22279659c0fd09c4892342415f8d2fde,
+        type: 3}
+      propertyPath: aimSensitivity
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22279659c0fd09c4892342415f8d2fde, type: 3}
