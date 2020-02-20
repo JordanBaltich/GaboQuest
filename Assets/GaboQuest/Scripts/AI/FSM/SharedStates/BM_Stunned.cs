@@ -39,5 +39,3 @@ public class BM_Stunned : StateBehaviour
         SendEvent("ResumeChase");
     }
 }
-
-

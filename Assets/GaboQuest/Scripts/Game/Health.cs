@@ -49,6 +49,11 @@ public class Health : MonoBehaviour
         }
     }
 
+    void DestroyObject()
+    {
+        Destroy(gameObject);
+    }
+
     IEnumerator InvulnerableTimer()
     {
         invulnerable = true;
