@@ -9,12 +9,37 @@ public class MovingWalls : MonoBehaviour
 
     public List<GameObject> enemies;
 
+
+    public List<Health> enemyHealth;
+
+
+    private void Start()
+    {
+        AssignAllEnemiestoThisWall();
+        
+    }
+
+
+    void AssignAllEnemiestoThisWall()
+    {
+        foreach(GameObject enemy in enemies)
+        {
+            enemyHealth.Add(enemy.GetComponentInChildren<Health>());
+        }
+
+        foreach (Health enemy in enemyHealth)
+        {
+
+            enemy.movingWall = this;
+        }
+
+    }
+
+
     public void RemoveEnemy(GameObject enemy)
     {
         enemies.Remove(enemy);
         print(enemies.Count);
-
-        
     }
 
     private void Update()

@@ -1,12 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/GaboQuest/Prefabs/Environment/MovingWall.prefab.meta
-guid: 9ea23591dc519214e8c7d5de3bc2a638
-PrefabImporter:
-=======
-guid: 8baeb9798ad43624fb3ffa07b0af3d66
+guid: d8982f1c088177d40af5fc93b19757ee
 folderAsset: yes
 DefaultImporter:
->>>>>>> f10d7261e63f0789a22175aa5cd72d510c85bd4b:Assets/GaboQuest/Scenes/Tests/ArtTest.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class destroyObject : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField]
-    MovingWalls movingWall;
+    internal MovingWalls movingWall;
 
     private void Update()
     {
