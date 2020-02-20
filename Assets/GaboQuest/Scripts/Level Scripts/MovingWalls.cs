@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MovingWalls : MonoBehaviour
 {
+    public enum WallType
+    {
+        Pressure,
+        Enemy
+    }
+
     public GameObject startPos;
     public GameObject endPos;
 
@@ -12,10 +18,13 @@ public class MovingWalls : MonoBehaviour
 
     public List<Health> enemyHealth;
 
+    
+    public WallType wallType;
 
     private void Start()
     {
         AssignAllEnemiestoThisWall();
+
         
     }
 
