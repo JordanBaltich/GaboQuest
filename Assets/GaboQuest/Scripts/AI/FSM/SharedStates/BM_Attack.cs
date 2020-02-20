@@ -26,9 +26,9 @@ public class BM_Attack : StateBehaviour
 
     void DamageTarget(GameObject DamageableObject)
     {
-        ITakeDamage Damageable = DamageableObject.GetComponent<ITakeDamage>();
+        //ITakeDamage Damageable = DamageableObject.GetComponent<ITakeDamage>();
         
-        Damageable?.TakeDamage(1);
+        //Damageable?.TakeDamage(1);
     }
 }
 

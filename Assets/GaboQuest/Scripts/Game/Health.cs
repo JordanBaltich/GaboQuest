@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
-    [SerializeField] private int currentHealth;
+    public int currentHealth;
     [SerializeField] private float InvulTime;
 
     public bool invulnerable = false;
@@ -21,6 +21,7 @@ public class Health : MonoBehaviour
     {
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
     }
 
     public void TakeDamage(int amount)
@@ -46,6 +47,11 @@ public class Health : MonoBehaviour
             invulRoutine = InvulnerableTimer();
             StartCoroutine(invulRoutine);
         }
+    }
+
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
     }
 
     IEnumerator InvulnerableTimer()

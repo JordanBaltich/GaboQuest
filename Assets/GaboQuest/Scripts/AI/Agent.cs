@@ -44,6 +44,8 @@ public class Agent : MonoBehaviour
         m_navAgent.acceleration = agentProperties.Acceleration;
 
         m_target = blackboard.GetGameObjectVar("Target");
+
+        Player = GameObject.Find("Player");
         
     }
 

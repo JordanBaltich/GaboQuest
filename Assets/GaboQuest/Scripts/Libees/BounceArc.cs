@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BounceArc : MonoBehaviour
 {
-    [SerializeField] int EnemyLayerID, GroundLayerID, PlayerLayerID;
 
     LineRenderer lr;
     Rigidbody m_Body;
@@ -21,7 +20,7 @@ public class BounceArc : MonoBehaviour
     [Range(0, 12)]
     [SerializeField] private int circlePosition;
     [SerializeField] GameObject LandingTarget;
-    GameObject currentLandingTarget;
+    public GameObject currentLandingTarget;
 
     Vector3[] positions;
 
@@ -29,7 +28,7 @@ public class BounceArc : MonoBehaviour
 
     float g = Physics.gravity.y;
     float radianAngle;
-    int currentPosition = 1;
+    public int currentPosition = 1;
 
     Vector3 ArcStartPosition;
   
@@ -72,27 +71,7 @@ public class BounceArc : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.layer == EnemyLayerID)
-        {
-            BounceOffTarget(collision.transform);
-        }
-
-        if (collision.gameObject.layer == GroundLayerID)
-        {
-            m_Body.isKinematic = false;
-            currentPosition = 0;
-            Destroy(currentLandingTarget);
-        }
-
-        if (collision.gameObject.layer == PlayerLayerID)
-        {
-            m_Body.isKinematic = false;
-            currentPosition = 0;
-            Destroy(currentLandingTarget);
-        }
-    }
+   
 
     private void FixedUpdate()
     {
