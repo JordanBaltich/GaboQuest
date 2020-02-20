@@ -31,7 +31,6 @@ public class Health : MonoBehaviour
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             StartInvulTimer();
         }
-       
     }
 
     void StartInvulTimer()
@@ -47,11 +46,6 @@ public class Health : MonoBehaviour
             invulRoutine = InvulnerableTimer();
             StartCoroutine(invulRoutine);
         }
-    }
-
-    void DestroyObject()
-    {
-        Destroy(gameObject);
     }
 
     IEnumerator InvulnerableTimer()
