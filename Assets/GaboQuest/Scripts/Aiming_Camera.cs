@@ -28,7 +28,9 @@ public class Aiming_Camera : MonoBehaviour
     void FixedUpdate()
     {
         AimingPoint();
-        LookRotate();
+        //LookRotate();
+
+        transform.position = new Vector3(transform.position.x, Player.transform.position.y - 0.9f, transform.position.z);
     }
     void AimingPoint()
     {
@@ -36,7 +38,7 @@ public class Aiming_Camera : MonoBehaviour
 
         if (playerController.player.GetButton("Aim"))
         {
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.lockState = CursorLockMode.None;
 
             if (aimMode == 1)
             {
@@ -59,7 +61,7 @@ public class Aiming_Camera : MonoBehaviour
                 {
                     Vector3 fromPlayer = transform.position - Player.transform.position;
                     fromPlayer *= aimRadius / Vector3.Distance(transform.position, Player.transform.position);
-                    transform.position = Player.transform.position + fromPlayer;
+                    transform.position = new Vector3(Player.transform.position.x + fromPlayer.x, 0, Player.transform.position.z + fromPlayer.z);
                 }
                 
 
@@ -68,7 +70,7 @@ public class Aiming_Camera : MonoBehaviour
             }
             if (aimMode == 3)
             {
-                gameObject.transform.position = new Vector3(Player.transform.position.x + DragPoint().x + DragPoint().x * Time.deltaTime * aimMode2Speed, 0f, Player.transform.position.z + DragPoint().z + DragPoint().z * Time.deltaTime * aimMode2Speed);
+                gameObject.transform.position = new Vector3(Player.transform.position.x + DragPoint().x + DragPoint().x * Time.deltaTime * aimMode2Speed, 0, Player.transform.position.z + DragPoint().z + DragPoint().z * Time.deltaTime * aimMode2Speed);
             }
         }
         else
@@ -85,14 +87,14 @@ public class Aiming_Camera : MonoBehaviour
         // Adjusting mouse position to screen center
         //CursorPos = new Vector3((Input.mousePosition.x - Screen.width / 2), 0f, (Input.mousePosition.y - Screen.height/2));
 
-        CursorPos = new Vector3((playerController.player.GetAxis("L_Horizontal")), 0f, (playerController.player.GetAxis("L_Vertical")));
+        CursorPos = new Vector3((playerController.player.GetAxis("R_Horizontal")), 0f, (playerController.player.GetAxis("R_Vertical")));
 
 
 
         // Get percentage to screen
         //aimDir = new Vector3 (CursorPos.x / Screen.width, 0f, CursorPos.z / Screen.height);
 
-        aimDir = new Vector3(CursorPos.x , 0f, CursorPos.z);
+        aimDir = new Vector3(CursorPos.x , 0, CursorPos.z);
 
         aimDir *= aimSensitivity;
 

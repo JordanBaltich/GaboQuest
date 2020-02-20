@@ -12,18 +12,19 @@ public class LibeeWell : MonoBehaviour
 
     void ReturnLibee()
     {
-        if (LibeeSorter.Dead.Count > 0)
+
+        foreach (Transform libee in LibeeSorter.Dead)
         {
-            foreach (Transform libee in LibeeSorter.Dead)
-            {
-                libee.parent = null;
-                libee.position = transform.position;
-                libee.GetComponent<Rigidbody>().useGravity = false;
-                libee.gameObject.GetComponent<BounceArc>().BounceOffTarget(transform);
-                LibeeSorter.Dead.Remove(libee);
-            }
+            LibeeSorter.Dead.Remove(libee);
+            libee.parent = null;
+            libee.position = transform.position;
+            libee.GetComponent<Rigidbody>().useGravity = false;
+            libee.gameObject.GetComponent<BounceArc>().BounceOffTarget(transform);
+
+            LibeeSorter.SortDeadLibees();
         }
-       
+
+
     }
 
     private void FixedUpdate()
@@ -33,7 +34,11 @@ public class LibeeWell : MonoBehaviour
 
         if (distance < returnRadius)
         {
-            ReturnLibee();
+            if (LibeeSorter.Dead.Count > 0)
+            {
+                ReturnLibee();
+            }
+
         }
     }
 }
