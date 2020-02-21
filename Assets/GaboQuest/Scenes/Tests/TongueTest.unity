@@ -1306,6 +1306,11 @@ PrefabInstance:
       propertyPath: m_LibeeSorter
       value: 
       objectReference: {fileID: 680007061}
+    - target: {fileID: 8956041398418869255, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+        type: 3}
+      propertyPath: m_StateMachine
+      value: 
+      objectReference: {fileID: 1886722398}
     - target: {fileID: 8956041398353320103, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
       propertyPath: m_Enabled
@@ -1316,6 +1321,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1161813813, guid: 94a9c25b15cfcf740be790d73eeca4ae, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161813813, guid: 94a9c25b15cfcf740be790d73eeca4ae, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 193d33d5347ee0d419bfe36c75ea07ce, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94a9c25b15cfcf740be790d73eeca4ae, type: 3}
 --- !u!1001 &779646294
@@ -1751,6 +1764,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 186789176}
     m_Modifications:
+    - target: {fileID: 7362528114568090207, guid: a3788b1f361646b41967da2c8d45e436,
+        type: 3}
+      propertyPath: m_Name
+      value: Mesh_Melee
+      objectReference: {fileID: 0}
     - target: {fileID: 1095346120276760183, guid: a3788b1f361646b41967da2c8d45e436,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1820,11 +1838,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7362528114568090207, guid: a3788b1f361646b41967da2c8d45e436,
-        type: 3}
-      propertyPath: m_Name
-      value: Mesh_Melee
       objectReference: {fileID: 0}
     - target: {fileID: 5052935506013977330, guid: a3788b1f361646b41967da2c8d45e436,
         type: 3}
@@ -3471,7 +3484,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 11e8098216bc7d840b6979fd4920607d, type: 2}
+      objectReference: {fileID: 2100000, guid: d2ac0144812f56d4abab41424341ce48, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193d33d5347ee0d419bfe36c75ea07ce, type: 3}
 --- !u!1001 &1679531629
@@ -4004,6 +4017,12 @@ PrefabInstance:
 --- !u!1 &1886722397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8956041398418869249, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 773602849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1886722398 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1161813813, guid: 94a9c25b15cfcf740be790d73eeca4ae,
     type: 3}
   m_PrefabInstance: {fileID: 773602849}
   m_PrefabAsset: {fileID: 0}
