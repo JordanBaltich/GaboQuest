@@ -58,7 +58,6 @@ public class MovingWalls : MonoBehaviour
 
         if(wallType == WallType.Pressure)
         {
-
         }
             
     }
