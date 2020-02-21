@@ -69,7 +69,6 @@ public class MovingWalls : MonoBehaviour
 
     void moveDown()
     {
-        print("movingdown");
         transform.position = Vector3.MoveTowards(transform.position, endPos.transform.position, 5 * Time.deltaTime);
     }
 

@@ -26,10 +26,16 @@ public class Vision2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print(other.tag);
+
         if (targetList.Contains(other.tag))
+        {
             ObjectsInVolume.Add(other.gameObject);
+        }
 
     }
+
+    
 
     private void Update()
     {
