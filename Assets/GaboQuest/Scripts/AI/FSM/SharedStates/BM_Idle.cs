@@ -25,9 +25,10 @@ public class BM_Idle : StateBehaviour
         Debug.Log("Stopped *Idle*");
     }
 
+    //Starts the idling state
     private IEnumerator StartIdling()
     {
-
+        
         m_agent.m_navAgent.isStopped = true;
         yield return new WaitForSeconds(m_agent.agentProperties.PatrolWait);
         m_agent.m_navAgent.isStopped = false;
@@ -35,8 +36,7 @@ public class BM_Idle : StateBehaviour
         if (m_Target != null)
             SendEvent("ResumeChase");
         else
-            SendEvent("ResumePatrol");
-            
+            SendEvent("ResumePatrol");       
     }
 }
 

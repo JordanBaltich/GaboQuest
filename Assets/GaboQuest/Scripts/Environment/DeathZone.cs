@@ -15,4 +15,12 @@ public class DeathZone : MonoBehaviour
             LibeeSorter.GatherDeadLibees(other.gameObject.transform);
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.layer == libeeLayer)
+        {
+            LibeeSorter.GatherDeadLibees(other.gameObject.transform);
+        }
+    }
 }
