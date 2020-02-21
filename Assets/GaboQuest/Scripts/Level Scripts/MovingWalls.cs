@@ -24,8 +24,6 @@ public class MovingWalls : MonoBehaviour
     private void Start()
     {
         AssignAllEnemiestoThisWall();
-
-        
     }
 
 
@@ -38,10 +36,8 @@ public class MovingWalls : MonoBehaviour
 
         foreach (Health enemy in enemyHealth)
         {
-
             enemy.movingWall = this;
         }
-
     }
 
 
@@ -53,10 +49,14 @@ public class MovingWalls : MonoBehaviour
 
     private void Update()
     {
-        if (enemies.Count <= 0)
+
+        if(wallType == WallType.Enemy)
         {
-            moveDown();
+            if (enemies.Count <= 0)
+                moveDown();
         }
+
+        if(wallType == WallType.)
     }
 
     void moveUp()
