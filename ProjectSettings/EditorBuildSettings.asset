@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/GaboQuest/Scenes/LevelDesign/Level_01.unity
-    guid: 19f1071649d1c024c80253e66f1bcebf
+    path: Assets/GaboQuest/Scenes/LevelDesign/Level_01.1.unity
+    guid: acb9c9942c51ed543a2ce4363ff07906
   m_configObjects: {}

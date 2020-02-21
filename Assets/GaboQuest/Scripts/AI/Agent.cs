@@ -8,11 +8,12 @@ public class Agent : MonoBehaviour
 {
     public AgentProperties agentProperties;
     internal Blackboard blackboard;
+    [SerializeField]
     internal NavMeshAgent m_navAgent;
 
     GameObjectVar m_target;
     [SerializeField]
-    GameObject Player;
+    internal GameObject Player;
 
     internal GameObject[] waypointTransform;
     internal int currentWaypointIndex = 0;

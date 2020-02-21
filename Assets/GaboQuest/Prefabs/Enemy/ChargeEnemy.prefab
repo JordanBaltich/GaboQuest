@@ -113,7 +113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4847331991185267265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.51, y: 0.75, z: -7.83}
+  m_LocalPosition: {x: -0.36, y: 0.75, z: -6.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4847331991885495388}
@@ -189,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4847331991599390876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: -14.1}
+  m_LocalPosition: {x: -5.94, y: 0.75, z: -14.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4847331991885495388}
@@ -267,7 +267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4847331992637701531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.51, y: 0.75, z: -14.1}
+  m_LocalPosition: {x: -0.55, y: 0.75, z: -14.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4847331991885495388}
@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agentProperties: {fileID: 11400000, guid: faaa0f01ffdd37b41bf956ec02a98780, type: 2}
+  m_navAgent: {fileID: 0}
   Player: {fileID: 0}
   cyclicPatrol: 0
   libeeLayer: 9
@@ -344,7 +345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4847331993153849517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.51, y: 0.75, z: 2.05}
+  m_LocalPosition: {x: -6.94, y: 0.75, z: 1.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4847331991885495388}
@@ -370,11 +371,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4847331991597513325}
     m_Modifications:
-    - target: {fileID: 867852666634893465, guid: d9d353aaf1ac680439efc60c9bc8973d,
-        type: 3}
-      propertyPath: m_Name
-      value: Pfb_Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 867852666634893464, guid: d9d353aaf1ac680439efc60c9bc8973d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -430,6 +426,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 867852666634893465, guid: d9d353aaf1ac680439efc60c9bc8973d,
+        type: 3}
+      propertyPath: m_Name
+      value: Pfb_Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 926663565988417547, guid: d9d353aaf1ac680439efc60c9bc8973d,
         type: 3}
       propertyPath: m_ConcreteFsmEvents.Array.size
@@ -451,12 +452,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4869022589742002397}
     - target: {fileID: 1880995775, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880995775, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
+      propertyPath: m_TagString
+      value: HitBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880995775, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1349252441, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: m_CachedInstanceID
-      value: -153134
+      value: -69300
       objectReference: {fileID: 0}
     - target: {fileID: 1349252441, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: distanceToReachTarget
@@ -476,7 +485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1349252438, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: m_CachedInstanceID
-      value: -153130
+      value: -69296
       objectReference: {fileID: 0}
     - target: {fileID: 1349252436, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -494,14 +503,6 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 4847331993153849517}
-    - target: {fileID: 1349252436, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
-      propertyPath: waypoints.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1349252436, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
-      propertyPath: waypoints.Array.data[5]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1349252437, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: m_Position.x
       value: 210
@@ -512,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1349252437, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: m_CachedInstanceID
-      value: -153128
+      value: -69294
       objectReference: {fileID: 0}
     - target: {fileID: 1349252437, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: distanceToArrive
@@ -528,7 +529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1349252439, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: m_CachedInstanceID
-      value: -153132
+      value: -69298
       objectReference: {fileID: 0}
     - target: {fileID: 1349252442, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: m_Position.y
@@ -544,7 +545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1349252442, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: m_CachedInstanceID
-      value: -153136
+      value: -69302
       objectReference: {fileID: 0}
     - target: {fileID: 1349252442, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: maxChargeTime
@@ -582,7 +583,7 @@ PrefabInstance:
     - target: {fileID: 8395883984839685011, guid: d9d353aaf1ac680439efc60c9bc8973d,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -153120
+      value: -69286
       objectReference: {fileID: 0}
     - target: {fileID: 1880995776, guid: d9d353aaf1ac680439efc60c9bc8973d, type: 3}
       propertyPath: m_LocalPosition.y

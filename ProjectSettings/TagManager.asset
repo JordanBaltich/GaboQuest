@@ -10,6 +10,7 @@ TagManager:
   - Grass
   - Weakpoint
   - HurtBox
+  - HitBox
   layers:
   - Default
   - TransparentFX

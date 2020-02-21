@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     internal bool CanMove = true;
 
-    [SerializeField] private int hazardLayerID, healthID, libeeLayerID;
+    [SerializeField] private int hazardLayerID, healthID, libeeLayerID, enemyLayerID;
 
     public float rotationSpeed;
 
@@ -115,6 +115,19 @@ public class PlayerController : MonoBehaviour
         {
             //m_Health.Heal(1);
             //Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.layer == enemyLayerID)
+        {
+            if (other.gameObject.tag == "HitBox")
+            {
+                m_Health.TakeDamage(1);
+
+                if (m_Health.currentHealth <= 0)
+                {
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+                }
+            }         
         }
     }
 
