@@ -7979,6 +7979,11 @@ PrefabInstance:
       propertyPath: enemies.Array.data[1]
       value: 
       objectReference: {fileID: 305467458}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: wallType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ea23591dc519214e8c7d5de3bc2a638, type: 3}
 --- !u!4 &1490298459 stripped
@@ -8114,31 +8119,6 @@ PrefabInstance:
       propertyPath: PlayerFront
       value: 
       objectReference: {fileID: 985879360}
-    - target: {fileID: 811921299508171495, guid: 22279659c0fd09c4892342415f8d2fde,
-        type: 3}
-      propertyPath: aimRadius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 811921299508171495, guid: 22279659c0fd09c4892342415f8d2fde,
-        type: 3}
-      propertyPath: aimMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 811921299508171495, guid: 22279659c0fd09c4892342415f8d2fde,
-        type: 3}
-      propertyPath: aimMode2Speed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 811921299508171495, guid: 22279659c0fd09c4892342415f8d2fde,
-        type: 3}
-      propertyPath: aimSensitivity
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 811921299332522500, guid: 22279659c0fd09c4892342415f8d2fde,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22279659c0fd09c4892342415f8d2fde, type: 3}
 --- !u!1 &1578232524

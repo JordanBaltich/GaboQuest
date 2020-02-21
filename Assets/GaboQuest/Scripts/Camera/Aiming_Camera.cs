@@ -7,6 +7,7 @@ public class Aiming_Camera : MonoBehaviour
     public GameObject Player;
     PlayerController playerController;
     public GameObject PlayerFront;
+    public GameObject VFX;
     public float aimSensitivity;
 
     public float aimRadius;
@@ -39,7 +40,7 @@ public class Aiming_Camera : MonoBehaviour
         if (playerController.player.GetButton("Aim"))
         {
             //Cursor.lockState = CursorLockMode.None;
-
+            VFX.SetActive(true);
             if (aimMode == 1)
             {
 
@@ -77,7 +78,7 @@ public class Aiming_Camera : MonoBehaviour
         {
             //gameObject.transform.position = new Vector3(Player.transform.position.x, 0f, Player.transform.position.z);
             gameObject.transform.position = new Vector3(PlayerFront.transform.position.x, 0f,  PlayerFront.transform.position.z);
-
+            VFX.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
         }
             
