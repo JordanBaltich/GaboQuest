@@ -36,7 +36,7 @@ public class MovingWalls : MonoBehaviour
 
         foreach (Health enemy in enemyHealth)
         {
-            enemy.movingWall = this;
+            enemy.m_movingWall = this;
         }
     }
 
@@ -58,7 +58,7 @@ public class MovingWalls : MonoBehaviour
 
         if(wallType == WallType.Pressure)
         {
-            if()
+
         }
             
     }

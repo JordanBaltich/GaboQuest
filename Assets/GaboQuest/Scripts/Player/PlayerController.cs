@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         m_Body = GetComponent<Rigidbody>();
-        //m_StateMachine = GetComponent<Animator>();
+        m_StateMachine = GetComponent<Animator>();
 
         m_Shoot = GetComponent<Shoot>();
         m_Motor = GetComponent<PlayerMotor>();

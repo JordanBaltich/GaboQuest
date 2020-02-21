@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     public int currentHealth;
     [SerializeField] private float InvulTime;
 
-    [SerializeField] internal MovingWalls movingWall;
+    [SerializeField] internal MovingWalls m_movingWall;
 
     public bool invulnerable = false;
   
@@ -53,7 +53,7 @@ public class Health : MonoBehaviour
 
     public void DestroyObject()
     {
-        movingWall.RemoveEnemy(gameObject);
+        m_movingWall.RemoveEnemy(transform.parent.gameObject);
         Destroy(gameObject);    
     }
 

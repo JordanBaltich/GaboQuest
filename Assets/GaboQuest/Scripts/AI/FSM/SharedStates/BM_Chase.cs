@@ -37,7 +37,7 @@ public class BM_Chase : StateBehaviour
         StopAllCoroutines();
     }
 
-
+    //sets up all references and proper metrics
     void Setup()
     {
         m_agent = GetComponent<Agent>();
@@ -46,6 +46,9 @@ public class BM_Chase : StateBehaviour
         sqrDistanceToReachTarget = distanceToReachTarget * distanceToReachTarget;
 
     }
+
+
+    //Changes agent properties to run from walk
     private void SetAgentSpeed()
     {
         m_agent.m_navAgent.speed = m_agent.agentProperties.RunSpeed;
@@ -53,15 +56,18 @@ public class BM_Chase : StateBehaviour
         m_agent.m_navAgent.acceleration = m_agent.agentProperties.RunAcceleration;
     }
 
+    //Calculate the distance from target to player position
     void calculateDistanceFromTarget()
     {
         sqrDistanceToTarget = (target.transform.position - transform.position).sqrMagnitude;
     }
 
+    //Begins chasing the player
     IEnumerator StartChasing()
     {
         while (enabled)
         {
+            //sets the destination for the agent to target the player's position
             if (target.Value != null)
             {
                 calculateDistanceFromTarget();
@@ -69,9 +75,8 @@ public class BM_Chase : StateBehaviour
                 m_agent.m_navAgent.SetDestination(destination.Value);
             }
 
-            //print("Square Distance To Target: " + sqrDistanceToTarget + ", Square distance To Reach Target: " + sqrDistanceToReachTarget);
 
-
+            //changes the state of the agent once it reaches a certain distance to the target
             if (sqrDistanceToTarget < sqrDistanceToReachTarget)
             {
                 SendEvent("ReachedTarget");

@@ -37,6 +37,7 @@ public class BM_Patrol : StateBehaviour
         StopAllCoroutines();
 	}
 
+    // sets up all references and proper metrics
     private void Setup()
     {
         m_patrolpoints = GetComponent<PatrolPoints>();
@@ -52,19 +53,22 @@ public class BM_Patrol : StateBehaviour
 
         m_patrolpoints.ResetAgent();
 
-        updateDistanceToDestination();
+        UpdateDistanceToDestination();
     }
 
-    private void updateDistanceToDestination()
+    // calculates the distance from this to target
+    private void UpdateDistanceToDestination()
     {
         sqrDistanceToDestination = (targetDestination() - transform.position).sqrMagnitude;
     }
 
+    // calculates the distance from this to target
     private Vector3 targetDestination()
     {
         return targetWaypoint.Value.transform.position;
     }
 
+    // checks if agent has vision of the enemy, and changes the state
     IEnumerator CheckForEnemy()
     {
         while (enabled)
@@ -94,7 +98,7 @@ public class BM_Patrol : StateBehaviour
 
                 yield return null;
             }
-            updateDistanceToDestination();
+            UpdateDistanceToDestination();
 
             yield return new WaitForSeconds(.2f);
         }
