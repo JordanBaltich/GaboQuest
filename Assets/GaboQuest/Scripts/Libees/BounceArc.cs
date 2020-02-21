@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BounceArc : MonoBehaviour
 {
-    [SerializeField] int EnemyLayerID, GroundLayerID, PlayerLayerID;
 
     LineRenderer lr;
     Rigidbody m_Body;
@@ -21,7 +20,7 @@ public class BounceArc : MonoBehaviour
     [Range(0, 12)]
     [SerializeField] private int circlePosition;
     [SerializeField] GameObject LandingTarget;
-    GameObject currentLandingTarget;
+    public GameObject currentLandingTarget;
 
     Vector3[] positions;
 
@@ -29,7 +28,7 @@ public class BounceArc : MonoBehaviour
 
     float g = Physics.gravity.y;
     float radianAngle;
-    int currentPosition = 1;
+    public int currentPosition = 1;
 
     Vector3 ArcStartPosition;
   
@@ -57,56 +56,22 @@ public class BounceArc : MonoBehaviour
     {
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.layer == EnemyLayerID)
-    //    {
-    //        m_Body.velocity = Vector3.zero;
-    //        m_Body.isKinematic = true;
-    //        ArcStartPosition = transform.position;
-
-    //        FindArcPoints();
-    //        DrawQuadraticCurve();
-
-    //    }
-
-    //    if (other.gameObject.layer == GroundLayerID)
-    //    {
-    //        m_Body.isKinematic = false;
-    //    }
-    //}
-
-    private void OnCollisionEnter(Collision collision)
+    public void BounceOffTarget(Transform hitTarget)
     {
-        if (collision.gameObject.layer == EnemyLayerID)
-        {
-            m_Body.velocity = Vector3.zero;
-            m_Body.rotation = Quaternion.Euler(Vector3.zero);
-            m_Body.isKinematic = true;
-            ArcStartPosition = new Vector3(collision.gameObject.transform.position.x, 0, collision.gameObject.transform.position.z); 
-           // ArcStartPosition = collision.gameObject.transform.position;
+        m_Body.velocity = Vector3.zero;
+        m_Body.rotation = Quaternion.Euler(Vector3.zero);
+        m_Body.isKinematic = true;
+        ArcStartPosition = new Vector3(hitTarget.position.x, 0, hitTarget.position.z);
+        // ArcStartPosition = collision.gameObject.transform.position;
 
-            FindArcPoints();
-            DrawQuadraticCurve();
+        FindArcPoints();
+        DrawQuadraticCurve();
 
-           currentLandingTarget = Instantiate(LandingTarget, p2 + (Vector3.up / 2), Quaternion.identity);
+        currentLandingTarget = Instantiate(LandingTarget, p2 + (Vector3.up / 2), Quaternion.identity);
 
-        }
-
-        if (collision.gameObject.layer == GroundLayerID)
-        {
-            m_Body.isKinematic = false;
-            currentPosition = 0;
-            Destroy(currentLandingTarget);
-        }
-
-        if (collision.gameObject.layer == PlayerLayerID)
-        {
-            m_Body.isKinematic = false;
-            currentPosition = 0;
-            Destroy(currentLandingTarget);
-        }
     }
+
+   
 
     private void FixedUpdate()
     {

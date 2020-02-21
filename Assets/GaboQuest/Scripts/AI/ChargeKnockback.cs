@@ -5,6 +5,7 @@ using BehaviourMachine;
 
 public class ChargeKnockback : MonoBehaviour
 {
+    [SerializeField] int playerLayer, libeeLayer;
     Blackboard blackboard;
 
     Transform parentObjectTransform;
@@ -22,7 +23,7 @@ public class ChargeKnockback : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" || other.tag == "Libee")
+        if (other.gameObject.layer == playerLayer || other.gameObject.layer == libeeLayer)
         {
             targetInvulnerability = other.gameObject.GetComponent<InvulnerabilityTimer>();
             blackboard = GetComponentInParent<Blackboard>();

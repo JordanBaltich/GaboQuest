@@ -22,7 +22,7 @@ public class PlayerMotor : MonoBehaviour
 
     public float Decelerate()
     {
-        speed -= acceleration * Time.deltaTime;
+        speed -= deceleration * Time.deltaTime;
 
         speed = Mathf.Clamp(speed, 0, maxWithWeight);
 

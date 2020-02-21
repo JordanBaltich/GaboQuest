@@ -5080,9 +5080,10 @@ GameObject:
   - component: {fileID: 7429962918727605132}
   - component: {fileID: 109286855869171717}
   - component: {fileID: 9048703606349471481}
+  - component: {fileID: 570084131117049670}
   - component: {fileID: -4640262312582943142}
   - component: {fileID: 652874711}
-  m_Layer: 29
+  m_Layer: 9
   m_Name: Libee
   m_TagString: Normal
   m_Icon: {fileID: 0}
@@ -5181,6 +5182,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &570084131117049670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7464787531361463914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13cf2da4ab9f2af498d4ae320ce187e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyLayerID: 10
+  GroundLayerID: 14
+  PlayerLayerID: 11
+  hitForce: 10
 --- !u!114 &-4640262312582943142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5193,9 +5210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f75a47132bb3e74d83289293ee3c21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyLayerID: 30
-  GroundLayerID: 27
-  PlayerLayerID: 31
   travelSpeed: 8
   height: 15
   resolution: 60
@@ -5205,6 +5219,8 @@ MonoBehaviour:
   circlePosition: 3
   LandingTarget: {fileID: 2031320377262353341, guid: c8a75e9b2afed344f9a2b06a7b9565d1,
     type: 3}
+  currentLandingTarget: {fileID: 0}
+  currentPosition: 1
 --- !u!120 &652874711
 LineRenderer:
   m_ObjectHideFlags: 0
