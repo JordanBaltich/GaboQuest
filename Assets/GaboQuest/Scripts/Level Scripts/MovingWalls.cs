@@ -56,7 +56,11 @@ public class MovingWalls : MonoBehaviour
                 moveDown();
         }
 
-        if(wallType == WallType.)
+        if(wallType == WallType.Pressure)
+        {
+            if()
+        }
+            
     }
 
     void moveUp()
