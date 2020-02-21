@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour
     public Player player;
 
     public GameObject libee;
-    public SortSelectLibee m_LibeeSorter;
+    public SortSelectLibee m_LibeeSorter; 
 
     public Transform AimPoint;
 
     Rigidbody m_Body;
-    public Animator m_StateMachine;
+    Animator m_StateMachine;
     GrowShrinkMechanic m_GrowMechanic;
     PlayerTongue m_Tongue;
     PlayerMotor m_Motor;
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         m_Body = GetComponent<Rigidbody>();
-        //m_StateMachine = GetComponent<Animator>();
+        m_StateMachine = GetComponent<Animator>();
 
         m_Shoot = GetComponent<Shoot>();
         m_Motor = GetComponent<PlayerMotor>();
@@ -107,6 +107,8 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+
+        m_StateMachine.SetFloat("Input", moveDirection.magnitude);
     }
 
     private void OnTriggerEnter(Collider other)
