@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/GaboQuest/Scenes/Tests/UI.meta
 guid: a7ff6f1a544cadc4eb2621d7a54c2fc3
+=======
+guid: d32786c99caa66e41baea4ab6d1c1cb8
+>>>>>>> First-Build:Assets/AmplifyShaderEditor/Examples/Official.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

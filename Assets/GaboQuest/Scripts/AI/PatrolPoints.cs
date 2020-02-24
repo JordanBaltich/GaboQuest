@@ -11,7 +11,7 @@ public class PatrolPoints : Agent
 
     public void WalkToWaypoint()
     {
-        print("Set destination: " + waypoints[waypointIndex].transform.position);
+        //print("Set destination: " + waypoints[waypointIndex].transform.position);
         m_navAgent.SetDestination(waypoints[waypointIndex].transform.position);
     }
 

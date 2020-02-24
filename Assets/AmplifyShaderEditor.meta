@@ -1,5 +1,10 @@
 fileFormatVersion: 2
 guid: 95262bbb2b8396b49986eefe81661b4f
+Assets/GaboQuest/Art/Models.meta
+guid: 622746529ec7c4b4c9ef062054e6e864
+Assets/GaboQuest/Prefabs/Game.meta
+guid: 95262bbb2b8396b49986eefe81661b4f
+Assets/AmplifyShaderEditor.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
