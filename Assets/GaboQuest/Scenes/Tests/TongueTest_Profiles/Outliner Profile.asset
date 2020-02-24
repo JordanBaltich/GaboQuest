@@ -24,10 +24,10 @@ MonoBehaviour:
     value: {r: 1, g: 0.83059174, b: 0.033018887, a: 0.27450982}
   depthThreshold:
     overrideState: 1
-    value: 1.5
+    value: 1
   depthNormalThreshold:
     overrideState: 1
-    value: 0.859
+    value: 1
   depthNormalThresholdScale:
     overrideState: 1
     value: 7

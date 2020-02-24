@@ -11,17 +11,17 @@ public class MoveTo : MonoBehaviour
     public Vector3 distanceDir;
     [Range(1, 50)]
     public float ySpeed;
-    [Range(1, 50)]
+    [Range(-1, 10)]
     public float firstSpeed;
-    [Range(1, 50)]
+    [Range(-1, 10)]
     public float secondSpeed;
-    [Range (1, 100)]
+    [Range (-1, 100)]
     public float chaseSpeed;
     [Range(-5, 5)]
     public float yPositionThreshold;
-    [Range(1, 5)]
+    [Range(-1, 5)]
     public float firstPositionThreshold;
-    [Range(1, 5)]
+    [Range(-1, 5)]
     public float secondPositionThreshold;
 
     public bool flipLookDir;
@@ -29,7 +29,7 @@ public class MoveTo : MonoBehaviour
     public bool looking;
 
 
-    private void LateUpdate()
+    private void Update()
     {
         if (destination != null)
         {
@@ -57,32 +57,38 @@ public class MoveTo : MonoBehaviour
 
         if (yDir.y !=0)
         {
-            transform.position += yDir * Time.smoothDeltaTime * ySpeed;
+            transform.position += yDir * Time.deltaTime * ySpeed;
+
         }
 
-        if (Vector3.Distance(transform.position, destination.position) >= firstPositionThreshold)
+        if (Vector3.Distance(transform.position, destination.position) > 0.1f)
         {
-            if (moving)
+            if (Vector3.Distance(transform.position, destination.position) >= firstPositionThreshold)
             {
-                transform.position += distanceDir * Time.smoothDeltaTime * firstSpeed;
-
-                if (Vector3.Distance(transform.position, destination.position) >= firstPositionThreshold)
+                if (moving)
                 {
-                    transform.position += distanceDir * Time.smoothDeltaTime * secondSpeed;
+                    //transform.position += distanceDir * Time.deltaTime * firstSpeed;
+                    transform.position = Vector3.MoveTowards(transform.position, destination.position, Time.deltaTime * 0.0001f);
+
+                    if (Vector3.Distance(transform.position, destination.position) >= firstPositionThreshold)
+                    {
+                        //transform.position += distanceDir * Time.deltaTime * secondSpeed;
+                        transform.position = Vector3.MoveTowards(transform.position, destination.position, Time.deltaTime * secondSpeed);
+
+                    }
                 }
-            }
 
                 if (looking)
-            {
-                if (flipLookDir)
                 {
-                    transform.rotation = Quaternion.LookRotation(-distanceDir);
-                }
-                else { transform.rotation = Quaternion.LookRotation(distanceDir); }
+                    if (flipLookDir)
+                    {
+                        transform.rotation = Quaternion.LookRotation(-distanceDir);
+                    }
+                    else { transform.rotation = Quaternion.LookRotation(distanceDir); }
 
+                }
             }
         }
-
         
     }
 

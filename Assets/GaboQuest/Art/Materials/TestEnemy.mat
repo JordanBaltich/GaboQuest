@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD:Assets/GaboQuest/Art/Materials/TestEnemy.mat
 --- !u!114 &-614265849230659464
-=======
---- !u!114 &-809003312271059668
->>>>>>> master:Assets/GaboQuest/Art/Materials/Light_White.mat
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
