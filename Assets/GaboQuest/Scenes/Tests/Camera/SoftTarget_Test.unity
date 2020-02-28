@@ -255,6 +255,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4959996329492130985, guid: dbfdb5eb0cb95804383f70c9c1041d29,
+        type: 3}
+      propertyPath: _userData.configVars.runInEditMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbfdb5eb0cb95804383f70c9c1041d29, type: 3}
 --- !u!1001 &101578096
@@ -841,10 +846,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a84af40c269f8d044a02abfd6f6558c8, type: 2}
+      objectReference: {fileID: 9100000, guid: 8a9f1b4c084908e46b7c290a008c8ece, type: 2}
     - target: {fileID: -6057140222963153312, guid: 073191fd8b4269949afd727eac625feb,
         type: 3}
       propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 073191fd8b4269949afd727eac625feb,
+        type: 3}
+      propertyPath: m_CullingMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4536155678594977845, guid: 073191fd8b4269949afd727eac625feb,
@@ -3466,10 +3476,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a84af40c269f8d044a02abfd6f6558c8, type: 2}
+      objectReference: {fileID: 9100000, guid: 8a9f1b4c084908e46b7c290a008c8ece, type: 2}
     - target: {fileID: -6057140222963153312, guid: 073191fd8b4269949afd727eac625feb,
         type: 3}
       propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 073191fd8b4269949afd727eac625feb,
+        type: 3}
+      propertyPath: m_CullingMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4536155678594977845, guid: 073191fd8b4269949afd727eac625feb,
@@ -3631,6 +3646,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225111951}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1232240515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 193d33d5347ee0d419bfe36c75ea07ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 2133990616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1300807318 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6808288846982635288, guid: 37dbf3b6c16bddc46844126608161080,
@@ -3781,10 +3802,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a84af40c269f8d044a02abfd6f6558c8, type: 2}
+      objectReference: {fileID: 9100000, guid: 8a9f1b4c084908e46b7c290a008c8ece, type: 2}
     - target: {fileID: -6057140222963153312, guid: 073191fd8b4269949afd727eac625feb,
         type: 3}
       propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 073191fd8b4269949afd727eac625feb,
+        type: 3}
+      propertyPath: m_CullingMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4536155678594977845, guid: 073191fd8b4269949afd727eac625feb,
@@ -3983,13 +4009,13 @@ PrefabInstance:
     - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
         type: 3}
       propertyPath: enemies.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
         type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1232240515}
     - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
         type: 3}
       propertyPath: enemies.Array.data[1]
@@ -4131,6 +4157,12 @@ PrefabInstance:
       objectReference: {fileID: 985879360}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22279659c0fd09c4892342415f8d2fde, type: 3}
+--- !u!1 &1544527977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 441903429, guid: 94a9c25b15cfcf740be790d73eeca4ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 773602849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1570516811 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6808288846982635288, guid: 37dbf3b6c16bddc46844126608161080,
@@ -4250,10 +4282,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a84af40c269f8d044a02abfd6f6558c8, type: 2}
+      objectReference: {fileID: 9100000, guid: 8a9f1b4c084908e46b7c290a008c8ece, type: 2}
     - target: {fileID: -6057140222963153312, guid: 073191fd8b4269949afd727eac625feb,
         type: 3}
       propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 073191fd8b4269949afd727eac625feb,
+        type: 3}
+      propertyPath: m_CullingMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4536155678594977845, guid: 073191fd8b4269949afd727eac625feb,
@@ -4383,10 +4420,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a84af40c269f8d044a02abfd6f6558c8, type: 2}
+      objectReference: {fileID: 9100000, guid: 8a9f1b4c084908e46b7c290a008c8ece, type: 2}
     - target: {fileID: -6057140222963153312, guid: 073191fd8b4269949afd727eac625feb,
         type: 3}
       propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 073191fd8b4269949afd727eac625feb,
+        type: 3}
+      propertyPath: m_CullingMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4536155678594977845, guid: 073191fd8b4269949afd727eac625feb,
@@ -4595,11 +4637,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AimMode: 1
-  AimTarget: {fileID: 0}
+  AimTarget: {fileID: 1544527977}
   m_Box: {fileID: 1674682855}
   stopSorting: 0
   BoxLocation: {x: 0, y: 0, z: 0}
-  BoxSize: {x: 3, y: 3, z: 8}
+  BoxSize: {x: 5, y: 3, z: 8}
   TaggedLayers: 
   TargetsByRange: []
 --- !u!65 &1674682855
