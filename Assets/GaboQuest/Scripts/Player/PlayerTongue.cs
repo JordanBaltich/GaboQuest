@@ -21,7 +21,7 @@ public class PlayerTongue : MonoBehaviour
     [SerializeField] BoxTargets tongueBox;
 
     //R* Grab Target is the Tongue's Destination
-    [SerializeField] Transform GrabTarget;
+    public Transform GrabTarget;
 
     //R* Grabbed Stops Destination from updating in Shoot State
     [SerializeField] bool Grabbed;
