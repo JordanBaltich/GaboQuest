@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/GaboQuest/Scenes/Tests/Camera/SoftTarget_Test.unity.meta
-guid: ed325c5ed66aabc4abd56bb6bafd8b7f
+guid: 763c3d019b418fa4ea0682874344bd2c
 DefaultImporter:
-=======
-guid: 0135217aca82c974cb72ad0b07dbdc24
-NativeFormatImporter:
->>>>>>> PlayerControllerRework:Assets/GaboQuest/Scenes/LevelDesign/Level_01.2/LightingData.asset.meta
   externalObjects: {}
-  mainObjectFileID: 112000000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
