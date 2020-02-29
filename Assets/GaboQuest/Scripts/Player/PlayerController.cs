@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public Player player;
 
     public GameObject libee;
-    public SortSelectLibee m_LibeeSorter; 
+    public SortSelectLibee m_LibeeSorter;
 
     public Transform AimPoint;
 
@@ -28,6 +28,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int hazardLayerID, healthID, libeeLayerID, enemyLayerID;
 
     public float rotationSpeed;
+
+    [SerializeField] float slopeForce;
+    [SerializeField] float slopeRayLength;
+
+
 
     private void Awake()
     {
@@ -94,6 +99,11 @@ public class PlayerController : MonoBehaviour
 
             m_Body.rotation = Quaternion.LookRotation((moveDirection * rotationSpeed * Time.deltaTime));
 
+
+            if (OnSlope())
+            {
+                m_Body.AddForce(Vector3.down * (Mathf.Abs(Physics.gravity.y * slopeForce)));
+            }
 
         }
         else
@@ -178,14 +188,18 @@ public class PlayerController : MonoBehaviour
         return direction;
     }
 
-    public bool GroundCheck()
+    public bool OnSlope()
     {
         RaycastHit hit;
 
-        if ((Physics.Raycast(transform.position, Vector3.down, out hit, GetComponent<CapsuleCollider>().height / 2, LayerMask.GetMask("Ground"))))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, GetComponent<CapsuleCollider>().height / 2 * slopeRayLength, LayerMask.GetMask("Ground")))
         {
-            return true;
+            if (hit.normal != Vector3.up)
+            {
+                return true;
+            }
         }
-        else return false;
+
+        return false;
     }
 }
