@@ -92,7 +92,6 @@ public class Shoot : MonoBehaviour
             bullets[bullets.Count - 1].transform.rotation = bulletSpawn.rotation;
             bullets[bullets.Count - 1].transform.parent = null;
             bulletBody.useGravity = true;
-            //bulletBody.AddForce(bulletSpawn.transform.forward * shotForce, ForceMode.Impulse);
 
             bulletBody.velocity = Vector3.zero;
             bulletBody.transform.parent = null;
@@ -100,6 +99,8 @@ public class Shoot : MonoBehaviour
 
             Vector3 endPoint = GetComponent<PlayerController>().AimPoint.transform.position;
             StartCoroutine(BulletTravel(bulletBody, bulletSpawn.position, endPoint));
+            bulletBody.gameObject.GetComponent<LibeeController>().ResetTriggers();
+            bulletBody.gameObject.GetComponent<Animator>().SetTrigger("isShot");
             StartShotCooldown();
         }        
     }

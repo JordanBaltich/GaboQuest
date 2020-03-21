@@ -22,7 +22,7 @@ public class BounceArc : MonoBehaviour
     [SerializeField] GameObject LandingTarget;
     public GameObject currentLandingTarget;
 
-    Vector3[] positions;
+    public Vector3[] positions;
 
     Vector3 p0, p1, p2;
 
@@ -52,17 +52,11 @@ public class BounceArc : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-    }
-
-    public void BounceOffTarget(Transform hitTarget)
+    public void BounceOffTarget(Vector3 hitTarget)
     {
         m_Body.velocity = Vector3.zero;
         m_Body.rotation = Quaternion.Euler(Vector3.zero);
-        m_Body.isKinematic = true;
-        ArcStartPosition = new Vector3(hitTarget.position.x, 0, hitTarget.position.z);
-        // ArcStartPosition = collision.gameObject.transform.position;
+        ArcStartPosition = new Vector3(hitTarget.x, 0, hitTarget.z);
 
         FindArcPoints();
         DrawQuadraticCurve();
@@ -71,44 +65,7 @@ public class BounceArc : MonoBehaviour
 
     }
 
-   
-
-    private void FixedUpdate()
-    {
-        if (m_Body.isKinematic)
-        {
-            MoveAlongArc();
-        }
-
-        if (currentPosition == positions.Length - 1)
-        {
-            m_Body.isKinematic = false;
-            currentPosition = 0;
-            Destroy(currentLandingTarget);
-        }
-    }
-
-   
-
-    //** lots of cool pointless math
-    ////finds the appropriate velocity to travel along generated arc
-    //void LaunchAlongArc()
-    //{
-    //    float distance = Vector3.Distance(new Vector3(p2.x, 0, p2.z), new Vector3(p0.x, 0, p0.z));
-    //    float yOffset = p0.y - p2.y;
-
-    //    float angle = Vector3.Angle(p0, p1) * Mathf.Deg2Rad;
-    //    float initialVelocity = (1 / Mathf.Cos(angle)) * Mathf.Sqrt((0.5f * g * Mathf.Pow(distance, 2)) / (distance * Mathf.Tan(angle) + yOffset));
-
-    //    Vector3 Velocity = new Vector3(0, initialVelocity * Mathf.Sin(angle), initialVelocity * Mathf.Cos(angle));
-
-    //    float angleBetweenObjects = Vector3.Angle(Vector3.forward, new Vector3(p2.x, 0, p2.z) - new Vector3(p0.x, 0, p0.z)) * (p2.x > transform.position.x ? 1 : -1);
-    //    Vector3 finalVelocity = Quaternion.AngleAxis(angleBetweenObjects, Vector3.up) * Velocity;
-
-    //    m_Body.velocity = finalVelocity;
-    //}
-
-    void MoveAlongArc()
+    public void MoveAlongArc()
     {
         m_Body.position = Vector3.MoveTowards(m_Body.position, positions[currentPosition], travelSpeed * g / m_Body.position.y  * Time.deltaTime);
         m_Body.rotation = Quaternion.LookRotation(positions[currentPosition] - transform.position, Vector3.up);
@@ -172,16 +129,6 @@ public class BounceArc : MonoBehaviour
     float FindGroundLevel(Vector3 point)
     {
         float currentGroundLevel;
-        //RaycastHit[] hits;
-        //hits = Physics.RaycastAll(point + (Vector3.up * g), Vector3.down, 100.0F);
-
-        //for (int i = 0; i < hits.Length; i++)
-        //{
-        //    RaycastHit hit = hits[i];
-
-
-        //}
-
 
         RaycastHit hit;
 

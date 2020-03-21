@@ -931,7 +931,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -96320
+  m_CachedInstanceID: -86074
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117952}
     m_EventID: 345612353
-  m_CachedInstanceID: -96328
+  m_CachedInstanceID: -86082
   distanceToArrive: 1.5
 --- !u!114 &5714528777163117952
 MonoBehaviour:
@@ -1116,7 +1116,7 @@ MonoBehaviour:
     m_EventID: 1330953036
   - m_Destination: {fileID: 5714528777163117967}
     m_EventID: 42786443
-  m_CachedInstanceID: -96330
+  m_CachedInstanceID: -86084
 --- !u!114 &5714528777163117953
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1140,7 +1140,7 @@ MonoBehaviour:
     m_EventID: 721442352
   - m_Destination: {fileID: 0}
     m_EventID: 895806009
-  m_CachedInstanceID: -96332
+  m_CachedInstanceID: -86086
   m_CanTransitionToSelf: 0
 --- !u!114 &5714528777163117967
 MonoBehaviour:
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 864347346}
     m_EventID: 1124719125
-  m_CachedInstanceID: -96334
+  m_CachedInstanceID: -86088
   ticks: 0.2
   distanceToReachTarget: 10
 --- !u!114 &5714528777163117964
@@ -1187,7 +1187,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117952}
     m_EventID: 345612353
-  m_CachedInstanceID: -96336
+  m_CachedInstanceID: -86090
   maxChargeTime: 2
   hitbox: {fileID: 5714528777706952553}
   distanceToArrive: 1
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117964}
     m_EventID: 315087159
-  m_CachedInstanceID: -96338
+  m_CachedInstanceID: -86092
   rotationSpeed: 1
   angleToAct: 15
   TimeBeforeActing: 1
@@ -1385,7 +1385,6 @@ GameObject:
   - component: {fileID: 5714528777706952466}
   - component: {fileID: 5714528777706952469}
   - component: {fileID: 5714528777706952468}
-  - component: {fileID: 5714528777706952471}
   m_Layer: 10
   m_Name: ChargeHitbox
   m_TagString: HitBox
@@ -1466,21 +1465,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5714528777706952471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5714528777706952553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 768fa99583647054196be93ef6555105, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLayer: 11
-  libeeLayer: 9
-  pushbackForce: 1000
 --- !u!1 &5761052994307947759
 GameObject:
   m_ObjectHideFlags: 0
