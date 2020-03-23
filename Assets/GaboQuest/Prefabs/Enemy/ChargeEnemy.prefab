@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 2907097581383930261}
   - component: {fileID: 4847331992516443261}
   - component: {fileID: 4847331992516443260}
-  m_Layer: 2
+  m_Layer: 18
   m_Name: VisionCone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -96320
+  m_CachedInstanceID: -33310
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117952}
     m_EventID: 345612353
-  m_CachedInstanceID: -96328
+  m_CachedInstanceID: -33318
   distanceToArrive: 1.5
 --- !u!114 &5714528777163117952
 MonoBehaviour:
@@ -1116,7 +1116,7 @@ MonoBehaviour:
     m_EventID: 1330953036
   - m_Destination: {fileID: 5714528777163117967}
     m_EventID: 42786443
-  m_CachedInstanceID: -96330
+  m_CachedInstanceID: -33320
 --- !u!114 &5714528777163117953
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1140,7 +1140,7 @@ MonoBehaviour:
     m_EventID: 721442352
   - m_Destination: {fileID: 0}
     m_EventID: 895806009
-  m_CachedInstanceID: -96332
+  m_CachedInstanceID: -33322
   m_CanTransitionToSelf: 0
 --- !u!114 &5714528777163117967
 MonoBehaviour:
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 864347346}
     m_EventID: 1124719125
-  m_CachedInstanceID: -96334
+  m_CachedInstanceID: -33324
   ticks: 0.2
   distanceToReachTarget: 10
 --- !u!114 &5714528777163117964
@@ -1187,7 +1187,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117952}
     m_EventID: 345612353
-  m_CachedInstanceID: -96336
+  m_CachedInstanceID: -33326
   maxChargeTime: 2
   hitbox: {fileID: 5714528777706952553}
   distanceToArrive: 1
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117964}
     m_EventID: 315087159
-  m_CachedInstanceID: -96338
+  m_CachedInstanceID: -33328
   rotationSpeed: 1
   angleToAct: 15
   TimeBeforeActing: 1
