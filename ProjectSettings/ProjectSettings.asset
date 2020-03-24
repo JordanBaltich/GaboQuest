@@ -649,10 +649,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 56427b84-f3d5-4967-ba3d-77683ac92bb7
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: GaboQuest
+  organizationId: gabo-quest
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

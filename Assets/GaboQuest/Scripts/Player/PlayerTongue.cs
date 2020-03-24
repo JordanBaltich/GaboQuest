@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Analytics;
 public class PlayerTongue : MonoBehaviour
 {
     public Transform tongueTarget;
@@ -59,6 +59,7 @@ public class PlayerTongue : MonoBehaviour
             tongueBox.TargetsByRange.Clear();
             //R* Stop movement by setting destination to itself
             GrabTarget = transform;
+            Analytics.CustomEvent("UsedTongueToGrabLibee");
         }
     }
 

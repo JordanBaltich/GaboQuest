@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class ShootingState : StateMachineBehaviour
 {
@@ -32,15 +33,20 @@ public class ShootingState : StateMachineBehaviour
 
         if (m_Controller.player.GetButton("Shoot"))
         {
+            float howLongButtonIsHeld = Time.deltaTime;
             m_Shoot.StartCharge(m_Controller.player);
 
+            Analytics.CustomEvent("bulletCharge", new Dictionary<string, object>
+            {
+                { "potions", howLongButtonIsHeld }
+            });
         }
 
         if (m_Controller.player.GetButtonUp("Shoot"))
         {
             m_Shoot.FireBullet(m_Controller.m_LibeeSorter.Normal);
             m_Shoot.StopCharge();
-
+            Analytics.CustomEvent("bulletShot");
         }
     }
 

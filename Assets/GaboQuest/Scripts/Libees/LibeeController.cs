@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class LibeeController : MonoBehaviour
 {
@@ -41,17 +42,20 @@ public class LibeeController : MonoBehaviour
                 m_BounceArc.BounceOffTarget(other.transform);
                 other.gameObject.GetComponentInParent<Health>().TakeDamage(2);
                 Knockback(enemyRB);
+                Analytics.CustomEvent("LibeeHitWeakpoint");
             }
             else if (other.gameObject.tag == "HitBox")
             {
                 m_BounceArc.BounceOffTarget(other.transform);
                 other.gameObject.GetComponentInParent<Health>().TakeDamage(1);
                 Knockback(enemyRB);
+                Analytics.CustomEvent("LibeeHitEnemyButNotWeakpoint");
             }
 
             if (other.gameObject.GetComponentInParent<Health>().currentHealth <= 0)
             {
                 other.gameObject.GetComponentInParent<Health>().DestroyObject();
+                Analytics.CustomEvent("LibeeKilledEnemy");
             }
         }
     }

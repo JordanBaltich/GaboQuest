@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
+using UnityEngine.Analytics;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     PlayerMotor m_Motor;
     Health m_Health;
     Shoot m_Shoot;
+    public LevelTimeCheck leveltimer;
 
     Vector3 direction;
     public Vector3 lastHeldDirection;
@@ -134,11 +136,19 @@ public class PlayerController : MonoBehaviour
             if (other.gameObject.tag == "HitBox")
             {
                 m_Health.TakeDamage(1);
-
+                Analytics.CustomEvent("GotHitByEnemy", other.transform.position);
                 if (m_Health.currentHealth <= 0)
                 {
+                    Analytics.CustomEvent("DiedByEnemy", other.transform.position);
+
+                    Analytics.CustomEvent("bulletCharge", new Dictionary<string, object>
+                    {
+                        { "LevelTimer", leveltimer.timer}
+                    });
+
                     UnityEngine.SceneManagement.SceneManager.LoadScene(0);
                 }
+
             }         
         }
     }
