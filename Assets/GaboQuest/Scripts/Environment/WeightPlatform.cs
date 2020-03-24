@@ -2,11 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LerpTo : MonoBehaviour
+public class WeightPlatform : MonoBehaviour
 {
     public Transform origin, target;
     [SerializeField] AnimationCurve lerpCurve;
     [SerializeField] float duration;
+
+    public PressurePlate linkedPlate;
+
+    Vector3 OriginPos;
+
+    private void Start()
+    {
+        OriginPos = origin.position;
+    }
 
     public States currentState = States.Wait;
 
@@ -24,6 +33,13 @@ public class LerpTo : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (OriginPos.y + linkedPlate.weightOnPlate != target.position.y)
+        {
+            StopAllCoroutines();
+            origin.position = transform.position;
+            target.position = new Vector3(target.position.x, OriginPos.y + linkedPlate.weightOnPlate, target.position.z);
+            ChangeState(0);
+        }
         if (currentState == States.On)
         {
             StartCoroutine(LerpToPosition(origin, target));
@@ -50,5 +66,7 @@ public class LerpTo : MonoBehaviour
 
             yield return null;
         }
+
+        origin.position = transform.position;
     }
 }

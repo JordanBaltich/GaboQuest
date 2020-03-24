@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     public Vector3 lastHitDirection;
     public float knockbackForce;
 
+    public int weight;
+
     private void Awake()
     {
         m_Body = GetComponent<Rigidbody>();
