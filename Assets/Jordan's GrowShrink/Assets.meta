@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Jordan's GrowShrink/Assets.meta
 guid: 5dfa46671b955e5479ac669bcd16af2c
+=======
+guid: 425c3aed47dd05444960ca41af18e591
+>>>>>>> master:Assets/AmplifyShaderEditor/Examples.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
