@@ -81,8 +81,7 @@ public class BounceArc : MonoBehaviour
     }
 
     private void DrawQuadraticCurve()
-    {
-       
+    {    
         for (int i = 1; i < resolution + 1; i++)
         {
             float t = i / (float)resolution;
@@ -143,6 +142,7 @@ public class BounceArc : MonoBehaviour
         {
             Debug.DrawRay(point, Vector3.down, Color.red);
             currentGroundLevel = 0;
+            p2 = FindLandingPosition();
         }
 
 

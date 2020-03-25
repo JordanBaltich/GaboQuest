@@ -15,6 +15,7 @@ public class LibeeBounceState : StateMachineBehaviour
         m_Controller = animator.GetComponent<LibeeController>();
 
         m_Body.isKinematic = true;
+        m_Controller.StopAllCoroutines();
         m_BounceArc.BounceOffTarget(m_Controller.bounceTarget);
         m_Controller.bouncing = true;
     }
