@@ -16,6 +16,10 @@ public class LibeeController : MonoBehaviour
 
     [SerializeField] float hitForce;
 
+    public float shotDistance;
+
+    public Vector3 shotDirection;
+
     private void Awake()
     {
         m_Body = GetComponent<Rigidbody>();
@@ -89,5 +93,22 @@ public class LibeeController : MonoBehaviour
         m_StateMachine.ResetTrigger("isBouncing");
         m_StateMachine.ResetTrigger("isPickedUp");
         m_StateMachine.ResetTrigger("isShot");
+    }
+
+    public IEnumerator BulletTravel(Vector3 end, float shotForce, AnimationCurve fallCurve, Transform AimPoint)
+    {
+        float time = 0;
+        Vector3 start = transform.position;
+
+        while (time <= shotForce)
+        {
+            float percent = time / shotForce;
+            time += Time.deltaTime;
+            end.y = Mathf.Lerp(start.y, AimPoint.position.y, fallCurve.Evaluate(percent));
+            m_Body.position = Vector3.Lerp(start, end, percent);
+
+
+            yield return null;
+        }
     }
 }
