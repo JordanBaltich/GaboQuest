@@ -14,8 +14,7 @@ public class LibeeWell : MonoBehaviour
     {
 
         foreach (Transform libee in LibeeSorter.Dead)
-        {
-            LibeeSorter.Dead.Remove(libee);
+        {        
             libee.parent = null;
             libee.position = transform.position;
             libee.GetComponent<Rigidbody>().useGravity = false;
@@ -23,6 +22,7 @@ public class LibeeWell : MonoBehaviour
             libee.gameObject.GetComponent<LibeeController>().ResetTriggers();
             libee.gameObject.GetComponent<Animator>().SetTrigger("isBouncing");
 
+            LibeeSorter.Dead.Remove(libee);
             LibeeSorter.SortDeadLibees();
         }
 

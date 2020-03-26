@@ -101,19 +101,4 @@ public class Shoot : MonoBehaviour
             StartShotCooldown();
         }        
     }
-
-    //IEnumerator BulletTravel(Rigidbody bulletBody, Vector3 start, Vector3 end)
-    //{
-    //    float time = 0;
-    //    while(time <= shotForce)
-    //    {
-    //        float percent = time / shotForce;
-    //        time += Time.deltaTime;
-    //        end.y = Mathf.Lerp(start.y, GetComponent<PlayerController>().AimPoint.transform.position.y, fallCurve.Evaluate(percent));
-    //        bulletBody.position = Vector3.Lerp(start, end, percent);
-
-
-    //        yield return null;
-    //    }
-    //}
 }

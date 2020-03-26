@@ -10,7 +10,6 @@ public class LibeeInventoryState : StateMachineBehaviour
     {
         m_Body = animator.GetComponent<Rigidbody>();
 
-        animator.transform.parent = null;
         m_Body.useGravity = false;
         m_Body.velocity = Vector3.zero;
 

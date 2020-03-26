@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
                 m_GrowMechanic.currentScale = transform.localScale;
                
                 collision.gameObject.transform.position = m_LibeeSorter.CapturedLibees.position;
-                collision.gameObject.transform.SetParent(m_LibeeSorter.CapturedLibees);
+                collision.gameObject.transform.parent = m_LibeeSorter.CapturedLibees;
                 m_LibeeSorter.SortLibee();
 
                 StartCoroutine(m_GrowMechanic.Grow(m_LibeeSorter.Normal.Count));
