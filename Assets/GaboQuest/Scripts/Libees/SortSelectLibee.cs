@@ -133,4 +133,15 @@ public class SortSelectLibee : MonoBehaviour
             }
         }
     }
+
+    public int TotalLibees()
+    {
+        int count = 0;
+
+        foreach (int libeeCount in LibeeCount)
+        {
+            count += libeeCount;
+        }
+        return count;
+    }
 }

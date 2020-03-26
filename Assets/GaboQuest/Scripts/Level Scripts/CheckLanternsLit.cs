@@ -10,8 +10,15 @@ public class CheckLanternsLit : MonoBehaviour
     int numberOfLanternsToLight;
     int numberOfLitLanterns;
 
+    [SerializeField] Material offMat, onMat;
+    [SerializeField] MeshRenderer targetMesh;
 
     public int playerID;
+
+    private void Awake()
+    {
+        targetMesh = GetComponent<MeshRenderer>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +45,17 @@ public class CheckLanternsLit : MonoBehaviour
                     numberOfLitLanterns++;
                 }
             }
+
+            //changes material depending on if the gate is open vs closed
+            if (numberOfLitLanterns == numberOfLanternsToLight)
+            {
+                targetMesh.material = onMat;
+            }
+            else
+            {
+                targetMesh.material = offMat;
+            }
+
             yield return new WaitForSeconds(.2f);
         }
     }

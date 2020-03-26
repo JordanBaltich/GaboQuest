@@ -92,6 +92,12 @@ public class Lantern : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        //
+        // -------------------------- BUG --------------------------
+        // this is causing the lanterns to lose a reference to the libee that is held when the tongue hitbox exits the lantern trigger
+        //
+        //
+        //
         if (other.gameObject.layer == tongueLayer)
         {
             if (heldLibee != null)

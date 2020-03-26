@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 1674682853}
   - component: {fileID: 1674682855}
   - component: {fileID: 1674682854}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: TongueHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
