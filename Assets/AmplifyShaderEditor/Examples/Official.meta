@@ -1,10 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/GaboQuest/Scenes/Puzzles/Puzzle1.unity.meta
-guid: 9056ad2574ec3fd43a7b246b8501f71c
-=======
-guid: d32786c99caa66e41baea4ab6d1c1cb8
+guid: 35ee097106ed2f340b0fee350a18ce91
 folderAsset: yes
->>>>>>> PlayerControllerRework:Assets/AmplifyShaderEditor/Examples/Official.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
