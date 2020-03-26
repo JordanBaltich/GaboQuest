@@ -10,6 +10,15 @@ public class LibeeWell : MonoBehaviour
 
     [SerializeField] float returnRadius;
 
+    private void Awake()
+    {
+        if(Player == null)
+            Player = GameObject.Find("Player").transform;
+
+        if (LibeeSorter == null)
+            LibeeSorter = GameObject.Find("PersistentGM").GetComponent<SortSelectLibee>();
+    }
+
     void ReturnLibee()
     {
 

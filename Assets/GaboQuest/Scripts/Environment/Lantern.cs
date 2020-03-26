@@ -15,6 +15,8 @@ public class Lantern : MonoBehaviour
 
     public States currentState = States.Off;
 
+    public bool isGateLantern;
+
     public enum States
     {
         On,
@@ -46,6 +48,7 @@ public class Lantern : MonoBehaviour
             {
                 if (heldLibee == null)
                 {
+                    print("GotLibee");
                     heldLibee = other.gameObject;
                     currentState = States.On;
 
@@ -130,4 +133,5 @@ public class Lantern : MonoBehaviour
         //        }
         //    }
         //}
+
     }
