@@ -78,7 +78,7 @@ public class WeightPlatform : MonoBehaviour
         {
             float percent = time / duration;
             time += Time.fixedDeltaTime;
-            transform.position = Vector3.Lerp(start.position, end.position, lerpCurve.Evaluate(percent));
+            transform.position = Vector3.LerpUnclamped(start.position, end.position, lerpCurve.Evaluate(percent));
 
             yield return null;
         }
