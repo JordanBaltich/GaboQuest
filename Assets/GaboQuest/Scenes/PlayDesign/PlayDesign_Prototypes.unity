@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: ed325c5ed66aabc4abd56bb6bafd8b7f,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2067,11 +2067,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Libee
       objectReference: {fileID: 0}
-    - target: {fileID: 7464787531361463914, guid: 37dbf3b6c16bddc46844126608161080,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 6808288846982635288, guid: 37dbf3b6c16bddc46844126608161080,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2126,21 +2121,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 109286855869171717, guid: 37dbf3b6c16bddc46844126608161080,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4640262312582943142, guid: 37dbf3b6c16bddc46844126608161080,
-        type: 3}
-      propertyPath: travelSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -4640262312582943142, guid: 37dbf3b6c16bddc46844126608161080,
-        type: 3}
-      propertyPath: resolution
-      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37dbf3b6c16bddc46844126608161080, type: 3}
@@ -2320,6 +2300,16 @@ PrefabInstance:
       propertyPath: linkedPlate
       value: 
       objectReference: {fileID: 874382755}
+    - target: {fileID: 7190557702576069291, guid: 70490696d1ea79c4a93328415770e530,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190557702576069291, guid: 70490696d1ea79c4a93328415770e530,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70490696d1ea79c4a93328415770e530, type: 3}
 --- !u!1001 &8707979278903051886
