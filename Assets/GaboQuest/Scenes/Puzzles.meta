@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/GaboQuest/Scenes/Puzzles.meta
-guid: ae8f0cdcef59d784ea0e256dd352dc1b
-=======
-guid: 95262bbb2b8396b49986eefe81661b4f
->>>>>>> PlayerControllerRework:Assets/AmplifyShaderEditor.meta
+guid: 0d64eddf38c9a5441a1d25a26dee0290
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
