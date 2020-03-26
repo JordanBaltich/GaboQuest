@@ -53,6 +53,7 @@ public class PlayerTongue : MonoBehaviour
             libeeBody.useGravity = false;
             libeeBody.velocity = Vector3.zero;
             other.transform.parent = this.transform;
+            other.transform.position = this.transform.position;
 
             //R* Stops tongueBox from updating 
             tongueBox.stopSorting = true;
