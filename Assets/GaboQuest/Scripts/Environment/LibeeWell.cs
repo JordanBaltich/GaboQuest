@@ -19,9 +19,7 @@ public class LibeeWell : MonoBehaviour
             libee.parent = null;
             libee.position = transform.position;
             libee.GetComponent<Rigidbody>().useGravity = false;
-            libee.gameObject.GetComponent<LibeeController>().bounceTarget = transform.position;
-            libee.gameObject.GetComponent<LibeeController>().ResetTriggers();
-            libee.gameObject.GetComponent<Animator>().SetTrigger("isBouncing");
+            libee.gameObject.GetComponent<BounceArc>().BounceOffTarget(transform);
 
             LibeeSorter.SortDeadLibees();
         }

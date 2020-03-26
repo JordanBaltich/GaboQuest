@@ -6,97 +6,21 @@ public class PressurePlate : MonoBehaviour
 {
     [SerializeField] LerpTo LerpObject;
 
-    [SerializeField] int playerID, libeeID, boxID;
+    [SerializeField] int layerID;
 
 
     [SerializeField] int weightLimit;
 
     PlayerController gaboController;
 
-    public int weightOnPlate = 0;
-    public int libeesOnPlate = 0;
-
-    public bool forRisingPlat;
-
-    int stepOnWeight;
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.layer == libeeID)
-        {
-            libeesOnPlate++;
-            weightLimit++;
-        }
-
-        if (other.gameObject.layer == playerID)
+        if (other.gameObject.layer == layerID)
         {
             gaboController = other.gameObject.GetComponent<PlayerController>();
 
-            stepOnWeight = gaboController.weight + gaboController.m_LibeeSorter.Normal.Count;
-
-            weightOnPlate += stepOnWeight;
-
-        }
-
-        if (other.gameObject.layer == boxID)
-        {
-            weightOnPlate += other.gameObject.GetComponent<PushBox>().weight;
-        }
-
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-
-        if (other.gameObject.layer == playerID)
-        {
-            if (gaboController.weight + gaboController.m_LibeeSorter.Normal.Count != stepOnWeight)
+            if (gaboController.m_LibeeSorter.Normal.Count >= weightLimit)
             {
-                weightOnPlate -= stepOnWeight;
-                stepOnWeight = gaboController.weight + gaboController.m_LibeeSorter.Normal.Count;
-                weightOnPlate += stepOnWeight;
-            }
-        }
-
-        if (forRisingPlat)
-        {
-            if (weightOnPlate > weightLimit)
-            {
-                weightOnPlate = weightLimit;
-            }
-        }
-
-        if (weightOnPlate >= weightLimit)
-        {
-            if (LerpObject != null)
-                LerpObject.ChangeState(0);
-        }
-
-
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.layer == playerID)
-        {
-            weightOnPlate -= gaboController.weight + gaboController.m_LibeeSorter.Normal.Count;
-
-        }
-        if (other.gameObject.layer == boxID)
-        {
-            weightOnPlate -= other.gameObject.GetComponent<PushBox>().weight;
-        }
-
-        if (other.gameObject.layer == libeeID)
-        {
-            libeesOnPlate--;
-        }
-
-        if (forRisingPlat)
-        {
-            if (LerpObject != null)
-            {
-                LerpObject.target.position = new Vector3(LerpObject.target.position.x, LerpObject.origin.position.y + weightOnPlate, LerpObject.target.position.z);
                 LerpObject.ChangeState(0);
             }
         }

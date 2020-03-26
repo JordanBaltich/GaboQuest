@@ -12,7 +12,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private float minForce;
     [SerializeField] private float chargeTime;
 
-    public Transform bulletSpawn;
+    [SerializeField] Transform bulletSpawn;
     [SerializeField] AnimationCurve fallCurve;
 
 
@@ -86,34 +86,36 @@ public class Shoot : MonoBehaviour
     {
         if (canFire && bullets.Count > 0)
         {
-            bullets[bullets.Count - 1].gameObject.GetComponent<LibeeController>().ResetTriggers();
-            bullets[bullets.Count - 1].gameObject.GetComponent<Animator>().SetTrigger("isShot");
+            Rigidbody bulletBody = bullets[bullets.Count - 1].GetComponent<Rigidbody>();
+
             bullets[bullets.Count - 1].transform.position = bulletSpawn.position;
             bullets[bullets.Count - 1].transform.rotation = bulletSpawn.rotation;
             bullets[bullets.Count - 1].transform.parent = null;
+            bulletBody.useGravity = true;
+            //bulletBody.AddForce(bulletSpawn.transform.forward * shotForce, ForceMode.Impulse);
 
-            bullets[bullets.Count - 1].gameObject.GetComponent<LibeeController>().shotDirection = GetComponent<PlayerController>().AimPoint.position - transform.position;
+            bulletBody.velocity = Vector3.zero;
+            bulletBody.transform.parent = null;
+            bullets.Remove(bullets[bullets.Count - 1]);
 
             Vector3 endPoint = GetComponent<PlayerController>().AimPoint.transform.position;
-            bullets[bullets.Count - 1].GetComponent<LibeeController>().StartCoroutine(bullets[bullets.Count - 1].GetComponent<LibeeController>().BulletTravel(endPoint, shotForce, fallCurve, GetComponent<PlayerController>().AimPoint));
-
-            bullets.Remove(bullets[bullets.Count - 1]);
+            StartCoroutine(BulletTravel(bulletBody, bulletSpawn.position, endPoint));
             StartShotCooldown();
         }        
     }
 
-    //IEnumerator BulletTravel(Rigidbody bulletBody, Vector3 start, Vector3 end)
-    //{
-    //    float time = 0;
-    //    while(time <= shotForce)
-    //    {
-    //        float percent = time / shotForce;
-    //        time += Time.deltaTime;
-    //        end.y = Mathf.Lerp(start.y, GetComponent<PlayerController>().AimPoint.transform.position.y, fallCurve.Evaluate(percent));
-    //        bulletBody.position = Vector3.Lerp(start, end, percent);
+    IEnumerator BulletTravel(Rigidbody bulletBody, Vector3 start, Vector3 end)
+    {
+        float time = 0;
+        while(time <= shotForce)
+        {
+            float percent = time / shotForce;
+            time += Time.deltaTime;
+            end.y = Mathf.Lerp(start.y, GetComponent<PlayerController>().AimPoint.transform.position.y, fallCurve.Evaluate(percent));
+            bulletBody.position = Vector3.Lerp(start, end, percent);
 
 
-    //        yield return null;
-    //    }
-    //}
+            yield return null;
+        }
+    }
 }

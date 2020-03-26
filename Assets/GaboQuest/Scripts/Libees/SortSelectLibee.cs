@@ -39,6 +39,9 @@ public class SortSelectLibee : MonoBehaviour
 
     public void GatherDeadLibees(Transform DeadLibee)
     {
+
+        DeadLibee.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        DeadLibee.GetComponent<Rigidbody>().useGravity = false;
         DeadLibee.transform.position = DeadLibeeStorage.position;
         DeadLibee.transform.parent = DeadLibeeStorage;
 
