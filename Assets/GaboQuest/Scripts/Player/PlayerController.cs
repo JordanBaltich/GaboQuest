@@ -78,6 +78,11 @@ public class PlayerController : MonoBehaviour
                 m_StateMachine.SetBool("isTongueOut", true);
             }
         }
+
+        if (player.GetButtonDown("SwitchAmmo"))
+        {
+            m_LibeeSorter.SelectLibees();
+        }
         
     }
 

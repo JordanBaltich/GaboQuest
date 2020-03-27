@@ -7,7 +7,7 @@ using TMPro;
 public class AmmoUI : MonoBehaviour
 {
     [SerializeField]
-    Image[] LibeeTypeImages = new Image[2];
+    Sprite[] LibeeTypeImages = new Sprite[2];
     [SerializeField]
     int[] counts = new int[2];
 
@@ -30,6 +30,11 @@ public class AmmoUI : MonoBehaviour
         GetInfo();
     }
 
+    private void Update()
+    {
+        GetInfo();
+    }
+
     void GetInfo()
     {
         for (int i = 0; i < counts.Length; i++)
@@ -39,7 +44,7 @@ public class AmmoUI : MonoBehaviour
 
         selectedLibeeType = LibeeSorter.CurrentLibeeIndex;
 
-        CurrentLibeeImage = LibeeTypeImages[selectedLibeeType];
+        CurrentLibeeImage.sprite = LibeeTypeImages[selectedLibeeType];
         NumberOfLibees.text = counts[selectedLibeeType].ToString();
     }
 }
