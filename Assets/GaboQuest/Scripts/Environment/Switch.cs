@@ -28,6 +28,39 @@ public class Switch : MonoBehaviour
                 }
               
             }
+
+            
+
+            if (LerpObject.name != "Bridge")
+            {
+                if(layerID == 11)
+                {
+                    LerpObject.ChangeState(0);
+                }
+                else
+                {
+                    if (lastState == 1)
+                    {
+                        LerpObject.ChangeState(0);
+                        lastState = 0;
+                    }
+                    else
+                    {
+                        LerpObject.ChangeState(1);
+                        lastState = 1;
+                    }
+                }
+            }
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(LerpObject.name != "Bridge")
+        {
+            if (layerID == 11)
+                LerpObject.ChangeState(1);
         }
     }
 }
