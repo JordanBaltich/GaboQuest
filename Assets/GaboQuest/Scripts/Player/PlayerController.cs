@@ -170,7 +170,7 @@ public class PlayerController : MonoBehaviour
                 collision.gameObject.transform.parent = m_LibeeSorter.CapturedLibees;
                 m_LibeeSorter.SortLibee();
 
-                StartCoroutine(m_GrowMechanic.Grow(m_LibeeSorter.Normal.Count));
+                StartCoroutine(m_GrowMechanic.Grow(m_LibeeSorter.TotalLibees()));
             }
         }
     }

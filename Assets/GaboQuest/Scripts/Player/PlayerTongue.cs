@@ -52,8 +52,8 @@ public class PlayerTongue : MonoBehaviour
             // Needs fixing!
             libeeBody.useGravity = false;
             libeeBody.velocity = Vector3.zero;
-            other.transform.parent = this.transform;
-            other.transform.position = this.transform.position;
+            other.transform.parent = transform;
+            other.transform.position = transform.position;
 
             //R* Stops tongueBox from updating 
             tongueBox.stopSorting = true;
@@ -111,6 +111,14 @@ public class PlayerTongue : MonoBehaviour
             transform.position = Vector3.LerpUnclamped(transform.position, gameObject.transform.parent.transform.position, SpeedCurve.Evaluate(percent));
 
             yield return null;
+        }
+
+        if (GetComponentInChildren<Transform>() != null)
+        {
+            foreach (Transform t in GetComponentInChildren<Transform>())
+            {
+                t.position = transform.position;
+            }
         }
 
         //R* Resetting parameters to default

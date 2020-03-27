@@ -43,7 +43,8 @@ GameObject:
   - component: {fileID: 7300689827720370765}
   - component: {fileID: 7300689827720370762}
   - component: {fileID: 7300689827720370761}
-  m_Layer: 14
+  - component: {fileID: 1261194665}
+  m_Layer: 13
   m_Name: pfb_LanternHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +58,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7300689827720370760}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.393679, y: 0.62, z: 2.503953}
   m_LocalScale: {x: 1.8617768, y: 6.188583, z: 1.8617768}
   m_Children:
@@ -145,6 +146,22 @@ MonoBehaviour:
   LibeeStorage: {fileID: 3079747164986156340}
   heldLibee: {fileID: 0}
   currentState: 1
+  isGateLantern: 0
+--- !u!114 &1261194665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300689827720370760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7959b88b5448f4eaff9190ec7a1955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LerpObject: {fileID: 0}
+  layerID: 9
+  forLantern: 1
 --- !u!1001 &3121109557767140168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -158,11 +175,6 @@ PrefabInstance:
       value: mesh_Lantern
       objectReference: {fileID: 0}
     - target: {fileID: -6165363029608005813, guid: 044fa5591551c4240a078ca95f90299b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6bee5ace345a05d4f9b785d57012fd88, type: 2}
-    - target: {fileID: -5586152139760086140, guid: 044fa5591551c4240a078ca95f90299b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -238,6 +250,11 @@ PrefabInstance:
       value: 16.158783
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 044fa5591551c4240a078ca95f90299b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bee5ace345a05d4f9b785d57012fd88, type: 2}
+    - target: {fileID: -5586152139760086140, guid: 044fa5591551c4240a078ca95f90299b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

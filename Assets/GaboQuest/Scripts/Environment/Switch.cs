@@ -9,6 +9,7 @@ public class Switch : MonoBehaviour
     [SerializeField] int layerID;
 
     int lastState = 1;
+    public bool forLantern;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,17 +17,35 @@ public class Switch : MonoBehaviour
         {
             if (LerpObject.name == "Bridge")
             {
-                if (lastState == 1)
+                if (forLantern)
                 {
-                    LerpObject.ChangeState(0);
-                    lastState = 0;
+                    if (other.gameObject.tag == "Fire")
+                    {
+                        if (lastState == 1)
+                        {
+                            LerpObject.ChangeState(0);
+                            lastState = 0;
+                        }
+                        else
+                        {
+                            LerpObject.ChangeState(1);
+                            lastState = 1;
+                        }
+                    }
                 }
                 else
                 {
-                    LerpObject.ChangeState(1);
-                    lastState = 1;
-                }
-              
+                    if (lastState == 1)
+                    {
+                        LerpObject.ChangeState(0);
+                        lastState = 0;
+                    }
+                    else
+                    {
+                        LerpObject.ChangeState(1);
+                        lastState = 1;
+                    }
+                }             
             }
 
             
@@ -57,10 +76,14 @@ public class Switch : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(LerpObject.name != "Bridge")
+        if (LerpObject != null)
         {
-            if (layerID == 11)
-                LerpObject.ChangeState(1);
+            if (LerpObject.name != "Bridge")
+            {
+                if (layerID == 11)
+                    LerpObject.ChangeState(1);
+            }
         }
+        
     }
 }

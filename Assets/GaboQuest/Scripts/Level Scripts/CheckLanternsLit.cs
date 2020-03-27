@@ -64,7 +64,14 @@ public class CheckLanternsLit : MonoBehaviour
     {
         if(other.gameObject.layer == playerID && numberOfLitLanterns == numberOfLanternsToLight)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 }
