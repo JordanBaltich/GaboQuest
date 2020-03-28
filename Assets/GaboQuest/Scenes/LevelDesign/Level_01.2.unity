@@ -1008,6 +1008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LerpObject: {fileID: 627198646}
   layerID: 9
+  forLantern: 0
 --- !u!1 &207509684
 GameObject:
   m_ObjectHideFlags: 0
@@ -4231,15 +4232,11 @@ MonoBehaviour:
   CapturedLibees: {fileID: 631365664}
   Normal: []
   Fire: []
-  Water: []
-  Grass: []
   DeadLibeeStorage: {fileID: 1031589982}
   Dead: []
   LibeeCount: 
   UI_Normal: {fileID: 0}
   UI_Fire: {fileID: 0}
-  UI_Water: {fileID: 0}
-  UI_Grass: {fileID: 0}
 --- !u!4 &680007062
 Transform:
   m_ObjectHideFlags: 0
@@ -4643,17 +4640,17 @@ PrefabInstance:
     - target: {fileID: 8956041398418869252, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 8956041398418869252, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 8956041398418869252, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: 61.77
       objectReference: {fileID: 0}
     - target: {fileID: 8956041398418869252, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
@@ -4718,7 +4715,7 @@ PrefabInstance:
     - target: {fileID: 8956041398418869255, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
       propertyPath: weight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1674682852, guid: 94a9c25b15cfcf740be790d73eeca4ae, type: 3}
       propertyPath: m_IsActive
@@ -5681,7 +5678,7 @@ GameObject:
   - component: {fileID: 908225178}
   - component: {fileID: 908225177}
   - component: {fileID: 908225180}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: PressurePlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5774,9 +5771,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LerpObject: {fileID: 2121473619}
-  playerID: 0
-  libeeID: 0
-  boxID: 0
+  playerID: 11
+  libeeID: 9
+  boxID: 20
   weightLimit: 2
   weightOnPlate: 0
   libeesOnPlate: 0
