@@ -12,6 +12,8 @@ public class WeightPlatform : MonoBehaviour
 
     Vector3 OriginPos;
 
+    public bool down;
+
     private void Start()
     {
         OriginPos = origin.position;
@@ -33,13 +35,27 @@ public class WeightPlatform : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (OriginPos.y + linkedPlate.weightOnPlate != target.position.y)
+        if (!down)
         {
-            StopAllCoroutines();
-            origin.position = transform.position;
-            target.position = new Vector3(target.position.x, OriginPos.y + linkedPlate.weightOnPlate, target.position.z);
-            ChangeState(0);
+            if (OriginPos.y + linkedPlate.weightOnPlate != target.position.y)
+            {
+                StopAllCoroutines();
+                origin.position = transform.position;
+                target.position = new Vector3(target.position.x, OriginPos.y + linkedPlate.weightOnPlate, target.position.z);
+                ChangeState(0);
+            }
         }
+        else
+        {
+            if (OriginPos.y - linkedPlate.weightOnPlate != target.position.y)
+            {
+                StopAllCoroutines();
+                origin.position = transform.position;
+                target.position = new Vector3(target.position.x, OriginPos.y - linkedPlate.weightOnPlate, target.position.z);
+                ChangeState(0);
+            }
+        }
+       
         if (currentState == States.On)
         {
             StartCoroutine(LerpToPosition(origin, target));
@@ -62,7 +78,7 @@ public class WeightPlatform : MonoBehaviour
         {
             float percent = time / duration;
             time += Time.fixedDeltaTime;
-            transform.position = Vector3.Lerp(start.position, end.position, lerpCurve.Evaluate(percent));
+            transform.position = Vector3.LerpUnclamped(start.position, end.position, lerpCurve.Evaluate(percent));
 
             yield return null;
         }

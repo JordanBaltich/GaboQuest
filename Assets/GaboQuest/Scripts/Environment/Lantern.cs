@@ -15,6 +15,8 @@ public class Lantern : MonoBehaviour
 
     public States currentState = States.Off;
 
+    public bool isGateLantern;
+
     public enum States
     {
         On,
@@ -42,32 +44,37 @@ public class Lantern : MonoBehaviour
     {
         if (other.gameObject.layer == targetLayer)
         {
-            if (currentState == States.Off)
+            if (other.gameObject.tag == "Fire")
             {
-                if (heldLibee == null)
+                if (currentState == States.Off)
                 {
-                    heldLibee = other.gameObject;
-                    currentState = States.On;
+                    if (heldLibee == null)
+                    {
+                        print("GotLibee");
+                        heldLibee = other.gameObject;
+                        currentState = States.On;
 
-                    heldLibee.transform.parent = LibeeStorage.transform;
+                        heldLibee.transform.parent = LibeeStorage.transform;
 
-                    heldLibee.GetComponent<LibeeController>().StopAllCoroutines();
+                        heldLibee.GetComponent<LibeeController>().StopAllCoroutines();
 
-                    Rigidbody libBody = heldLibee.GetComponent<Rigidbody>();
-                    libBody.useGravity = false;
-                    libBody.isKinematic = true;
-                    libBody.velocity = Vector3.zero;
+                        Rigidbody libBody = heldLibee.GetComponent<Rigidbody>();
+                        libBody.useGravity = false;
+                        libBody.isKinematic = true;
+                        libBody.velocity = Vector3.zero;
 
 
-                    libBody.transform.position = LibeeStorage.position;
+                        libBody.transform.position = LibeeStorage.position;
+                    }
+
+
                 }
-
-
+                else
+                {
+                    currentState = States.Off;
+                }
             }
-            else
-            {
-                currentState = States.Off;
-            }
+            
         }
 
         if (other.gameObject.layer == tongueLayer)
@@ -89,6 +96,12 @@ public class Lantern : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        //
+        // -------------------------- BUG --------------------------
+        // this is causing the lanterns to lose a reference to the libee that is held when the tongue hitbox exits the lantern trigger
+        //
+        //
+        //
         if (other.gameObject.layer == tongueLayer)
         {
             if (heldLibee != null)
@@ -130,4 +143,5 @@ public class Lantern : MonoBehaviour
         //        }
         //    }
         //}
+
     }

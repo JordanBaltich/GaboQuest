@@ -25,14 +25,14 @@ public class PressurePlate : MonoBehaviour
         if (other.gameObject.layer == libeeID)
         {
             libeesOnPlate++;
-            weightLimit++;
+            //weightLimit++;
+            weightOnPlate++;
         }
 
         if (other.gameObject.layer == playerID)
         {
             gaboController = other.gameObject.GetComponent<PlayerController>();
-
-            stepOnWeight = gaboController.weight + gaboController.m_LibeeSorter.Normal.Count;
+            stepOnWeight = gaboController.weight + gaboController.m_LibeeSorter.TotalLibees();
 
             weightOnPlate += stepOnWeight;
 
@@ -47,14 +47,17 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        
 
         if (other.gameObject.layer == playerID)
         {
             if (gaboController.weight + gaboController.m_LibeeSorter.Normal.Count != stepOnWeight)
             {
                 weightOnPlate -= stepOnWeight;
-                stepOnWeight = gaboController.weight + gaboController.m_LibeeSorter.Normal.Count;
+                //stepOnWeight = gaboController.weight + gaboController.m_LibeeSorter.Normal.Count;
+                stepOnWeight = gaboController.weight + gaboController.m_LibeeSorter.TotalLibees();
                 weightOnPlate += stepOnWeight;
+
             }
         }
 
@@ -90,6 +93,7 @@ public class PressurePlate : MonoBehaviour
         if (other.gameObject.layer == libeeID)
         {
             libeesOnPlate--;
+            weightOnPlate--;
         }
 
         if (forRisingPlat)

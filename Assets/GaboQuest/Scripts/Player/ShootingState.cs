@@ -38,8 +38,10 @@ public class ShootingState : StateMachineBehaviour
 
         if (m_Controller.player.GetButtonUp("Shoot"))
         {
-            m_Shoot.FireBullet(m_Controller.m_LibeeSorter.Normal);
+            m_Shoot.FireBullet(m_Controller.m_LibeeSorter.CurrentAmmoPool());
             m_Shoot.StopCharge();
+
+            m_Controller.m_LibeeSorter.SortLibee();
 
         }
     }

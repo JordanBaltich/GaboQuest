@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 1674682853}
   - component: {fileID: 1674682855}
   - component: {fileID: 1674682854}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: TongueHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c6bcde45938a8b545b493d550775e4b5, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -463,7 +463,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c6bcde45938a8b545b493d550775e4b5, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -544,7 +544,6 @@ MonoBehaviour:
   libee: {fileID: 7464787531361463914, guid: 37dbf3b6c16bddc46844126608161080, type: 3}
   m_LibeeSorter: {fileID: 0}
   AimPoint: {fileID: 0}
-  lastHeldDirection: {x: 0, y: 0, z: 0}
   hazardLayerID: 28
   healthID: 26
   libeeLayerID: 9
@@ -552,6 +551,9 @@ MonoBehaviour:
   rotationSpeed: 0.5
   slopeForce: 5
   slopeRayLength: 1.5
+  lastHitDirection: {x: 0, y: 0, z: 0}
+  knockbackForce: 0
+  weight: 2
 --- !u!114 &8956041398418869254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,8 +841,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0953765b1a5416b4897ae0d50f5f7da9, type: 2}
-    m_RemovedComponents:
-    - {fileID: -6057140222963153312, guid: 193d33d5347ee0d419bfe36c75ea07ce, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193d33d5347ee0d419bfe36c75ea07ce, type: 3}
 --- !u!4 &5006512736133679587 stripped
 Transform:
