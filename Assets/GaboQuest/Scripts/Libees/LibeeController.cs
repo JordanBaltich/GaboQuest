@@ -8,6 +8,7 @@ public class LibeeController : MonoBehaviour
     BounceArc m_BounceArc;
     Rigidbody m_Body;
 
+    public int libeeHitting;
     public int EnemyLayerID, GroundLayerID, PlayerLayerID;
 
     [SerializeField] float hitForce;
@@ -39,23 +40,47 @@ public class LibeeController : MonoBehaviour
             Rigidbody enemyRB = other.gameObject.GetComponentInParent<Rigidbody>();
             if (other.gameObject.tag == "Weakpoint")
             {
+                libeeHitting += 1;
                 m_BounceArc.BounceOffTarget(other.transform);
                 other.gameObject.GetComponentInParent<Health>().TakeDamage(2);
                 Knockback(enemyRB);
-                Analytics.CustomEvent("LibeeHitWeakpoint");
+                Analytics.CustomEvent("LibeeHitEnemyWeakpoint", new Dictionary<string, object>
+            {
+                { "EnemyName", other.gameObject.name }
+            });
+
+                Analytics.CustomEvent("LibeeHitsWeakpoint", new Dictionary<string, object>
+            {
+                { "NumberOfHits", libeeHitting }
+            });
+                
             }
             else if (other.gameObject.tag == "HitBox")
             {
                 m_BounceArc.BounceOffTarget(other.transform);
                 other.gameObject.GetComponentInParent<Health>().TakeDamage(1);
                 Knockback(enemyRB);
-                Analytics.CustomEvent("LibeeHitEnemyButNotWeakpoint");
+
+                Analytics.CustomEvent("LibeeHitEnemyButNotWeakpoint", new Dictionary<string, object>
+            {
+                { "EnemyName", other.gameObject.name }
+            });
+
+                Analytics.CustomEvent("LibeeHitsNotWeakpoint", new Dictionary<string, object>
+            {
+                { "NumberOfHits", libeeHitting }
+            });
+
             }
 
             if (other.gameObject.GetComponentInParent<Health>().currentHealth <= 0)
             {
                 other.gameObject.GetComponentInParent<Health>().DestroyObject();
-                Analytics.CustomEvent("LibeeKilledEnemy");
+
+                Analytics.CustomEvent("LibeeKilledEnemy", new Dictionary<string, object>
+            {
+                { "EnemyName", other.gameObject.name }
+            });
             }
         }
     }

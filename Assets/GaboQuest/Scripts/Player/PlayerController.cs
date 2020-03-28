@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float slopeForce;
     [SerializeField] float slopeRayLength;
 
-
+    public int tongueUsesThisMuchTimes;
 
     private void Awake()
     {
@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
         {
             if (player.GetButtonDown("Tongue"))
             {
+                tongueUsesThisMuchTimes += 1;
                 m_Tongue.gameObject.SetActive(true);
                 m_StateMachine.SetBool("isTongueOut", true);
             }
@@ -136,12 +137,18 @@ public class PlayerController : MonoBehaviour
             if (other.gameObject.tag == "HitBox")
             {
                 m_Health.TakeDamage(1);
-                Analytics.CustomEvent("GotHitByEnemy", other.transform.position);
+                Analytics.CustomEvent("EnemyHitGabo", new Dictionary<string, object>
+                {
+                    { "EnemyName", other.gameObject.name }
+                });
                 if (m_Health.currentHealth <= 0)
                 {
-                    Analytics.CustomEvent("DiedByEnemy", other.transform.position);
+                    Analytics.CustomEvent("EnemyKilledGabo", new Dictionary<string, object>
+                    {
+                        { "EnemyName", other.gameObject.name }
+                    });
 
-                    Analytics.CustomEvent("bulletCharge", new Dictionary<string, object>
+                    Analytics.CustomEvent("HowLongItTookTillDeath", new Dictionary<string, object>
                     {
                         { "LevelTimer", leveltimer.timer}
                     });

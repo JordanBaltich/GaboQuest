@@ -59,7 +59,10 @@ public class PlayerTongue : MonoBehaviour
             tongueBox.TargetsByRange.Clear();
             //R* Stop movement by setting destination to itself
             GrabTarget = transform;
-            Analytics.CustomEvent("UsedTongueToGrabLibee");
+            Analytics.CustomEvent("UsedTongueToGrabLibee", new Dictionary<string, object>
+            {
+                { "NumberOfTimesTongueIsUsed", GetComponent<PlayerController>().tongueUsesThisMuchTimes }
+            });
         }
     }
 

@@ -13,6 +13,7 @@ public class ShootingState : StateMachineBehaviour
     Vector3 moveDirection;
     Vector3 lastHeldDirection;
 
+    public int shootThisManyTimes;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         m_Controller = animator.GetComponent<PlayerController>();
@@ -38,15 +39,19 @@ public class ShootingState : StateMachineBehaviour
 
             Analytics.CustomEvent("bulletCharge", new Dictionary<string, object>
             {
-                { "potions", howLongButtonIsHeld }
+                { "buttonHeldForThisLong", howLongButtonIsHeld }
             });
         }
 
         if (m_Controller.player.GetButtonUp("Shoot"))
         {
+            shootThisManyTimes += 1;
             m_Shoot.FireBullet(m_Controller.m_LibeeSorter.Normal);
             m_Shoot.StopCharge();
-            Analytics.CustomEvent("bulletShot");
+            Analytics.CustomEvent("bulletShooting", new Dictionary<string, object>
+            {
+                { "HowManyTimesBulletShot", shootThisManyTimes}
+            });
         }
     }
 
