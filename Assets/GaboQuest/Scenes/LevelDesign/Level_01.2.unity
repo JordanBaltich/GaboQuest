@@ -1008,6 +1008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LerpObject: {fileID: 627198646}
   layerID: 9
+  forLantern: 0
 --- !u!1 &207509684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,7 +1548,7 @@ GameObject:
   - component: {fileID: 294383610}
   - component: {fileID: 294383609}
   - component: {fileID: 294383608}
-  m_Layer: 17
+  m_Layer: 21
   m_Name: Gate2Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2972,26 +2973,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate
       objectReference: {fileID: 0}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: enemies.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: enemies.Array.data[0]
-      value: 
-      objectReference: {fileID: 1964092369}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: enemies.Array.data[1]
-      value: 
-      objectReference: {fileID: 972072272}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: enemies.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8156795209162712322, guid: 9ea23591dc519214e8c7d5de3bc2a638,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3071,6 +3052,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1964092369}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 972072272}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemies.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ea23591dc519214e8c7d5de3bc2a638, type: 3}
@@ -3648,10 +3649,6 @@ PrefabInstance:
       propertyPath: m_CachedInstanceID
       value: -5882
       objectReference: {fileID: 0}
-    - target: {fileID: 2003870053, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
-      propertyPath: m_movingWall
-      value: 
-      objectReference: {fileID: 1130437892}
     - target: {fileID: 4847331993110714435, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: Player
@@ -3677,6 +3674,10 @@ PrefabInstance:
       propertyPath: m_GameObjectVars.Array.data[1].value
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2003870053, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
+      propertyPath: m_movingWall
+      value: 
+      objectReference: {fileID: 1130437892}
     - target: {fileID: 5714528777706952553, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_IsActive
@@ -4231,15 +4232,11 @@ MonoBehaviour:
   CapturedLibees: {fileID: 631365664}
   Normal: []
   Fire: []
-  Water: []
-  Grass: []
   DeadLibeeStorage: {fileID: 1031589982}
   Dead: []
   LibeeCount: 
   UI_Normal: {fileID: 0}
   UI_Fire: {fileID: 0}
-  UI_Water: {fileID: 0}
-  UI_Grass: {fileID: 0}
 --- !u!4 &680007062
 Transform:
   m_ObjectHideFlags: 0
@@ -4722,7 +4719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1674682852, guid: 94a9c25b15cfcf740be790d73eeca4ae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4791942291977939813, guid: 94a9c25b15cfcf740be790d73eeca4ae,
         type: 3}
@@ -5549,7 +5546,7 @@ GameObject:
   - component: {fileID: 880230068}
   - component: {fileID: 880230067}
   - component: {fileID: 880230066}
-  m_Layer: 17
+  m_Layer: 21
   m_Name: Gate_1_Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7463,6 +7460,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1700075718, guid: b01a024d05838f74eb9bad300d3869d1, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1353235350}
+    - target: {fileID: 1700075718, guid: b01a024d05838f74eb9bad300d3869d1, type: 3}
+      propertyPath: LibeeSorter
+      value: 
+      objectReference: {fileID: 680007061}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b01a024d05838f74eb9bad300d3869d1, type: 3}
 --- !u!1 &1264509414
@@ -8189,11 +8194,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 109286855869171717, guid: 37dbf3b6c16bddc46844126608161080,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4640262312582943142, guid: 37dbf3b6c16bddc46844126608161080,
         type: 3}
       propertyPath: travelSpeed
@@ -8203,6 +8203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: resolution
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 109286855869171717, guid: 37dbf3b6c16bddc46844126608161080,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37dbf3b6c16bddc46844126608161080, type: 3}
@@ -8695,26 +8700,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate
       objectReference: {fileID: 0}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: enemies.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: enemies.Array.data[0]
-      value: 
-      objectReference: {fileID: 331733286}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: enemies.Array.data[1]
-      value: 
-      objectReference: {fileID: 66574196}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: wallType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8156795209162712322, guid: 9ea23591dc519214e8c7d5de3bc2a638,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8793,6 +8778,26 @@ PrefabInstance:
     - target: {fileID: 8156795208632285471, guid: 9ea23591dc519214e8c7d5de3bc2a638,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 331733286}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 66574196}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: wallType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8156795208632285464, guid: 9ea23591dc519214e8c7d5de3bc2a638,
@@ -10514,26 +10519,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingWallCollection
       objectReference: {fileID: 0}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: enemies.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: enemies.Array.data[0]
-      value: 
-      objectReference: {fileID: 213145954}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: enemies.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
-        type: 3}
-      propertyPath: wallType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8156795209162712322, guid: 9ea23591dc519214e8c7d5de3bc2a638,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10614,6 +10599,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemyHealth.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 213145954}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: wallType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156795208632285470, guid: 9ea23591dc519214e8c7d5de3bc2a638,
+        type: 3}
+      propertyPath: enemyHealth.Array.data[0]
+      value: 
+      objectReference: {fileID: 2043264860}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ea23591dc519214e8c7d5de3bc2a638, type: 3}
 --- !u!1 &1948051022
@@ -11009,11 +11024,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 109286855869171717, guid: 37dbf3b6c16bddc46844126608161080,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4640262312582943142, guid: 37dbf3b6c16bddc46844126608161080,
         type: 3}
       propertyPath: travelSpeed
@@ -11023,6 +11033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: resolution
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 109286855869171717, guid: 37dbf3b6c16bddc46844126608161080,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37dbf3b6c16bddc46844126608161080, type: 3}
@@ -11038,7 +11053,7 @@ GameObject:
   - component: {fileID: 2002585399}
   - component: {fileID: 2002585398}
   - component: {fileID: 2002585397}
-  m_Layer: 17
+  m_Layer: 21
   m_Name: Gate2Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11223,11 +11238,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 109286855869171717, guid: 37dbf3b6c16bddc46844126608161080,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4640262312582943142, guid: 37dbf3b6c16bddc46844126608161080,
         type: 3}
       propertyPath: travelSpeed
@@ -11237,6 +11247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: resolution
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 109286855869171717, guid: 37dbf3b6c16bddc46844126608161080,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37dbf3b6c16bddc46844126608161080, type: 3}
@@ -11304,6 +11319,18 @@ Transform:
   m_Father: {fileID: 659107811}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2043264860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2003870053, guid: 7524b0db11f855949a41f83ef241952f,
+    type: 3}
+  m_PrefabInstance: {fileID: 595068285}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f32b32ba20a7b4985855ccfd88d0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2049864461
 GameObject:
   m_ObjectHideFlags: 0

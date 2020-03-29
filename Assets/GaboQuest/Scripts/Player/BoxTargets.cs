@@ -106,6 +106,13 @@ public class BoxTargets : MonoBehaviour
 
     private void SortListByRange()
     {
+        for (int i = TargetsByRange.Count - 1; i >= 0; i--)
+        {
+            if (TargetsByRange[i] == null)
+            {
+                TargetsByRange.Remove(TargetsByRange[i]);
+            }
+        }
             TargetsByRange.Sort((x, y) => { return (gameObject.transform.position - x.transform.position).sqrMagnitude.CompareTo((gameObject.transform.position - y.transform.position).sqrMagnitude); });   
     }
 
