@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/GaboQuest/Scripts/AI/AgentProperties.cs.meta
+guid: e0bc0ef47d28eca4c86518bf2b6330a1
+=======
+guid: 9a7a4894d14a08b4d8ccaaa50c540006
+>>>>>>> master:Assets/GaboQuest/Scripts/Game/HealthSpawner.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
