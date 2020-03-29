@@ -136,7 +136,6 @@ public class BounceArc : MonoBehaviour
 
             currentGroundLevel = hit.point.y;
             Debug.DrawRay(point, Vector3.down, Color.red, 1f);
-            print(currentGroundLevel + " , " + hit.collider.name);
         }
         else
         {

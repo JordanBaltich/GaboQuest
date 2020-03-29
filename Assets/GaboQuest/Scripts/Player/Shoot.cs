@@ -68,7 +68,6 @@ public class Shoot : MonoBehaviour
             float percent = time / chargeTime;
             time += Time.deltaTime;
             shotForce = Mathf.LerpUnclamped(minForce, maxForce, chargeCurve.Evaluate(percent));
-            Debug.Log(shotForce);
             yield return null;
         }
      
