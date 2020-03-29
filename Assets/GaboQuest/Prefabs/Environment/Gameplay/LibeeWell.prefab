@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1700075713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700075714}
+  - component: {fileID: 1700075718}
+  m_Layer: 0
+  m_Name: Well
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700075714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700075713}
+  m_LocalRotation: {x: 0.25495914, y: 0.65954214, z: 0.65954214, w: 0.25495914}
+  m_LocalPosition: {x: 0.0003536062, y: 0.00092704315, z: 0.0032577459}
+  m_LocalScale: {x: 0.014586921, y: 0.004862307, z: 0.014586921}
+  m_Children: []
+  m_Father: {fileID: 384063713627374687}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700075718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700075713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e57ea6cdf06b98439dedb4ad75cb7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  LibeeSorter: {fileID: 0}
+  returnRadius: 10
 --- !u!1 &184959535233276674
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +539,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3679210209822537292}
-  m_LocalRotation: {x: -0.7071049, y: -0, z: -0, w: 0.7071087}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -3.24, y: 0.04, z: -8.9}
   m_LocalScale: {x: 205.66368, y: 205.66368, z: 205.66368}
   m_Children:
@@ -508,6 +554,7 @@ Transform:
   - {fileID: 4132735922883533470}
   - {fileID: 6476818090413371350}
   - {fileID: 8929625726796409337}
+  - {fileID: 1700075714}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
@@ -1120,7 +1167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1857823701642556631
 Transform:
   m_ObjectHideFlags: 0

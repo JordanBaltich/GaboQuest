@@ -10,17 +10,26 @@ public class LibeeWell : MonoBehaviour
 
     [SerializeField] float returnRadius;
 
+    private void Awake()
+    {
+        if(Player == null)
+            Player = GameObject.Find("Player").transform;
+
+        if (LibeeSorter == null)
+            LibeeSorter = GameObject.Find("PersistentGM").GetComponent<SortSelectLibee>();
+    }
+
     void ReturnLibee()
     {
 
         foreach (Transform libee in LibeeSorter.Dead)
-        {
-            LibeeSorter.Dead.Remove(libee);
+        {        
             libee.parent = null;
             libee.position = transform.position;
             libee.GetComponent<Rigidbody>().useGravity = false;
             libee.gameObject.GetComponent<BounceArc>().BounceOffTarget(transform);
 
+            LibeeSorter.Dead.Remove(libee);
             LibeeSorter.SortDeadLibees();
         }
 

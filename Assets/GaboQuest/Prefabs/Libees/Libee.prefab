@@ -5194,10 +5194,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cf2da4ab9f2af498d4ae320ce187e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceTarget: {x: 0, y: 0, z: 0}
   EnemyLayerID: 10
   GroundLayerID: 14
   PlayerLayerID: 11
+  bouncing: 0
   hitForce: 10
+  shotDistance: 0
+  shotDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &-4640262312582943142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5220,6 +5224,7 @@ MonoBehaviour:
   LandingTarget: {fileID: 2031320377262353341, guid: c8a75e9b2afed344f9a2b06a7b9565d1,
     type: 3}
   currentLandingTarget: {fileID: 0}
+  positions: []
   currentPosition: 1
   FallOffCurve:
     serializedVersion: 2

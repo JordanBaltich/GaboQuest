@@ -79,6 +79,11 @@ public class PlayerController : MonoBehaviour
                 m_StateMachine.SetBool("isTongueOut", true);
             }
         }
+
+        if (player.GetButtonDown("SwitchAmmo"))
+        {
+            m_LibeeSorter.SelectLibees();
+        }
         
     }
 
@@ -173,10 +178,10 @@ public class PlayerController : MonoBehaviour
                 libeeBody.useGravity = false;
                 libeeBody.velocity = Vector3.zero;
                 collision.gameObject.transform.position = m_LibeeSorter.CapturedLibees.position;
-                collision.gameObject.transform.SetParent(m_LibeeSorter.CapturedLibees);
+                collision.gameObject.transform.parent = m_LibeeSorter.CapturedLibees;
                 m_LibeeSorter.SortLibee();
 
-                StartCoroutine(m_GrowMechanic.Grow(m_LibeeSorter.Normal.Count));
+                StartCoroutine(m_GrowMechanic.Grow(m_LibeeSorter.TotalLibees()));
             }
         }
     }

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Analytics;
 
 public class ShootingState : StateMachineBehaviour
 {
@@ -13,7 +12,6 @@ public class ShootingState : StateMachineBehaviour
     Vector3 moveDirection;
     Vector3 lastHeldDirection;
 
-    public int shootThisManyTimes;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         m_Controller = animator.GetComponent<PlayerController>();
@@ -34,24 +32,17 @@ public class ShootingState : StateMachineBehaviour
 
         if (m_Controller.player.GetButton("Shoot"))
         {
-            float howLongButtonIsHeld = Time.deltaTime;
             m_Shoot.StartCharge(m_Controller.player);
 
-            Analytics.CustomEvent("bulletCharge", new Dictionary<string, object>
-            {
-                { "buttonHeldForThisLong", howLongButtonIsHeld }
-            });
         }
 
         if (m_Controller.player.GetButtonUp("Shoot"))
         {
-            shootThisManyTimes += 1;
-            m_Shoot.FireBullet(m_Controller.m_LibeeSorter.Normal);
+            m_Shoot.FireBullet(m_Controller.m_LibeeSorter.CurrentAmmoPool());
             m_Shoot.StopCharge();
-            Analytics.CustomEvent("bulletShooting", new Dictionary<string, object>
-            {
-                { "HowManyTimesBulletShot", shootThisManyTimes}
-            });
+
+            m_Controller.m_LibeeSorter.SortLibee();
+
         }
     }
 
