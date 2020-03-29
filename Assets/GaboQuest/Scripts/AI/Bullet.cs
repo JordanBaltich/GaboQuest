@@ -8,18 +8,42 @@ public class Bullet : MonoBehaviour
     
     public ProjectileProperties m_Projectile;
 
-    float m_force;
+    public float m_ImpulseForce;
+
+    [SerializeField] List<int> DamageLayerIDs;
+
+    [Range (1,3)]
+    [SerializeField] int Damage_Dealt = 1;
 
     private void Awake()
     {
+        m_Rigidbody = GetComponent<Rigidbody>();
+
+        if (m_Projectile != null)
+            m_ImpulseForce = m_Projectile.Force;
+
         FlyForward();
-        m_force = m_Projectile.Force;
     }
 
 
     void FlyForward()
     {
-        m_Rigidbody.AddForce(transform.forward * m_force, ForceMode.Impulse);
+        m_Rigidbody.AddForce(transform.forward * m_ImpulseForce, ForceMode.Impulse);
+        //m_Rigidbody
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject collisionObject = collision.gameObject;
+
+        if (DamageLayerIDs.Contains(collisionObject.layer))
+        {
+            Health m_Health = collisionObject.GetComponent<Health>();
+
+            m_Health.currentHealth -= Damage_Dealt;
+        }
+
+        Destroy(gameObject);
     }
 
 }

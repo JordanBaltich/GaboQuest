@@ -6,10 +6,16 @@ using BehaviourMachine;
 public class BM_Shoot : StateBehaviour
 {
     GameObject obj_bullet;
+    [SerializeField] float TimeBeforeIdle;
+    [SerializeField] BulletSpawner m_BulletSpawner;
 
     void OnEnable()
     {
         Debug.Log("Started *Shoot*");
+        if(m_BulletSpawner == null)
+            m_BulletSpawner = GetComponentInChildren<BulletSpawner>();
+        
+        StartCoroutine(ShootTarget());
     }
 
     // Called when the state is disabled
@@ -17,20 +23,14 @@ public class BM_Shoot : StateBehaviour
     {
         Debug.Log("Stopped *Shoot*");
         StopAllCoroutines();
-
     }
 
     
-    void ShootTarget(Transform target)
+    IEnumerator ShootTarget()
     {
-        Vector3 direction = (target.position - transform.position);
-        direction = direction.normalized;
+        m_BulletSpawner.SpawnBullet();
+        yield return new WaitForSeconds(TimeBeforeIdle);
+        SendEvent("Idling");
 
-        //transform.rotation = Quaternion.Lerp(transform.rotation, direction, 1f);
-    }
-
-    void SpawnBullet()
-    {
-        Instantiate(obj_bullet);
     }
 }
