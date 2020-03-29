@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/GaboQuest/Prefabs/Enemy/ChargeEnemy.meta
 guid: e9ef651b9e684ea4989fc873719c4bd2
+=======
+guid: 95262bbb2b8396b49986eefe81661b4f
+>>>>>>> Puzzles-Design:Assets/AmplifyShaderEditor.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

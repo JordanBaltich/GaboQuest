@@ -29,8 +29,10 @@ TagManager:
   - Ground
   - Bounds
   - Geometry
-  - 
-  - 
+  - Gate
+  - VisionCone
+  - PressurePlate
+  - Box
   - 
   - 
   - 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LerpTo : MonoBehaviour
 {
-    [SerializeField] Transform origin, target;
+    public Transform origin, target;
     [SerializeField] AnimationCurve lerpCurve;
     [SerializeField] float duration;
 
