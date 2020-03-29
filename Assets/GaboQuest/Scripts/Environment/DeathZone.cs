@@ -12,6 +12,8 @@ public class DeathZone : MonoBehaviour
     {
         if (other.gameObject.layer == libeeLayer)
         {
+            other.gameObject.GetComponent<LibeeController>().ResetTriggers();
+            other.gameObject.GetComponent<Animator>().SetTrigger("isDead");
             LibeeSorter.GatherDeadLibees(other.gameObject.transform);
         }
     }
@@ -20,6 +22,8 @@ public class DeathZone : MonoBehaviour
     {
         if(other.gameObject.layer == libeeLayer)
         {
+            other.gameObject.GetComponent<LibeeController>().ResetTriggers();
+            other.gameObject.GetComponent<Animator>().SetTrigger("isDead");
             LibeeSorter.GatherDeadLibees(other.gameObject.transform);
         }
     }

@@ -20,10 +20,8 @@ public class PlayerController : MonoBehaviour
     PlayerMotor m_Motor;
     Health m_Health;
     Shoot m_Shoot;
-    public LevelTimeCheck leveltimer;
 
     Vector3 direction;
-    public Vector3 lastHeldDirection;
 
     internal bool CanMove = true;
 
@@ -34,6 +32,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float slopeForce;
     [SerializeField] float slopeRayLength;
 
+    public Vector3 lastHitDirection;
+    public float knockbackForce;
+
+    public int weight;
+
+    public LevelTimeCheck leveltimer;
     public int tongueUsesThisMuchTimes;
 
     private void Awake()
@@ -141,12 +145,19 @@ public class PlayerController : MonoBehaviour
         {
             if (other.gameObject.tag == "HitBox")
             {
-                m_Health.TakeDamage(1);
-                Analytics.CustomEvent("EnemyHitGabo", new Dictionary<string, object>
+                if (m_Health.currentHealth > 0)
                 {
+                    m_Health.TakeDamage(1);
+                    Analytics.CustomEvent("EnemyHitGabo", new Dictionary<string, object>
+                    { 
                     { "EnemyName", other.gameObject.name }
                 });
-                if (m_Health.currentHealth <= 0)
+
+                lastHitDirection = GetHitDirection(other.ClosestPointOnBounds(m_Body.position));
+                m_StateMachine.SetBool("isHit", true);
+                   
+                }
+                else
                 {
                     Analytics.CustomEvent("EnemyKilledGabo", new Dictionary<string, object>
                     {
@@ -158,9 +169,9 @@ public class PlayerController : MonoBehaviour
                         { "LevelTimer", leveltimer.timer}
                     });
 
+                    m_StateMachine.SetBool("isDead", true);
                     UnityEngine.SceneManagement.SceneManager.LoadScene(0);
                 }
-
             }         
         }
     }
@@ -171,12 +182,11 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.gameObject.layer == libeeLayerID)
             {
-                collision.gameObject.transform.parent = null;
+                collision.gameObject.GetComponent<LibeeController>().ResetTriggers();
+                collision.gameObject.GetComponent<Animator>().SetTrigger("isPickedUp");              
+
                 m_GrowMechanic.currentScale = transform.localScale;
                
-                Rigidbody libeeBody = collision.gameObject.GetComponent<Rigidbody>();
-                libeeBody.useGravity = false;
-                libeeBody.velocity = Vector3.zero;
                 collision.gameObject.transform.position = m_LibeeSorter.CapturedLibees.position;
                 collision.gameObject.transform.parent = m_LibeeSorter.CapturedLibees;
                 m_LibeeSorter.SortLibee();
@@ -223,5 +233,15 @@ public class PlayerController : MonoBehaviour
         }
 
         return false;
+    }
+
+
+    public Vector3 GetHitDirection(Vector3 enemyPos)
+    {
+        Vector3 direction = enemyPos - transform.position;
+
+        direction.y = transform.position.y;
+
+        return direction.normalized;
     }
 }
