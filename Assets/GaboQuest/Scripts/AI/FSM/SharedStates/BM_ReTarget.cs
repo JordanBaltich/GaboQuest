@@ -33,7 +33,6 @@ public class BM_ReTarget : StateBehaviour
     {
         m_target = blackboard.GetGameObjectVar("Target");
         m_agent = GetComponent<Agent>();
-        
     }
 
     private void Update()
