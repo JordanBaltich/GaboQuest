@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
 
-public class Area2Event : MonoBehaviour
+public class Area1Event : MonoBehaviour
 {
     public LevelTimeCheck timer;
 
@@ -11,10 +11,11 @@ public class Area2Event : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Analytics.CustomEvent("Room2Reached", new Dictionary<string, object>
+            Analytics.CustomEvent("Room1Reached", new Dictionary<string, object>
             {
                 { "TookThisLongToReach", timer.timer }
             });
+            this.enabled = false;
         }
     }
 }
