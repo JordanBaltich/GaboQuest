@@ -5,6 +5,7 @@ using UnityEngine.Analytics;
 public class PlayerTongue : MonoBehaviour
 {
     public Transform tongueTarget;
+    public PlayerController playerController;
     // [SerializeField] float distance;
     [SerializeField] float duration;
     [SerializeField] AnimationCurve SpeedCurve;
@@ -30,7 +31,7 @@ public class PlayerTongue : MonoBehaviour
     private void Awake()
     {
         m_LR = GetComponent<LineRenderer>();
-
+        playerController = GetComponentInParent<PlayerController>();
         //R* Setting the variable to avoid errors
         GrabTarget = tongueTarget;
         newDuration = duration;
@@ -62,7 +63,7 @@ public class PlayerTongue : MonoBehaviour
             GrabTarget = transform;
             Analytics.CustomEvent("UsedTongueToGrabLibee", new Dictionary<string, object>
             {
-                { "NumberOfTimesTongueIsUsed", GetComponent<PlayerController>().tongueUsesThisMuchTimes }
+                { "NumberOfTimesTongueIsUsed", playerController.tongueUsesThisMuchTimes }
             });
         }
     }

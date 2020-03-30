@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -199980
+  m_CachedInstanceID: -42594
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agentProperties: {fileID: 11400000, guid: faaa0f01ffdd37b41bf956ec02a98780, type: 2}
-  m_navAgent: {fileID: 0}
+  m_navAgent: {fileID: 1449458145981936778}
   Player: {fileID: 0}
   cyclicPatrol: 0
   waypoints:
@@ -1183,7 +1183,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117952}
     m_EventID: 345612353
-  m_CachedInstanceID: -199988
+  m_CachedInstanceID: -42602
   distanceToArrive: 1.5
 --- !u!114 &5714528777163117952
 MonoBehaviour:
@@ -1208,7 +1208,7 @@ MonoBehaviour:
     m_EventID: 1330953036
   - m_Destination: {fileID: 5714528777163117967}
     m_EventID: 42786443
-  m_CachedInstanceID: -199990
+  m_CachedInstanceID: -42604
 --- !u!114 &5714528777163117953
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1232,7 +1232,7 @@ MonoBehaviour:
     m_EventID: 721442352
   - m_Destination: {fileID: 0}
     m_EventID: 895806009
-  m_CachedInstanceID: -199992
+  m_CachedInstanceID: -42606
   m_CanTransitionToSelf: 0
 --- !u!114 &5714528777163117967
 MonoBehaviour:
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 864347346}
     m_EventID: 1124719125
-  m_CachedInstanceID: -199994
+  m_CachedInstanceID: -42608
   ticks: 0.2
   distanceToReachTarget: 10
 --- !u!114 &5714528777163117964
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117952}
     m_EventID: 345612353
-  m_CachedInstanceID: -199996
+  m_CachedInstanceID: -42610
   maxChargeTime: 2
   hitbox: {fileID: 5714528777706952553}
   distanceToArrive: 1
@@ -1305,7 +1305,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117964}
     m_EventID: 315087159
-  m_CachedInstanceID: -199998
+  m_CachedInstanceID: -42612
   rotationSpeed: 1
   angleToAct: 15
   TimeBeforeActing: 1
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agentProperties: {fileID: 11400000, guid: faaa0f01ffdd37b41bf956ec02a98780, type: 2}
-  m_navAgent: {fileID: 0}
+  m_navAgent: {fileID: 1449458145981936778}
   Player: {fileID: 0}
   cyclicPatrol: 0
   libeeLayer: 9
