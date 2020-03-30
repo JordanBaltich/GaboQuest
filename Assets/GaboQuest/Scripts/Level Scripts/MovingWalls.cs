@@ -54,12 +54,7 @@ public class MovingWalls : MonoBehaviour
         {
             if (enemies.Count <= 0)
                 moveDown();
-        }
-
-        if(wallType == WallType.Pressure)
-        {
-        }
-            
+        }   
     }
 
     void moveUp()

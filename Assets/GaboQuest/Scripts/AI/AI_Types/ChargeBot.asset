@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e40019b656c32cf41add0163a9bbad0a, type: 3}
-  m_Name: Grunt
+  m_Name: ChargeBot
   m_EditorClassIdentifier: 
   MaxHealth: 100
   MaxStamina: 100
   Damage: 20
   AttackRange: 2
   Speed: 5
-  RunSpeed: 10
+  RunSpeed: 25
   AngularSpeed: 120
-  Acceleration: 8
+  Acceleration: 12.7
   Deceleration: 5
   RunAngularSpeed: 280
-  RunAcceleration: 10
+  RunAcceleration: 20
   VisionRadius: 15
   VisionAngle: 35
   WanderChance: 2
