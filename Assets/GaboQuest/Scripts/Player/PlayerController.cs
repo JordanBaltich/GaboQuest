@@ -59,6 +59,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (player == null)
+        {
+            player = ReInput.players.GetPlayer(0);
+        }
         if (player.GetButton("Aim"))
         {
             m_StateMachine.SetBool("isShooting" ,true);
