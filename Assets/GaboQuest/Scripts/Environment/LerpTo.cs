@@ -27,7 +27,7 @@ public class LerpTo : MonoBehaviour
         if (currentState == States.On)
         {
             StartCoroutine(LerpToPosition(origin, target));
-
+            this.enabled = false;
             currentState = States.Wait;
         }
         else if (currentState == States.Off)

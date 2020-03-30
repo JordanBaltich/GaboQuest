@@ -20,6 +20,12 @@ public class PressurePlate : MonoBehaviour
 
     int stepOnWeight;
 
+    private void Awake()
+    {
+        playerID = 11;
+        libeeID = 9;
+        boxID = 20;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == libeeID)

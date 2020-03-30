@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
+using UnityEngine.Analytics;
 
 public class PlayerController : MonoBehaviour
 {
@@ -35,6 +36,9 @@ public class PlayerController : MonoBehaviour
     public float knockbackForce;
 
     public int weight;
+
+    public LevelTimeCheck leveltimer;
+    public int tongueUsesThisMuchTimes;
 
     private void Awake()
     {
@@ -74,6 +78,7 @@ public class PlayerController : MonoBehaviour
         {
             if (player.GetButtonDown("Tongue"))
             {
+                tongueUsesThisMuchTimes += 1;
                 m_Tongue.gameObject.SetActive(true);
                 m_StateMachine.SetBool("isTongueOut", true);
             }
@@ -143,13 +148,29 @@ public class PlayerController : MonoBehaviour
                 if (m_Health.currentHealth > 0)
                 {
                     m_Health.TakeDamage(1);
-                    lastHitDirection = GetHitDirection(other.ClosestPointOnBounds(m_Body.position));
-                    m_StateMachine.SetBool("isHit", true);
+                    Analytics.CustomEvent("EnemyHitGabo", new Dictionary<string, object>
+                    { 
+                    { "EnemyName", other.gameObject.name }
+                });
+
+                lastHitDirection = GetHitDirection(other.ClosestPointOnBounds(m_Body.position));
+                m_StateMachine.SetBool("isHit", true);
                    
                 }
                 else
                 {
+                    Analytics.CustomEvent("EnemyKilledGabo", new Dictionary<string, object>
+                    {
+                        { "EnemyName", other.gameObject.name }
+                    });
+
+                    Analytics.CustomEvent("HowLongItTookTillDeath", new Dictionary<string, object>
+                    {
+                        { "LevelTimer", leveltimer.timer}
+                    });
+
                     m_StateMachine.SetBool("isDead", true);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(0);
                 }
             }         
         }

@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Analytics;
 public class PlayerTongue : MonoBehaviour
 {
     public Transform tongueTarget;
+    public PlayerController playerController;
     // [SerializeField] float distance;
     [SerializeField] float duration;
     [SerializeField] AnimationCurve SpeedCurve;
@@ -30,7 +31,7 @@ public class PlayerTongue : MonoBehaviour
     private void Awake()
     {
         m_LR = GetComponent<LineRenderer>();
-
+        playerController = GetComponentInParent<PlayerController>();
         //R* Setting the variable to avoid errors
         GrabTarget = tongueTarget;
         newDuration = duration;
@@ -60,6 +61,10 @@ public class PlayerTongue : MonoBehaviour
             tongueBox.TargetsByRange.Clear();
             //R* Stop movement by setting destination to itself
             GrabTarget = transform;
+            Analytics.CustomEvent("UsedTongueToGrabLibee", new Dictionary<string, object>
+            {
+                { "NumberOfTimesTongueIsUsed", playerController.tongueUsesThisMuchTimes }
+            });
         }
     }
 
