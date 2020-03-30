@@ -107,6 +107,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPos: {fileID: 8156795209730330687}
   endPos: {fileID: 8156795209732618920}
+  enemies: []
+  enemyHealth: []
+  wallType: 0
 --- !u!1 &8156795209162712323
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8156795209162712322}
   m_Layer: 0
-  m_Name: Moving Wall
+  m_Name: MovingWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
