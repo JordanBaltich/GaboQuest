@@ -37,11 +37,6 @@ public class BM_ReTarget : StateBehaviour
 
     private void Update()
     {
-        if(m_target == null)
-        {
-            m_target = blackboard.GetGameObjectVar("Target");
-
-        }
         Vector3 targetDirection = m_target.transform.position - transform.position;
         angleFromTarget = Vector3.Angle(targetDirection, transform.forward);
 
