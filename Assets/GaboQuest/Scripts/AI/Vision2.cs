@@ -26,11 +26,10 @@ public class Vision2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print(other.tag);
-
         if (targetList.Contains(other.tag))
         {
-            ObjectsInVolume.Add(other.gameObject);
+            if(!ObjectsInVolume.Contains(other.gameObject))
+                ObjectsInVolume.Add(other.gameObject);
         }
 
     }
@@ -53,6 +52,7 @@ public class Vision2 : MonoBehaviour
             RaycastHit hit;
             Physics.Raycast(ray, out hit, 100);
 
+            
 
             if (hit.collider.gameObject == objectInVolume)
             {
@@ -60,11 +60,11 @@ public class Vision2 : MonoBehaviour
                 currentTarget.Value = objectInVolume;
 
             }
-            else if (hit.collider.gameObject != objectInVolume)
-            {
-                Debug.DrawLine(transform.parent.transform.position, objectInVolume.transform.position, debugOccludedColor);
-                currentTarget.Value = null;
-            }
+            //else if (hit.collider.gameObject != objectInVolume)
+            //{
+            //    Debug.DrawLine(transform.parent.transform.position, objectInVolume.transform.position, debugOccludedColor);
+            //    currentTarget.Value = null;
+            //}
         }
     }
 }

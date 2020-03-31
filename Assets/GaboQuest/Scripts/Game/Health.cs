@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BehaviourMachine;
 
 public class Health : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float InvulTime;
 
     [SerializeField] internal MovingWalls m_movingWall;
+    Blackboard m_blackboard;
 
     public bool invulnerable = false;
   
@@ -17,6 +19,7 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         currentHealth = maxHealth;
+        m_blackboard = GetComponent<Blackboard>();
     }
 
     public void Heal(int amount)
@@ -28,6 +31,11 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        if(m_blackboard!= null)
+        {
+            m_blackboard.GetGameObjectVar("Target").Value = GameObject.FindGameObjectWithTag("Player");
+        }
+
         if (!invulnerable)
         {
             currentHealth -= amount;
