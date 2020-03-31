@@ -11,6 +11,7 @@ TagManager:
   - Weakpoint
   - HurtBox
   - HitBox
+  - Enemy
   layers:
   - Default
   - TransparentFX
