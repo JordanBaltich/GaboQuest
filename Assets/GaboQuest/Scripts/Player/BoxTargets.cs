@@ -32,6 +32,7 @@ public class BoxTargets : MonoBehaviour
 
         //Set Target Layers
         AddLayersToList();
+        ClosestTarget(transform);
     }
 
     //Read TargetsByRange and return first item

@@ -32,7 +32,7 @@ public class PlayerTongue : MonoBehaviour
         m_LR = GetComponent<LineRenderer>();
 
         //R* Setting the variable to avoid errors
-        GrabTarget = tongueTarget;
+        //GrabTarget = tongueTarget;
         newDuration = duration;
     }
 
@@ -49,7 +49,6 @@ public class PlayerTongue : MonoBehaviour
             Rigidbody libeeBody = other.gameObject.GetComponent<Rigidbody>();
 
             //R* Setting the libee to float state 
-            // Needs fixing!
             libeeBody.useGravity = false;
             libeeBody.velocity = Vector3.zero;
             other.transform.parent = transform;
