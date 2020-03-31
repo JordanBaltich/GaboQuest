@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1326394933}
-  - component: {fileID: 1326394932}
+  - component: {fileID: 4069819918381471645}
   m_Layer: 0
   m_Name: EnemyLocations
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 811921299508171494}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1326394932
+--- !u!114 &4069819918381471645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1326394931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c207ddb18cbce4885cbd5c72a439d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 13361978541b19441b0c0b95a1ca9837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
@@ -5009,7 +5009,7 @@ MonoBehaviour:
   clampedDir: {x: 0, y: 0, z: 0}
   aimMode: 2
   aimMode2Speed: 15
-  Enemies: {fileID: 1326394932}
+  Enemies: {fileID: 0}
   enemyDist: 0
   Locking: 0
 --- !u!1001 &430731166060248338
