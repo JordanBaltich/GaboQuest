@@ -3663,36 +3663,36 @@ PrefabInstance:
     - target: {fileID: 4308319375274234693, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -152366
+      value: -43626
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117955, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -152370
+      value: -43628
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117952, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -152372
+      value: -43630
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117953, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -152374
+      value: -43632
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117967, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -152376
+      value: -43634
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117964, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -152378
+      value: -43636
       objectReference: {fileID: 0}
     - target: {fileID: 864347346, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
       propertyPath: m_CachedInstanceID
-      value: -152380
+      value: -43638
       objectReference: {fileID: 0}
     - target: {fileID: 2003870053, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
       propertyPath: m_movingWall.Array.size
@@ -3737,7 +3737,13 @@ PrefabInstance:
         type: 3}
       propertyPath: agentProperties
       value: 
-      objectReference: {fileID: 11400000, guid: 050f4be887fa6754380a807c50324f4d,
+      objectReference: {fileID: 11400000, guid: 5ff503e0045f07c4d86984afbae0af28,
+        type: 2}
+    - target: {fileID: 5714528777163117954, guid: 7524b0db11f855949a41f83ef241952f,
+        type: 3}
+      propertyPath: agentProperties
+      value: 
+      objectReference: {fileID: 11400000, guid: 5ff503e0045f07c4d86984afbae0af28,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
@@ -16402,41 +16408,53 @@ PrefabInstance:
     - target: {fileID: 4308319375274234693, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -154286
+      value: -45546
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117955, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -154290
+      value: -45548
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117952, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -154292
+      value: -45550
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117953, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -154294
+      value: -45552
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117967, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -154296
+      value: -45554
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117964, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -154298
+      value: -45556
       objectReference: {fileID: 0}
     - target: {fileID: 864347346, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
       propertyPath: m_CachedInstanceID
-      value: -154300
+      value: -45558
       objectReference: {fileID: 0}
     - target: {fileID: 2003870053, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
       propertyPath: m_movingWall
       value: 
       objectReference: {fileID: 1686824285}
+    - target: {fileID: 4847331993110714435, guid: 7524b0db11f855949a41f83ef241952f,
+        type: 3}
+      propertyPath: agentProperties
+      value: 
+      objectReference: {fileID: 11400000, guid: 5ff503e0045f07c4d86984afbae0af28,
+        type: 2}
+    - target: {fileID: 5714528777163117954, guid: 7524b0db11f855949a41f83ef241952f,
+        type: 3}
+      propertyPath: agentProperties
+      value: 
+      objectReference: {fileID: 11400000, guid: 5ff503e0045f07c4d86984afbae0af28,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
 --- !u!1001 &1384219020
@@ -23596,6 +23614,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 109286855869171717, guid: 37dbf3b6c16bddc46844126608161080,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4640262312582943142, guid: 37dbf3b6c16bddc46844126608161080,
         type: 3}
       propertyPath: travelSpeed
@@ -23605,11 +23628,6 @@ PrefabInstance:
         type: 3}
       propertyPath: resolution
       value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 109286855869171717, guid: 37dbf3b6c16bddc46844126608161080,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37dbf3b6c16bddc46844126608161080, type: 3}
