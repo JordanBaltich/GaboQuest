@@ -4,29 +4,28 @@ using UnityEngine;
 
 public class Aiming_Camera : MonoBehaviour
 {
-    public GameObject Player;
-    PlayerController playerController;
-    public GameObject PlayerFront;
-    public GameObject Crosshair_unlocked;
-    public GameObject Crosshair_locked;
+    [SerializeField] GameObject Player;
+    [SerializeField] PlayerController playerController;     //Player Input Script
+    [SerializeField] GameObject PlayerFront;        //Player's front offset
+    [SerializeField] GameObject Crosshair_unlocked;     //VFX
+    [SerializeField] GameObject Crosshair_locked;       //VFX
 
-    float time;
-    public float aimSensitivity;
+    [SerializeField] float time;
+    [SerializeField] float aimSensitivity;      //Desired Sensitivity
+    [SerializeField] float newSensitivity;      //Current Sensitivity
 
-    public float aimRadius;
-    public Vector3 CursorPos;
-    public Vector3 aimDir;
-    public Vector3 clampedDir;
+    [SerializeField] float aimRadius;   //Aim Radius
+    [SerializeField] Vector3 aimDir;    //Normalized Aiming Input
+
     [Range(1, 3)]
-    public int aimMode;
-
+    [SerializeField] int aimMode;   //Different Aim modes
     [Range (1,15)]
-    public float aimMode2Speed;
+    [SerializeField] float aimMode2Speed;   //Speed of the crosshair
 
-    public EnemyLocations Enemies;
-    public float enemyDist;
-    public float playerDist;
-    public bool Locking;
+    [SerializeField] EnemyLocations Enemies;    //Script to read all enemies
+    [SerializeField] float enemyDist;    //Distance of the closet Enemy
+    [SerializeField] float playerDist;    //Distance of the player from crosshair
+    [SerializeField] bool Locking;
 
 
     private void Awake()
@@ -35,7 +34,6 @@ public class Aiming_Camera : MonoBehaviour
         Enemies = GetComponentInChildren<EnemyLocations>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         playerDist = Vector3.Distance(gameObject.transform.position, Player.transform.position);
@@ -44,15 +42,16 @@ public class Aiming_Camera : MonoBehaviour
         AimAssist();
         transform.position = new Vector3(transform.position.x, Player.transform.position.y - 0.9f, transform.position.z);
     }
+
+    //AimAssist chases an enemy
     void AimAssist()
     {
-
         time += Time.fixedDeltaTime;
         if (time >= 1f)
         {
             Locking = false;
         }
-        //Enemies.FindClosestEnemy().position
+
         if (playerController.player.GetButton("Aim"))
         {
             enemyDist = Vector3.Distance(gameObject.transform.position, Enemies.FindClosestEnemy().position);
@@ -80,14 +79,17 @@ public class Aiming_Camera : MonoBehaviour
             Crosshair_locked.SetActive(false);
 
     }
+    
+    //AimPoint enable moving of the crosshair
     void AimingPoint()
     {
         Cursor.visible = false;
 
         if (playerController.player.GetButton("Aim"))
         {
-            //Cursor.lockState = CursorLockMode.None;
+
             Crosshair_unlocked.SetActive(true);
+
             if (aimMode == 1)
             {
 
@@ -95,8 +97,6 @@ public class Aiming_Camera : MonoBehaviour
             }
             if (aimMode == 2)
             {
-                //if (Vector3.Distance(gameObject.transform.position, Player.transform.position) <= aimRadius)
-                //    gameObject.transform.position += new Vector3(Player.transform.position.x + DragPoint().x, 0f, Player.transform.position.z + DragPoint().z) * Time.deltaTime * aimMode2Speed;
 
                 Vector3 directon = transform.position - Player.transform.position;
                 float distance = directon.magnitude;
@@ -105,7 +105,7 @@ public class Aiming_Camera : MonoBehaviour
                 {
                     gameObject.transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(DragPoint().x, 0, DragPoint().z), aimMode2Speed * Time.deltaTime);
                 }
-                else if (Mathf.Abs(distance) > aimRadius - 0.1f)
+                if (Mathf.Abs(distance) > aimRadius - 0.1f)
                 {
 
                     Vector3 fromPlayer = transform.position - Player.transform.position;
@@ -122,34 +122,31 @@ public class Aiming_Camera : MonoBehaviour
         }
         else
         {
-            //gameObject.transform.position = new Vector3(Player.transform.position.x, 0f, Player.transform.position.z);
             gameObject.transform.position = new Vector3(PlayerFront.transform.position.x, 0f,  PlayerFront.transform.position.z);
             Crosshair_unlocked.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
         }
             
     }
+
+    //DragPoint read the input of controller/mouse
     public Vector3 DragPoint()
     {
-        // Adjusting mouse position to screen center
-        //CursorPos = new Vector3((Input.mousePosition.x - Screen.width / 2), 0f, (Input.mousePosition.y - Screen.height/2));
 
-        CursorPos = new Vector3((playerController.player.GetAxis("R_Horizontal")), 0f, (playerController.player.GetAxis("R_Vertical")));
+        aimDir = new Vector3((playerController.player.GetAxis("R_Horizontal")), 0f, (playerController.player.GetAxis("R_Vertical")));
 
-        // Get percentage to screen
-        //aimDir = new Vector3 (CursorPos.x / Screen.width, 0f, CursorPos.z / Screen.height);
+        if(playerDist> aimRadius * 0.8f)
+        {
+            newSensitivity = aimSensitivity * 0.2f;
+        }
+        else
+        {
+            newSensitivity = aimSensitivity;
+        }
+        aimDir *= newSensitivity;
 
-        aimDir = new Vector3(CursorPos.x , 0, CursorPos.z);
-
-        aimDir *= aimSensitivity;
-
-        //clampedDir = new Vector3(Mathf.Clamp(aimDir.x, -aimRadius, aimRadius), 0f, Mathf.Clamp(aimDir.z, -aimRadius, aimRadius));
-        //return Vector3.ClampMagnitude(clampedDir, aimRadius);
         return aimDir;
     }
-    public void LookRotate()
-    {
-        transform.LookAt(new Vector3(Player.transform.position.x, 0f,Player.transform.position.z));
-    }
+
 }
 

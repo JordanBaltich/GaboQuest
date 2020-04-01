@@ -5009,8 +5009,9 @@ MonoBehaviour:
   clampedDir: {x: 0, y: 0, z: 0}
   aimMode: 2
   aimMode2Speed: 15
-  Enemies: {fileID: 0}
+  Enemies: {fileID: 4069819918381471645}
   enemyDist: 0
+  playerDist: 0
   Locking: 0
 --- !u!1001 &430731166060248338
 PrefabInstance:

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class OnHitFX : MonoBehaviour
 {
-    public ParticleSystem _VFX1;
-    [SerializeField] CapsuleCollider Sphere;
+    [SerializeField] ParticleSystem _VFX1;
+    [SerializeField] CapsuleCollider _Sphere;
 
     private void Awake()
     {
-        Sphere = GetComponent<CapsuleCollider>();
+        _Sphere = GetComponent<CapsuleCollider>();
     }
 
     private void OnTriggerEnter(Collider other)

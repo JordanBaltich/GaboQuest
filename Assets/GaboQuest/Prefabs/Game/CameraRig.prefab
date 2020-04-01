@@ -223,20 +223,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b4d6aa20d51974fb51d03feabc22b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
-  yDir: {x: 0, y: 0, z: 0}
-  dir: {x: 0, y: 0, z: 0}
-  distanceDir: {x: 0, y: 0, z: 0}
-  ySpeed: 5
-  firstSpeed: 1
-  secondSpeed: 6
-  chaseSpeed: 50
-  yPositionThreshold: 1
-  firstPositionThreshold: 1
-  secondPositionThreshold: 5
-  flipLookDir: 0
-  moving: 1
-  looking: 0
+  _destination: {fileID: 0}
+  _startChaseDist: 1
+  _moving: 1
+  _time: 0
+  lerpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.86159855
+      value: 0.0018755066
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1.0069845
+      value: 0.016732424
+      inSlope: 0.64571905
+      outSlope: 0.64571905
+      tangentMode: 0
+      weightedMode: 1
+      inWeight: 0.14130147
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &916032669
 PrefabInstance:
   m_ObjectHideFlags: 0

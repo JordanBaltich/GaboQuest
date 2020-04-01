@@ -592,7 +592,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -302748
+  m_CachedInstanceID: -76246
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117952}
     m_EventID: 345612353
-  m_CachedInstanceID: -302756
+  m_CachedInstanceID: -76254
   distanceToArrive: 1.5
 --- !u!114 &5714528777163117952
 MonoBehaviour:
@@ -777,7 +777,7 @@ MonoBehaviour:
     m_EventID: 1330953036
   - m_Destination: {fileID: 5714528777163117967}
     m_EventID: 42786443
-  m_CachedInstanceID: -302758
+  m_CachedInstanceID: -76256
 --- !u!114 &5714528777163117953
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -801,7 +801,7 @@ MonoBehaviour:
     m_EventID: 721442352
   - m_Destination: {fileID: 0}
     m_EventID: 895806009
-  m_CachedInstanceID: -302760
+  m_CachedInstanceID: -76258
   m_CanTransitionToSelf: 0
 --- !u!114 &5714528777163117967
 MonoBehaviour:
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 864347346}
     m_EventID: 1124719125
-  m_CachedInstanceID: -302762
+  m_CachedInstanceID: -76260
   ticks: 0.2
   distanceToReachTarget: 10
 --- !u!114 &5714528777163117964
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117952}
     m_EventID: 345612353
-  m_CachedInstanceID: -302764
+  m_CachedInstanceID: -76262
   maxChargeTime: 2
   hitbox: {fileID: 5714528777706952553}
   distanceToArrive: 1
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117964}
     m_EventID: 315087159
-  m_CachedInstanceID: -302766
+  m_CachedInstanceID: -76264
   rotationSpeed: 1
   angleToAct: 15
   TimeBeforeActing: 1
@@ -925,7 +925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _VFX1: {fileID: 894373557452111391}
-  Sphere: {fileID: 4847331993110714440}
+  _Sphere: {fileID: 4847331993110714440}
 --- !u!1 &4847331993153849517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,31 +1105,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OnHitFX
       objectReference: {fileID: 0}
-    - target: {fileID: 1957299480417881673, guid: c1952183ce6fbee458d008fa1f3766a8,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957299480417881673, guid: c1952183ce6fbee458d008fa1f3766a8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957299480417881675, guid: c1952183ce6fbee458d008fa1f3766a8,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957299480627744357, guid: c1952183ce6fbee458d008fa1f3766a8,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957299480705873459, guid: c1952183ce6fbee458d008fa1f3766a8,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1957299480929324352, guid: c1952183ce6fbee458d008fa1f3766a8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1199,6 +1174,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957299480417881673, guid: c1952183ce6fbee458d008fa1f3766a8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957299480417881673, guid: c1952183ce6fbee458d008fa1f3766a8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957299480417881675, guid: c1952183ce6fbee458d008fa1f3766a8,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957299480627744357, guid: c1952183ce6fbee458d008fa1f3766a8,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957299480705873459, guid: c1952183ce6fbee458d008fa1f3766a8,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1952183ce6fbee458d008fa1f3766a8, type: 3}
