@@ -25,6 +25,7 @@ public class Aiming_Camera : MonoBehaviour
 
     public EnemyLocations Enemies;
     public float enemyDist;
+    public float playerDist;
     public bool Locking;
 
 
@@ -37,6 +38,7 @@ public class Aiming_Camera : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        playerDist = Vector3.Distance(gameObject.transform.position, Player.transform.position);
         AimingPoint();
         //LookRotate();
         AimAssist();
@@ -56,15 +58,20 @@ public class Aiming_Camera : MonoBehaviour
             enemyDist = Vector3.Distance(gameObject.transform.position, Enemies.FindClosestEnemy().position);
             if (enemyDist <= 3f && Locking == false)
             {
-                gameObject.transform.position = Enemies.FindClosestEnemy().position;
-
-                Crosshair_locked.SetActive(true);
-                time = 0f;
-                time += Time.fixedDeltaTime;
-                if (time >= 1f)
+                if (Vector3.Distance(gameObject.transform.position, Player.transform.position) <= (aimRadius-1))
                 {
-                    Locking = true;
+                    gameObject.transform.position = Enemies.FindClosestEnemy().position;
+
+                    Crosshair_locked.SetActive(true);
+                    time = 0f;
+                    time += Time.fixedDeltaTime;
+                    if (time >= 1f)
+                    {
+                        Locking = true;
+                    }
                 }
+                else
+                    Crosshair_locked.SetActive(false);
             }
             else
                 Crosshair_locked.SetActive(false);
@@ -98,8 +105,9 @@ public class Aiming_Camera : MonoBehaviour
                 {
                     gameObject.transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(DragPoint().x, 0, DragPoint().z), aimMode2Speed * Time.deltaTime);
                 }
-                else if (Mathf.Abs(distance) > aimRadius)
+                else if (Mathf.Abs(distance) > aimRadius - 0.1f)
                 {
+
                     Vector3 fromPlayer = transform.position - Player.transform.position;
                     fromPlayer *= aimRadius / Vector3.Distance(transform.position, Player.transform.position);
                     transform.position = new Vector3(Player.transform.position.x + fromPlayer.x, 0, Player.transform.position.z + fromPlayer.z);
