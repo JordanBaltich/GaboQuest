@@ -105,7 +105,7 @@ public class Aiming_Camera : MonoBehaviour
                 {
                     gameObject.transform.position = Vector3.MoveTowards(transform.position, transform.position + new Vector3(DragPoint().x, 0, DragPoint().z), aimMode2Speed * Time.deltaTime);
                 }
-                if (Mathf.Abs(distance) > aimRadius - 0.1f)
+                if (Mathf.Abs(distance) > aimRadius - 0.3f)
                 {
 
                     Vector3 fromPlayer = transform.position - Player.transform.position;
