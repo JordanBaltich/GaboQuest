@@ -63,7 +63,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 65334
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -90,7 +90,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 534324662334378922}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 4294967295
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 1
   antialiasingMode: 1

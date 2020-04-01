@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
 
     public int weight;
 
+    public ParticleSystem _OnDmgFX;
+
     private void Awake()
     {
         m_Body = GetComponent<Rigidbody>();
@@ -145,6 +147,7 @@ public class PlayerController : MonoBehaviour
         {
             if (other.gameObject.tag == "HitBox")
             {
+                _OnDmgFX.Play(true);
                 if (m_Health.currentHealth > 0)
                 {
                     m_Health.TakeDamage(1);
