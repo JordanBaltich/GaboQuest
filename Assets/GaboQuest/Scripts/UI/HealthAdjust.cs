@@ -6,7 +6,12 @@ using UnityEngine.UI;
 public class HealthAdjust : MonoBehaviour
 {
 
-    public Slider slider;
+    [SerializeField]
+    Sprite[] GaboHPImages = new Sprite[6];
+    public Health health;
+    [SerializeField]
+    Image CurrentGaboImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +21,8 @@ public class HealthAdjust : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.value -= Time.deltaTime;
+        CurrentGaboImage.sprite = GaboHPImages[health.currentHealth];
     }
+
+
 }
