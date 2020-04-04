@@ -40,11 +40,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1326394931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2c207ddb18cbce4885cbd5c72a439d8, type: 3}
+  m_Script: {fileID: 11500000, guid: cf6d873d4de2dde4aabd72194e2e48e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  Crosshair: {fileID: 811921299508171512}
+  Crosshair: {fileID: 811921299332522502}
   Enemies: []
   Closest: {fileID: 0}
 --- !u!1 &811921298867605466
@@ -4999,14 +4999,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  playerController: {fileID: 0}
   PlayerFront: {fileID: 0}
   Crosshair_unlocked: {fileID: 192250121183742224}
   Crosshair_locked: {fileID: 2953589511324374020}
+  time: 0
   aimSensitivity: 5
+  newSensitivity: 0
   aimRadius: 10
-  CursorPos: {x: 0, y: 0, z: 0}
   aimDir: {x: 0, y: 0, z: 0}
-  clampedDir: {x: 0, y: 0, z: 0}
   aimMode: 2
   aimMode2Speed: 15
   Enemies: {fileID: 4069819918381471645}

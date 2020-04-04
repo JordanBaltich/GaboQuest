@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: ec639722f38475047a2e9fb5c6d5f0df,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3551,42 +3551,42 @@ PrefabInstance:
     - target: {fileID: 4308319375274234693, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -43626
+      value: -8406
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117954, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: agentProperties
       value: 
-      objectReference: {fileID: 11400000, guid: 01d03a94a255ae84db75e26620899bb3,
+      objectReference: {fileID: 11400000, guid: f640c3982f99c1c4788c94a4d892ad05,
         type: 2}
     - target: {fileID: 5714528777163117955, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -43628
+      value: -8410
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117952, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -43630
+      value: -8412
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117953, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -43632
+      value: -8414
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117967, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -43634
+      value: -8416
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117964, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -43636
+      value: -8418
       objectReference: {fileID: 0}
     - target: {fileID: 864347346, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
       propertyPath: m_CachedInstanceID
-      value: -43638
+      value: -8420
       objectReference: {fileID: 0}
     - target: {fileID: 2003870053, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
       propertyPath: m_movingWall.Array.size
@@ -3631,7 +3631,7 @@ PrefabInstance:
         type: 3}
       propertyPath: agentProperties
       value: 
-      objectReference: {fileID: 11400000, guid: 01d03a94a255ae84db75e26620899bb3,
+      objectReference: {fileID: 11400000, guid: f640c3982f99c1c4788c94a4d892ad05,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
@@ -11340,6 +11340,16 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 1982367365}
+    - target: {fileID: 8396686329085190727, guid: 7e7a00d3bc5f32847bd556e1b79fd2c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623053949041304433, guid: 7e7a00d3bc5f32847bd556e1b79fd2c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e7a00d3bc5f32847bd556e1b79fd2c3, type: 3}
 --- !u!4 &858811335 stripped
@@ -16247,42 +16257,42 @@ PrefabInstance:
     - target: {fileID: 4308319375274234693, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -45546
+      value: -10492
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117954, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: agentProperties
       value: 
-      objectReference: {fileID: 11400000, guid: 5ff503e0045f07c4d86984afbae0af28,
+      objectReference: {fileID: 11400000, guid: f640c3982f99c1c4788c94a4d892ad05,
         type: 2}
     - target: {fileID: 5714528777163117955, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -45548
+      value: -10496
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117952, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -45550
+      value: -10498
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117953, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -45552
+      value: -10500
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117967, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -45554
+      value: -10502
       objectReference: {fileID: 0}
     - target: {fileID: 5714528777163117964, guid: 7524b0db11f855949a41f83ef241952f,
         type: 3}
       propertyPath: m_CachedInstanceID
-      value: -45556
+      value: -10504
       objectReference: {fileID: 0}
     - target: {fileID: 864347346, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
       propertyPath: m_CachedInstanceID
-      value: -45558
+      value: -10506
       objectReference: {fileID: 0}
     - target: {fileID: 2003870053, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
       propertyPath: m_movingWall
@@ -16292,7 +16302,7 @@ PrefabInstance:
         type: 3}
       propertyPath: agentProperties
       value: 
-      objectReference: {fileID: 11400000, guid: 5ff503e0045f07c4d86984afbae0af28,
+      objectReference: {fileID: 11400000, guid: f640c3982f99c1c4788c94a4d892ad05,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7524b0db11f855949a41f83ef241952f, type: 3}
@@ -18125,6 +18135,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163212657570797076, guid: a8c36dbd3a342b54b8220db8267af7eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396255174001046823, guid: a8c36dbd3a342b54b8220db8267af7eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8c36dbd3a342b54b8220db8267af7eb, type: 3}

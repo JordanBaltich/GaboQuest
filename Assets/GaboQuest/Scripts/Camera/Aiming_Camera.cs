@@ -54,26 +54,30 @@ public class Aiming_Camera : MonoBehaviour
 
         if (playerController.player.GetButton("Aim"))
         {
-            enemyDist = Vector3.Distance(gameObject.transform.position, Enemies.FindClosestEnemy().position);
-            if (enemyDist <= 3f && Locking == false)
+            if (Enemies.Enemies.Count > 0)
             {
-                if (Vector3.Distance(gameObject.transform.position, Player.transform.position) <= (aimRadius-1))
+                enemyDist = Vector3.Distance(gameObject.transform.position, Enemies.FindClosestEnemy().position);
+                if (enemyDist <= 3f && Locking == false)
                 {
-                    gameObject.transform.position = Enemies.FindClosestEnemy().position;
-
-                    Crosshair_locked.SetActive(true);
-                    time = 0f;
-                    time += Time.fixedDeltaTime;
-                    if (time >= 1f)
+                    if (Vector3.Distance(gameObject.transform.position, Player.transform.position) <= (aimRadius - 1))
                     {
-                        Locking = true;
+                        gameObject.transform.position = Enemies.FindClosestEnemy().position;
+
+                        Crosshair_locked.SetActive(true);
+                        time = 0f;
+                        time += Time.fixedDeltaTime;
+                        if (time >= 1f)
+                        {
+                            Locking = true;
+                        }
                     }
+                    else
+                        Crosshair_locked.SetActive(false);
                 }
                 else
                     Crosshair_locked.SetActive(false);
             }
-            else
-                Crosshair_locked.SetActive(false);
+            
         }
         else
             Crosshair_locked.SetActive(false);
