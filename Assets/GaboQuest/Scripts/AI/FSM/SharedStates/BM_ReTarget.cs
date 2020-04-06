@@ -33,6 +33,15 @@ public class BM_ReTarget : StateBehaviour
     {
         m_target = blackboard.GetGameObjectVar("Target");
         m_agent = GetComponent<Agent>();
+
+        SetAgentSpeed();   
+    }
+
+    private void SetAgentSpeed()
+    {
+        m_agent.m_navAgent.speed = m_agent.agentProperties.RunSpeed;
+        m_agent.m_navAgent.angularSpeed = m_agent.agentProperties.RunAngularSpeed;
+        m_agent.m_navAgent.acceleration = m_agent.agentProperties.RunAcceleration;
     }
 
     private void Update()
