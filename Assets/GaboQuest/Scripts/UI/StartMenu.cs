@@ -9,6 +9,6 @@ public class StartMenu : MonoBehaviour
 
     public void StartTheGame()
     {
-        SceneManager.LoadScene("Movement");
+        SceneManager.LoadScene(1);
     }
 }

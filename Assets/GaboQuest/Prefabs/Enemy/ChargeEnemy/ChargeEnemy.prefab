@@ -652,7 +652,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -27544
+  m_CachedInstanceID: -8782
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63b09ce6e4311744bb76892ce576b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentProperties: {fileID: 11400000, guid: 050f4be887fa6754380a807c50324f4d, type: 2}
+  agentProperties: {fileID: 11400000, guid: f640c3982f99c1c4788c94a4d892ad05, type: 2}
   m_navAgent: {fileID: 1449458145981936778}
   Player: {fileID: 0}
   cyclicPatrol: 0
@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117952}
     m_EventID: 345612353
-  m_CachedInstanceID: -27552
+  m_CachedInstanceID: -8790
   distanceToArrive: 1.5
 --- !u!114 &5714528777163117952
 MonoBehaviour:
@@ -844,7 +844,7 @@ MonoBehaviour:
     m_EventID: 42786443
   - m_Destination: {fileID: 864347346}
     m_EventID: 2002822686
-  m_CachedInstanceID: -27554
+  m_CachedInstanceID: -8792
 --- !u!114 &5714528777163117953
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -868,7 +868,7 @@ MonoBehaviour:
     m_EventID: 721442352
   - m_Destination: {fileID: 0}
     m_EventID: 895806009
-  m_CachedInstanceID: -27556
+  m_CachedInstanceID: -8794
   m_CanTransitionToSelf: 0
 --- !u!114 &5714528777163117964
 MonoBehaviour:
@@ -891,7 +891,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117952}
     m_EventID: 345612353
-  m_CachedInstanceID: -27558
+  m_CachedInstanceID: -8796
   maxChargeTime: 2
   hitbox: {fileID: 5714528777706952553}
   distanceToArrive: 1
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 5714528777163117964}
     m_EventID: 315087159
-  m_CachedInstanceID: -27560
+  m_CachedInstanceID: -8798
   rotationSpeed: 1
   angleToAct: 15
   TimeBeforeActing: 1
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ef7df15b9ce264cb2fcb58df37914e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentProperties: {fileID: 11400000, guid: 050f4be887fa6754380a807c50324f4d, type: 2}
+  agentProperties: {fileID: 11400000, guid: f640c3982f99c1c4788c94a4d892ad05, type: 2}
   m_navAgent: {fileID: 1449458145981936778}
   Player: {fileID: 0}
   cyclicPatrol: 0
