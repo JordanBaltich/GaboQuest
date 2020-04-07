@@ -20,17 +20,6 @@ public class Room_Locker : MonoBehaviour
         AssignAllEnemiestoThisRoom();
     }
 
-    private void Update()
-    {
-        //if (room_cleared)
-        //{
-        //    foreach (MovingWalls m_wall in m_movingWalls)
-        //    {
-        //        m_wall.moveDown();
-        //    }
-        //}
-    }
-
     public void RemoveEnemy(GameObject enemy)
     {
         foreach (MovingWalls m_wall in m_movingWalls)
