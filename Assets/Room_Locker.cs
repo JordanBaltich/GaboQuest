@@ -13,8 +13,6 @@ public class Room_Locker : MonoBehaviour
 
     public int playerID;
 
-    bool room_cleared;
-
     private void Start()
     {
         AssignAllEnemiestoThisRoom();

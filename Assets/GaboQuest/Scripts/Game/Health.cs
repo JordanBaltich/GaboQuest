@@ -62,14 +62,14 @@ public class Health : MonoBehaviour
     /// <summary>
     /// tests for killing enemies to open gates
     /// </summary>
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.K))
-    //    {
-    //        if(m_roomLocker != null)
-    //            DestroyObject();
-    //    }
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (m_roomLocker != null)
+                DestroyObject();
+        }
+    }
 
     //removes reference from roomlocker to this object so the gate unlocks
     public void DestroyObject()
