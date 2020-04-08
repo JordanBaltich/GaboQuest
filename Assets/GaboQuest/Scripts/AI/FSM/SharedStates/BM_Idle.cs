@@ -34,9 +34,12 @@ public class BM_Idle : StateBehaviour
         m_agent.m_navAgent.isStopped = false;
 
         if (m_Target != null)
+        {
+            SendEvent("Targetting");
             SendEvent("ResumeChase");
+        }
         else
-            SendEvent("ResumePatrol");       
+            SendEvent("ResumePatrol");
     }
 }
 

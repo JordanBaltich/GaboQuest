@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public int currentHealth;
     [SerializeField] private float InvulTime;
 
-    [SerializeField] internal MovingWalls m_movingWall;
+    [SerializeField] internal Room_Locker m_roomLocker;
     Blackboard m_blackboard;
 
     public bool invulnerable = false;
@@ -59,12 +59,29 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void DestroyObject()
+    /// <summary>
+    /// tests for killing enemies to open gates
+    /// </summary>
+    private void Update()
     {
-        m_movingWall.RemoveEnemy(transform.parent.gameObject);
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (m_roomLocker != null)
+                DestroyObject();
+        }
+    }
+
+    //removes reference from roomlocker to this object so the gate unlocks
+    public void DestroyObject()
+    { 
+        
+        if (m_roomLocker != null)
+            m_roomLocker.RemoveEnemy(transform.parent.gameObject);
+
         Destroy(gameObject);    
     }
 
+    //initiates invulnerable timer for when the target will be next vulnerable
     IEnumerator InvulnerableTimer()
     {
         invulnerable = true;
