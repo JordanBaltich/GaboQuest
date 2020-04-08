@@ -138,6 +138,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -232,6 +237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -337,6 +347,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -481,6 +496,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -580,6 +600,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -773,6 +798,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -942,6 +972,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1036,6 +1071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -1224,6 +1264,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -1501,6 +1546,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1637,6 +1687,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1736,6 +1791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -1838,6 +1898,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1917,6 +1982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -2013,6 +2083,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBrickWall (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2092,6 +2167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -2188,6 +2268,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2267,6 +2352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -2471,6 +2561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2640,6 +2735,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2739,6 +2839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -2873,6 +2978,7 @@ Transform:
   - {fileID: 1712375686}
   - {fileID: 144739301}
   - {fileID: 1201015880}
+  - {fileID: 408393340}
   m_Father: {fileID: 659107811}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2957,6 +3063,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3036,6 +3147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -3206,6 +3322,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3281,6 +3402,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3355,6 +3481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone2
       objectReference: {fileID: 0}
+    - target: {fileID: 1086333168986288, guid: fd26e2745d16505448b7814636d03a71, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3916027052871113379, guid: fd26e2745d16505448b7814636d03a71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3424,6 +3554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712897274237257846, guid: fd26e2745d16505448b7814636d03a71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd26e2745d16505448b7814636d03a71, type: 3}
@@ -3711,6 +3846,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3810,7 +3950,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &309100044
 Transform:
@@ -3864,6 +4004,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -3950,6 +4095,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -4048,7 +4198,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &347342799
 Transform:
@@ -4087,6 +4237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -4162,6 +4317,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -4277,6 +4437,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4376,6 +4541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -4493,6 +4663,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4600,6 +4775,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4679,6 +4859,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -4763,6 +4948,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &408393340 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2130016897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &413550947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3022284534793093972, guid: 818df25ffd6df7349be1c0094cc3841a,
@@ -4785,6 +4976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -4885,6 +5081,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -5113,6 +5314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBrickWall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5192,6 +5398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -5288,6 +5499,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5363,6 +5579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5437,6 +5658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -5517,6 +5743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -5612,6 +5843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -5795,6 +6031,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5874,6 +6115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -5969,6 +6215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -6078,6 +6329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -6253,6 +6509,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6332,6 +6593,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -6433,6 +6699,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6527,6 +6798,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -6634,6 +6910,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneSet1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5939419816649905170, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7221054719589066241, guid: 435de7e769672534c845e6a6d4b92c3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6704,6 +6985,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2610210100082301566, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435de7e769672534c845e6a6d4b92c3f, type: 3}
 --- !u!1001 &575386703
@@ -6717,6 +7003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -6797,6 +7088,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -6893,6 +7189,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6972,6 +7273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -7080,6 +7386,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneSet1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5939419816649905170, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7221054719589066241, guid: 435de7e769672534c845e6a6d4b92c3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7150,6 +7461,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2610210100082301566, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435de7e769672534c845e6a6d4b92c3f, type: 3}
 --- !u!4 &595836077 stripped
@@ -7172,7 +7488,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &599414851
 Transform:
@@ -7218,6 +7534,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TallRock_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950304477426837596, guid: d72ab8967f3419a4fae8fd85ca67c7cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3263850025120668239, guid: d72ab8967f3419a4fae8fd85ca67c7cf,
         type: 3}
@@ -7307,6 +7628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -7402,6 +7728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -7647,6 +7978,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7732,6 +8068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -7827,6 +8168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -7945,6 +8291,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8045,6 +8396,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8140,6 +8496,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBrickWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8219,6 +8580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -8375,6 +8741,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8475,6 +8846,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8569,6 +8945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -8773,6 +9154,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8854,6 +9240,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8933,6 +9324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -9033,6 +9429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -9226,7 +9627,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &746260559
 Transform:
@@ -9289,6 +9690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -9465,6 +9871,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9565,6 +9976,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9664,6 +10080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -10287,6 +10708,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10393,6 +10819,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10487,6 +10918,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -10668,6 +11104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -10858,6 +11299,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10988,6 +11434,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stone_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290458194622260935, guid: 3936bf7914c338c43b0bb03f75ffca33,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2860904228168488148, guid: 3936bf7914c338c43b0bb03f75ffca33,
         type: 3}
@@ -11289,6 +11740,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11368,6 +11824,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -11761,6 +12222,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5187513502647736638, guid: 7e7a00d3bc5f32847bd556e1b79fd2c3,
+        type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e7a00d3bc5f32847bd556e1b79fd2c3, type: 3}
 --- !u!4 &858811335 stripped
@@ -11785,6 +12251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -11921,6 +12392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -12114,6 +12590,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12213,6 +12694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -12326,6 +12812,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12420,6 +12911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -12565,6 +13061,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBrickWall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12704,6 +13205,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12804,6 +13310,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12903,6 +13414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -13023,6 +13539,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13126,7 +13647,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &990299910
 Transform:
@@ -13219,6 +13740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -13320,6 +13846,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13414,6 +13945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1086333168986288, guid: fd26e2745d16505448b7814636d03a71, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3916027052871113379, guid: fd26e2745d16505448b7814636d03a71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13484,6 +14019,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1712897274237257846, guid: fd26e2745d16505448b7814636d03a71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd26e2745d16505448b7814636d03a71, type: 3}
 --- !u!4 &1016734931 stripped
@@ -13503,6 +14043,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -13699,6 +14244,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13794,6 +14344,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13874,6 +14429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TallRock_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950304477426837596, guid: d72ab8967f3419a4fae8fd85ca67c7cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3263850025120668239, guid: d72ab8967f3419a4fae8fd85ca67c7cf,
         type: 3}
@@ -13971,6 +14531,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14050,6 +14615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -14148,7 +14718,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1106907078
 Transform:
@@ -14196,6 +14766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -14408,6 +14983,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14487,6 +15067,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -14582,6 +15167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -14717,6 +15307,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14792,6 +15387,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14866,6 +15466,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -15122,6 +15727,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15219,7 +15829,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1201015880
 Transform:
@@ -15260,6 +15870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -15361,6 +15976,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15460,6 +16080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -15562,6 +16187,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TallRock_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1950304477426837596, guid: d72ab8967f3419a4fae8fd85ca67c7cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3263850025120668239, guid: d72ab8967f3419a4fae8fd85ca67c7cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15646,6 +16276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneSet1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5939419816649905170, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7221054719589066241, guid: 435de7e769672534c845e6a6d4b92c3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15716,6 +16351,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2610210100082301566, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435de7e769672534c845e6a6d4b92c3f, type: 3}
 --- !u!4 &1212362284 stripped
@@ -15740,6 +16380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -16073,7 +16718,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1257787593
 Transform:
@@ -16281,6 +16926,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022284535131764515, guid: 818df25ffd6df7349be1c0094cc3841a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022284536551998884, guid: 818df25ffd6df7349be1c0094cc3841a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7821621203451780336, guid: 818df25ffd6df7349be1c0094cc3841a,
         type: 3}
@@ -16496,6 +17151,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16575,6 +17235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -16675,6 +17340,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -16878,6 +17548,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16973,6 +17648,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBrickWall (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17052,6 +17732,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -17148,6 +17833,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17222,6 +17912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -17302,6 +17997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -17402,6 +18102,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -17700,7 +18405,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1397800476
 Transform:
@@ -17745,6 +18450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneSet1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939419816649905170, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7221054719589066241, guid: 435de7e769672534c845e6a6d4b92c3f,
         type: 3}
@@ -17816,6 +18526,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2610210100082301566, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435de7e769672534c845e6a6d4b92c3f, type: 3}
 --- !u!4 &1402235344 stripped
@@ -17840,6 +18555,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -17936,6 +18656,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18010,6 +18735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -18090,6 +18820,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -18190,6 +18925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -18308,6 +19048,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18387,6 +19132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -18487,6 +19237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -18616,6 +19371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18690,6 +19450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -18803,7 +19568,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1480015287
 Transform:
@@ -18868,6 +19633,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -18968,6 +19738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -19248,7 +20023,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 119
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1526571799
 Transform:
@@ -19323,6 +20098,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -19423,6 +20203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -19873,6 +20658,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19972,6 +20762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -20074,6 +20869,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_03
       objectReference: {fileID: 0}
+    - target: {fileID: 7950573269540288761, guid: 900f890c8f46c3f48ada983232de9657,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6344803982799325930, guid: 900f890c8f46c3f48ada983232de9657,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20162,6 +20962,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -20260,7 +21065,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1590713323
 Transform:
@@ -20398,6 +21203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -20563,6 +21373,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20640,7 +21455,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1632053878
 Transform:
@@ -20672,6 +21487,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -20772,6 +21592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -20879,6 +21704,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20984,6 +21814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -21255,6 +22090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21329,6 +22169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -21480,6 +22325,26 @@ PrefabInstance:
       propertyPath: LerpObject
       value: 
       objectReference: {fileID: 1076796918}
+    - target: {fileID: 5855842675276217870, guid: 557e5847647d749498fb6f2e878d7396,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769915125864834542, guid: 557e5847647d749498fb6f2e878d7396,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637187370346992577, guid: 557e5847647d749498fb6f2e878d7396,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011479196277850972, guid: 557e5847647d749498fb6f2e878d7396,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557e5847647d749498fb6f2e878d7396, type: 3}
 --- !u!4 &1657455256 stripped
@@ -21504,6 +22369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -21605,6 +22475,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21700,6 +22575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBrickWall (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21779,6 +22659,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -21879,6 +22764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -22009,6 +22899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
@@ -22181,6 +23076,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22281,6 +23181,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22378,7 +23283,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1712375686
 Transform:
@@ -22420,6 +23325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -22670,6 +23580,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22777,6 +23692,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22851,6 +23771,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stone_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290458194622260935, guid: 3936bf7914c338c43b0bb03f75ffca33,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2860904228168488148, guid: 3936bf7914c338c43b0bb03f75ffca33,
         type: 3}
@@ -22940,6 +23865,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -23036,6 +23966,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23115,6 +24050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -23213,7 +24153,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1808046460
 Transform:
@@ -23254,6 +24194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -23425,6 +24370,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23504,6 +24454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -23600,6 +24555,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneSet1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5939419816649905170, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7221054719589066241, guid: 435de7e769672534c845e6a6d4b92c3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23670,6 +24630,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2610210100082301566, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435de7e769672534c845e6a6d4b92c3f, type: 3}
 --- !u!4 &1862157489 stripped
@@ -23694,6 +24659,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -23790,6 +24760,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBrickWall (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23875,6 +24850,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -23976,6 +24956,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24075,6 +25060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -24176,6 +25166,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24271,6 +25266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24345,6 +25345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -24431,6 +25436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -24531,6 +25541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -24797,6 +25812,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24896,6 +25916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -24997,6 +26022,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25092,6 +26122,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25166,6 +26201,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneWallPiece (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
@@ -25260,6 +26300,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25339,6 +26384,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -25440,6 +26490,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25535,6 +26590,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBrickWall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25612,7 +26672,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1997854082
 Transform:
@@ -25743,6 +26803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneSet1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5939419816649905170, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7221054719589066241, guid: 435de7e769672534c845e6a6d4b92c3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25813,6 +26878,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2610210100082301566, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435de7e769672534c845e6a6d4b92c3f, type: 3}
 --- !u!4 &2006068458 stripped
@@ -25832,6 +26902,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TallRock_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950304477426837596, guid: d72ab8967f3419a4fae8fd85ca67c7cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3263850025120668239, guid: d72ab8967f3419a4fae8fd85ca67c7cf,
         type: 3}
@@ -25982,6 +27057,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26061,6 +27141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -26268,6 +27353,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneSet1
       objectReference: {fileID: 0}
+    - target: {fileID: 5939419816649905170, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7221054719589066241, guid: 435de7e769672534c845e6a6d4b92c3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26338,6 +27428,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2610210100082301566, guid: 435de7e769672534c845e6a6d4b92c3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435de7e769672534c845e6a6d4b92c3f, type: 3}
 --- !u!1001 &2051440784
@@ -26356,6 +27451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -26691,6 +27791,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBrickWall (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26766,6 +27871,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26840,6 +27950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stone_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290458194622260935, guid: 3936bf7914c338c43b0bb03f75ffca33,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2860904228168488148, guid: 3936bf7914c338c43b0bb03f75ffca33,
         type: 3}
@@ -26925,6 +28040,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneWallPiece (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 830267339583421358, guid: e7c1b657ce165bb4c84ca64357a43cac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9119824503570314706, guid: e7c1b657ce165bb4c84ca64357a43cac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27004,6 +28124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -27102,7 +28227,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2095215496
 Transform:
@@ -27160,6 +28285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -27287,6 +28417,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 510432811}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2130016897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 244403188}
+    m_Modifications:
+    - target: {fileID: 8707979278960663170, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_Name
+      value: PushBox (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 37.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663198, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979278960663168, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: weight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707979277763394315, guid: 65174b140f964d044940cb5b48e5625f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.66
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65174b140f964d044940cb5b48e5625f, type: 3}
 --- !u!1001 &2146556093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27297,6 +28506,10 @@ PrefabInstance:
     - target: {fileID: 1086333168986288, guid: fd26e2745d16505448b7814636d03a71, type: 3}
       propertyPath: m_Name
       value: Stone2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086333168986288, guid: fd26e2745d16505448b7814636d03a71, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3916027052871113379, guid: fd26e2745d16505448b7814636d03a71,
         type: 3}
@@ -27368,6 +28581,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1712897274237257846, guid: fd26e2745d16505448b7814636d03a71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd26e2745d16505448b7814636d03a71, type: 3}
 --- !u!1001 &2147254846
@@ -27386,6 +28604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327584830592160533, guid: 204da6dac807d3c42b78a3fc7e7074bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 390077406252122382, guid: 204da6dac807d3c42b78a3fc7e7074bc,
         type: 3}
@@ -28353,6 +29576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StoneBrickWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 998350935322825876, guid: 659689b12740eb34786df4cef0954a6f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8705257199327566568, guid: 659689b12740eb34786df4cef0954a6f,
         type: 3}
