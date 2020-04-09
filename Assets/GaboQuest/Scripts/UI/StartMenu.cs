@@ -9,6 +9,11 @@ public class StartMenu : MonoBehaviour
 
     public void StartTheGame()
     {
-        SceneManager.LoadScene("Movement");
+        SceneManager.LoadScene("Puzzle1");
+    }
+
+    public void EndGame()
+    {
+        Application.Quit();
     }
 }
