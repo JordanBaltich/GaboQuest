@@ -131,7 +131,7 @@ public class BounceArc : MonoBehaviour
 
         RaycastHit hit;
 
-        if ((Physics.Raycast(point + (Physics.gravity * -1), Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Ground"))))
+        if ((Physics.Raycast(point + (Physics.gravity * -1), Vector3.down, out hit, 25f, LayerMask.GetMask("Ground"))))
         {
             currentGroundLevel = hit.point.y;
             Debug.DrawRay(point, Vector3.down, Color.red, 1f);
