@@ -554,7 +554,7 @@ MonoBehaviour:
   slopeRayLength: 1.5
   lastHitDirection: {x: 0, y: 0, z: 0}
   knockbackForce: 25
-  weight: 0
+  weight: 2
   _OnDmgFX: {fileID: 4184409680207318247}
 --- !u!114 &8956041398418869254
 MonoBehaviour:
@@ -589,7 +589,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   InvulTime: 1
-  m_movingWall: {fileID: 0}
+  m_roomLocker: {fileID: 0}
   invulnerable: 0
 --- !u!114 &3797857769291508754
 MonoBehaviour:
